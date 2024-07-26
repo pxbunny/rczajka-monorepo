@@ -9,11 +9,14 @@ const config: Config = {
     colors: {
       primary: "var(--color-primary)",
       secondary: "var(--color-secondary)",
-      accent: "#DF7171",
+      accent: "var(--color-accent)",
+      bg: "var(--background)",
     },
     extend: {
       textShadow: {
-        "DEFAULT": "0 0 2px var(--color-primary)",
+        "DEFAULT": "-1px -1px 0 var(--color-primary), 1px -1px 0 var(--color-primary), -1px 1px 0 var(--color-primary), 1px 1px 0 var(--color-primary)",
+        "primary": "-1px -1px 0 var(--color-primary), 1px -1px 0 var(--color-primary), -1px 1px 0 var(--color-primary), 1px 1px 0 var(--color-primary)",
+        "secondary": "-1px -1px 0 var(--color-secondary), 1px -1px 0 var(--color-secondary), -1px 1px 0 var(--color-secondary), 1px 1px 0 var(--color-secondary)",
       }
     }
   },
@@ -21,7 +24,7 @@ const config: Config = {
     plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
-          'text-shadow': (value) => ({
+          'text-stroke': (value) => ({
             textShadow: value,
           })
         },
