@@ -12,6 +12,13 @@ const config: Config = {
       accent: "var(--color-accent)",
       bg: "var(--background)",
     },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1152px',
+      '2xl': '1280px',
+    },
     extend: {
       textShadow: {
         "DEFAULT": "-1px -1px 0 var(--color-primary), 1px -1px 0 var(--color-primary), -1px 1px 0 var(--color-primary), 1px 1px 0 var(--color-primary)",
