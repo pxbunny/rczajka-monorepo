@@ -1,3 +1,12 @@
+import {
+  IoCloudyNight,
+  IoLanguage,
+  IoLocationOutline,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoTimeOutline
+} from "react-icons/io5";
+
 export default function Home() {
   return (
     <div className="max-w-screen-xl mx-auto px-36 flex">
@@ -6,9 +15,13 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Rafał Czajka</h1>
           <h2 className="text-xl mt-1 font-medium text-accent">Software Developer</h2>
           <p className="max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
-          <div className="mt-6 space-y-4">
-            <div>Cracow, Poland</div>
-            <div>22:59<span className="text-secondary"> - same time</span></div>
+          <div className="mt-6 space-y-2">
+            <div className="flex items-center">
+              <span className="w-8"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
+            </div>
+            <div className="flex items-center">
+              <span className="w-8"><IoTimeOutline size={20} /></span><span>22:59<span className="text-secondary"> - same time</span></span>
+            </div>
           </div>
           <nav className="mt-20">
             <ul className="space-y-4 font-bold text-secondary">
@@ -19,12 +32,19 @@ export default function Home() {
             </ul>
           </nav>
         </div>
-        <div className="mt-6 text-secondary">
-          socials
+        <div className="mt-6 text-secondary flex items-center">
+          <div className="flex space-x-8">
+            <IoLogoGithub size={24} />
+            <IoLogoLinkedin size={24} />
+          </div>
+          <div className="flex space-x-8 before:border-r before:mx-8 before:opacity-30">
+            <IoCloudyNight size={24} />
+            <IoLanguage size={24} />
+          </div>
         </div>
       </header>
-      <main className="ml-auto py-20">
-        <div className="max-w-lg space-y-20">
+      <div className="ml-auto py-20">
+        <main className="max-w-lg space-y-20">
           <section>
             <h1 className="font-bold text-xl"><span className="text-stroke-secondary text-bg opacity-30 inline-block w-10">01.</span> ABOUT</h1>
             <p className="mt-6 text-secondary">
@@ -69,8 +89,8 @@ export default function Home() {
               lacinia libero et, semper magna.
             </p>
           </section>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
