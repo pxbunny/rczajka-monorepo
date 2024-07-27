@@ -1,9 +1,9 @@
 import {
-  IoCloudyNight,
   IoLanguage,
   IoLocationOutline,
   IoLogoGithub,
   IoLogoLinkedin,
+  IoMoon,
   IoTimeOutline
 } from "react-icons/io5";
 
@@ -38,7 +38,7 @@ export default function Home() {
             <IoLogoLinkedin size={24} />
           </div>
           <div className="flex space-x-8 before:border-r before:mx-8 before:opacity-30">
-            <IoCloudyNight size={24} />
+            <IoMoon size={24} />
             <IoLanguage size={24} />
           </div>
         </div>
