@@ -13,8 +13,8 @@ export default function Home() {
       <header className="lg:sticky top-0 lg:max-w-96 lg:min-h-screen pt-12 md:pt-20 lg:py-20 self-start flex flex-row lg:flex-col justify-between">
         <div>
           <h1 className="text-4xl md:text-5xl leading-none font-bold">Rafał Czajka</h1>
-          <h2 className="text-lg md:text-xl pt-1 font-medium text-accent">Software Developer</h2>
-          <p className="max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
+          <h2 className="text-lg md:text-xl leading-none pt-2 font-medium text-accent">Software Developer</h2>
+          <p className="max-w-64 md:max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
           <div className="mt-6 space-y-2">
             <div className="flex items-center">
               <span className="w-8"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
