@@ -17,10 +17,10 @@ export default function Home() {
           <p className="hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
           <div className="mt-6 sm:space-x-8 lg:space-x-0 lg:space-y-2 flex lg:block flex-col sm:flex-row">
             <div className="flex items-center">
-              <span className="w-8"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
+              <span className="w-8 text-secondary"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
             </div>
             <div className="flex items-center">
-              <span className="w-8"><IoTimeOutline size={20} /></span><span>22:59<span className="text-secondary"> - same time</span></span>
+              <span className="w-8 text-secondary"><IoTimeOutline size={20} /></span><span>22:59<span className="text-secondary"> - same time</span></span>
             </div>
           </div>
           <nav className="mt-20 hidden lg:block">
@@ -33,11 +33,11 @@ export default function Home() {
           </nav>
         </div>
         <div className="hidden mt-6 text-secondary lg:flex items-center">
-          <div className="flex space-x-8">
+          <div className="flex space-x-6">
             <IoLogoGithub size={24} />
             <IoLogoLinkedin size={24} />
           </div>
-          <div className="flex space-x-8 before:border-r before:mx-8 before:opacity-30">
+          <div className="flex space-x-6 before:border-r before:mx-8 before:opacity-30">
             <IoMoon size={24} />
             <IoLanguage size={24} />
           </div>
