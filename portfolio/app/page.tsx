@@ -9,13 +9,13 @@ import {
 
 export default function Home() {
   return (
-    <div className="max-w-screen-2xl mx-auto px-5 md:px-20 xl:px-28 2xl:px-36 lg:flex">
-      <header className="lg:sticky top-0 lg:max-w-96 lg:min-h-screen pt-12 md:pt-20 lg:py-20 self-start flex flex-row lg:flex-col justify-between">
+    <div className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 2xl:px-36 lg:flex">
+      <header className="lg:sticky top-0 lg:max-w-96 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between">
         <div>
-          <h1 className="text-4xl md:text-5xl leading-none font-bold">Rafał Czajka</h1>
-          <h2 className="text-lg md:text-xl leading-none pt-2 font-medium text-accent">Software Developer</h2>
-          <p className="max-w-64 md:max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
-          <div className="mt-6 space-y-2">
+          <h1 className="text-4xl sm:text-5xl leading-none font-bold">Rafał Czajka</h1>
+          <h2 className="text-lg sm:text-xl leading-none pt-1 font-medium text-accent">Software Developer</h2>
+          <p className="hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
+          <div className="mt-6 sm:space-x-8 lg:space-x-0 lg:space-y-2 flex lg:block flex-col sm:flex-row">
             <div className="flex items-center">
               <span className="w-8"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
             </div>
@@ -32,19 +32,19 @@ export default function Home() {
             </ul>
           </nav>
         </div>
-        <div className="lg:mt-6 max-lg:ml-5 text-secondary flex flex-col-reverse lg:flex-row items-center max-lg:justify-end">
-          <div className="flex flex-col lg:flex-row max-lg:space-y-6 lg:space-x-8 max-lg:before:border-t-2 max-lg:before:my-6 max-lg:before:opacity-30">
+        <div className="hidden mt-6 text-secondary lg:flex items-center">
+          <div className="flex space-x-8">
             <IoLogoGithub size={24} />
             <IoLogoLinkedin size={24} />
           </div>
-          <div className="flex flex-col lg:flex-row max-lg:space-y-6 lg:space-x-8 lg:before:border-r lg:before:mx-8 lg:before:opacity-30">
+          <div className="flex space-x-8 before:border-r before:mx-8 before:opacity-30">
             <IoMoon size={24} />
             <IoLanguage size={24} />
           </div>
         </div>
       </header>
-      <div className="ml-auto pt-20 pb-12 md:py-20">
-        <main className="lg:max-w-lg space-y-20">
+      <div className="ml-auto pt-16 sm:pt-20 pb-8 sm:pb-16 md:py-20">
+        <main className="lg:max-w-lg space-y-16 sm:space-y-20">
           <section>
             <h1 className="font-bold text-xl"><span className="text-stroke-secondary text-bg opacity-30 inline-block w-10">01.</span> ABOUT</h1>
             <p className="mt-6 text-secondary">
