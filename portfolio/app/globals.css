@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #E7E7E7;
-  --color-secondary: #A3A7AD;
-  --color-accent: #E37C7D;
+  --color-primary: #E4E4E7;
+  --color-secondary: #B8BABE;
+  --color-dimmed: #E4E4E730;
+  --color-accent: #F59494;
   --background: #08101B;
 }
 
@@ -18,4 +19,26 @@
 body {
   color: var(--color-primary);
   background-color: var(--background);
+}
+
+.headers-numbered,
+.list-numbered {
+  counter-reset: number;
+}
+
+.headers-numbered h1::before,
+.list-numbered li::before {
+  display: inline-block;
+  width: 2em;
+  content: '0' counter(number) '.';
+  counter-increment: number;
+  -webkit-text-stroke: 1px var(--color-dimmed);
+  -webkit-text-fill-color: transparent;
+  text-stroke: 1px var(--color-dimmed);
+  text-fill-color: transparent;
+}
+
+.headers-numbered h1:nth-child(n+10)::before,
+.list-numbered li:nth-child(n+10)::before {
+  content: counter(number) '.';
 }
