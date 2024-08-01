@@ -18,6 +18,15 @@ const config: Config = {
       'xl': '1152px',
       '2xl': '1280px',
     },
+    extend: {
+      fontSize: {
+        'lg': ['1.125rem', '1rem'],
+        'xl': ['1.25rem', '1rem'],
+        '2xl': ['1.5rem', '1rem'],
+        '3xl': ['1.875rem', '1rem'],
+        '4xl': ['2.25rem', '1rem'],
+      }
+    }
   },
 };
 export default config;

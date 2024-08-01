@@ -27,7 +27,7 @@ export default function Home() {
             </div>
           </div>
           <nav className="mt-20 hidden lg:block">
-            <ul className="list-numbered space-y-2 font-bold text-secondary">
+            <ul className="list-numbered space-y-4 font-bold text-lg text-secondary">
               <li>ABOUT</li>
               <li className="text-primary">PROJECTS</li>
               <li>BLOG</li>
@@ -36,11 +36,11 @@ export default function Home() {
           </nav>
         </div>
         <div className="hidden mt-6 text-secondary lg:flex items-center">
-          <div className="flex space-x-8">
+          <div className="flex space-x-6">
             <IoLogoGithub size={24} />
             <IoLogoLinkedin size={24} />
           </div>
-          <div className="flex space-x-8 before:border-r before:mx-8 before:border-r-dimmed">
+          <div className="flex space-x-6 before:border-r before:mx-6 before:border-r-dimmed">
             <IoMoon size={24} />
             <IoLanguage size={24} />
           </div>
