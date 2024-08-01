@@ -15,7 +15,7 @@ export default function Home() {
         <div>
           <Link href="/">
             <div className="text-4xl sm:text-5xl font-bold">Rafał Czajka</div>
-            <div className="text-lg sm:text-xl pt-1 font-medium text-accent">Software Developer</div>
+            <div className="text-lg sm:text-xl font-medium text-accent">Software Developer</div>
           </Link>
           <p className="hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
           <div className="mt-6 space-y-2">
@@ -27,7 +27,7 @@ export default function Home() {
             </div>
           </div>
           <nav className="mt-20 hidden lg:block">
-            <ul className="list-numbered space-y-4 font-bold text-lg text-secondary">
+            <ul className="list-numbered space-y-5 font-bold text-lg text-secondary">
               <li>ABOUT</li>
               <li className="text-primary">PROJECTS</li>
               <li>BLOG</li>

@@ -20,11 +20,11 @@ const config: Config = {
     },
     extend: {
       fontSize: {
-        'lg': ['1.125rem', '1rem'],
-        'xl': ['1.25rem', '1rem'],
-        '2xl': ['1.5rem', '1rem'],
-        '3xl': ['1.875rem', '1rem'],
-        '4xl': ['2.25rem', '1rem'],
+        'lg': ['1.125rem', '1'],
+        'xl': ['1.25rem', '1'],
+        '2xl': ['1.5rem', '1'],
+        '3xl': ['1.875rem', '1'],
+        '4xl': ['2.25rem', '1'],
       }
     }
   },
