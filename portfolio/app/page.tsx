@@ -10,10 +10,10 @@ import { Logo, Nav, Section } from "@ui";
 
 export default function Home() {
   return (
-    <div className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 lg:flex lg:gap-8">
+    <div id="top" className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 lg:flex lg:gap-8">
       <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between items-start">
         <div className="flex flex-col items-start">
-          <Logo className="text-4xl lg:text-5xl" />
+          <Logo className="text-4xl sm:text-5xl" />
           <p className="blurrable hidden lg:inline-block max-w-72 mt-6 text-secondary">
             Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.
           </p>
@@ -27,7 +27,7 @@ export default function Home() {
           </div> */}
           <Nav
             items={[
-              { section: 'about' },
+              { section: 'about', scrollToTop: true },
               { section: 'projects' },
               { section: 'blog' },
               { section: 'contact' }
@@ -47,18 +47,7 @@ export default function Home() {
         </div>
       </header>
       <div className="lg:w-1/2 pt-16 sm:pt-20 pb-8 sm:pb-16 md:py-20">
-        <main className="headers-numbered space-y-16 sm:space-y-20">
-          {/* <section className="blurrable" data-section="about">
-            <h1 className="font-bold text-xl mb-6 lg:hidden">ABOUT</h1>
-            <p className="text-secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
-              Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
-              Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
-              lacus mauris ullamcorper purus, id semper tellus sem id nunc. Quisque molestie quam id nulla venenatis,
-              eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
-              lacinia libero et, semper magna.
-            </p>
-          </section> */}
+        <main className="headers-numbered lg:space-y-20">
           <Section name="about">
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
@@ -68,9 +57,16 @@ export default function Home() {
               eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
               lacinia libero et, semper magna.
             </p>
+            <p className="text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+              Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
+              Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
+              lacus mauris ullamcorper purus, id semper tellus sem id nunc. Quisque molestie quam id nulla venenatis,
+              eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
+              lacinia libero et, semper magna.
+            </p>
           </Section>
-          <section className="blurrable" data-section="projects">
-            <h1 className="font-bold text-xl mb-6 lg:hidden">PROJECTS</h1>
+          <Section name="projects" className="pt-20">
             <div className="space-y-8">
 
               <div className="flex">
@@ -93,8 +89,8 @@ export default function Home() {
               </div>
 
             </div>
-          </section>
-          <Section name="blog">
+          </Section>
+          <Section name="blog" className="pt-20">
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
               Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
@@ -104,7 +100,7 @@ export default function Home() {
               lacinia libero et, semper magna.
             </p>
           </Section>
-          <Section name="contact">
+          <Section name="contact" className="pt-20">
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
               Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.

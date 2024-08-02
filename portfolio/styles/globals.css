@@ -11,7 +11,7 @@
   --color-accent: #918077;
   --color-accent-dimmed: #5b5f67  ;
   --background: #08101B;
-  --blur-transition: 0.25s;
+  --transition: 0.25s;
 }
 
 @media (prefers-color-scheme: dark) {

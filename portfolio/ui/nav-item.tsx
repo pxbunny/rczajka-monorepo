@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 
 const HIGHLIGHTED_ATTRIBUTE = 'data-highlighted';
@@ -8,6 +9,7 @@ const SECTION_NAME_ATTRIBUTE = 'data-section';
 export type NavItemProps = {
   section: string;
   className?: string;
+  scrollToTop?: boolean;
 };
 
 const clearHighlights = () => {
@@ -22,13 +24,15 @@ const handleHover = (e: React.MouseEvent<HTMLElement>) => {
   elements.forEach(el => el.setAttribute(HIGHLIGHTED_ATTRIBUTE, ''));
 }
 
-export const NavItem = ({ section, className }: NavItemProps) => (
+export const NavItem = ({ section, className, scrollToTop = false }: NavItemProps) => (
   <li
     className={`blurrable py-2 uppercase ${className}`}
     onMouseEnter={handleHover}
     onMouseLeave={clearHighlights}
     data-section={section}
   >
-    {section}
+    <Link href={scrollToTop ? '#top' : `#${section}`}>
+      {section}
+    </Link>
   </li>
 );
