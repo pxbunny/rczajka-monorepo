@@ -1,0 +1,13 @@
+import Link from 'next/link';
+import React from 'react';
+
+export type LogoProps = {
+  className?: string;
+};
+
+export const Logo = ({ className }: LogoProps) => (
+  <Link href="/" className={`blurrable ${className}`}>
+    <div className="leading-none font-bold">Rafał Czajka</div>
+    <div className="text-[0.48em] font-medium text-accent mt-[-0.2em]">Software Developer</div>
+  </Link>
+);

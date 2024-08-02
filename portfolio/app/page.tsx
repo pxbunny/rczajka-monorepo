@@ -7,17 +7,14 @@ import {
   IoMoon,
   IoTimeOutline
 } from "react-icons/io5";
-import { Nav } from "../ui";
+import { Logo, Nav } from "../ui";
 
 export default function Home() {
   return (
     <div className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 lg:flex lg:gap-8">
       <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between items-start">
         <div className="flex flex-col items-start">
-          <Link href="/" className="blurrable">
-            <div className="text-[2.65rem] leading-none font-bold">Rafał Czajka</div>
-            <div className="text-xl font-medium text-accent mt-[-5px]">Software Developer</div>
-          </Link>
+          <Logo className="text-4xl lg:text-5xl" />
           <p className="blurrable hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
           {/* <div className="mt-6 space-y-2">
             <div className="flex items-center">
