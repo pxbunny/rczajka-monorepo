@@ -1,0 +1,28 @@
+.blurrable {
+  transition:
+    filter var(--blur-transition),
+    opacity var(--blur-transition),
+    transform var(--blur-transition);
+  will-change: filter, opacity, transform;
+  /* Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
+}
+
+body:has(.nav li:hover) .blurrable:not([data-highlighted]) {
+  filter: blur(1px);
+  opacity: 0.6;
+}
+
+.nav li[data-highlighted] {
+  transform: scale(1.1);
+}
+
+.nav li:hover {
+  position: relative;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.nav:hover li:not(:hover) {
+  filter: blur(1px);
+}
