@@ -7,7 +7,7 @@ import {
   IoMoon,
   IoTimeOutline
 } from "react-icons/io5";
-import { Logo, Nav } from "../ui";
+import { Logo, Nav, Section } from "../ui";
 
 export default function Home() {
   return (
@@ -15,7 +15,9 @@ export default function Home() {
       <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between items-start">
         <div className="flex flex-col items-start">
           <Logo className="text-4xl lg:text-5xl" />
-          <p className="blurrable hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
+          <p className="blurrable hidden lg:inline-block max-w-72 mt-6 text-secondary">
+            Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.
+          </p>
           {/* <div className="mt-6 space-y-2">
             <div className="flex items-center">
               <span className="w-8 text-secondary"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
@@ -47,7 +49,7 @@ export default function Home() {
       </header>
       <div className="lg:w-1/2 pt-16 sm:pt-20 pb-8 sm:pb-16 md:py-20">
         <main className="headers-numbered space-y-16 sm:space-y-20">
-          <section className="blurrable" data-section="about">
+          {/* <section className="blurrable" data-section="about">
             <h1 className="font-bold text-xl mb-6 lg:hidden">ABOUT</h1>
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
@@ -57,7 +59,17 @@ export default function Home() {
               eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
               lacinia libero et, semper magna.
             </p>
-          </section>
+          </section> */}
+          <Section name="about">
+            <p className="text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+              Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
+              Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
+              lacus mauris ullamcorper purus, id semper tellus sem id nunc. Quisque molestie quam id nulla venenatis,
+              eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
+              lacinia libero et, semper magna.
+            </p>
+          </Section>
           <section className="blurrable" data-section="projects">
             <h1 className="font-bold text-xl mb-6 lg:hidden">PROJECTS</h1>
             <div className="space-y-8">
@@ -83,8 +95,7 @@ export default function Home() {
 
             </div>
           </section>
-          <section className="blurrable" data-section="blog">
-            <h1 className="font-bold text-xl mb-6 lg:hidden">BLOG</h1>
+          <Section name="blog">
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
               Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
@@ -93,9 +104,8 @@ export default function Home() {
               eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
               lacinia libero et, semper magna.
             </p>
-          </section>
-          <section className="blurrable" data-section="contact">
-            <h1 className="font-bold text-xl mb-6 lg:hidden">CONTACT</h1>
+          </Section>
+          <Section name="contact">
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
               Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
@@ -104,7 +114,7 @@ export default function Home() {
               eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
               lacinia libero et, semper magna.
             </p>
-          </section>
+          </Section>
         </main>
       </div>
     </div>
