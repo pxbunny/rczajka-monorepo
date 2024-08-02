@@ -30,6 +30,9 @@ body {
     filter var(--blur-transition),
     opacity var(--blur-transition),
     transform var(--blur-transition);
+  will-change: filter, opacity, transform;
+  /* Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
 }
 
 body:has(.nav li:hover) .blurrable:not([data-highlighted]) {
