@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 
 import '@styles/globals.css';
 import '@styles/counters.css';
-import '@styles/highlights.css';
+import '@styles/zenmode.css';
 
 const inter = Inter({ subsets: ["latin"] });
 

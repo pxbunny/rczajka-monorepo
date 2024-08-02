@@ -14,7 +14,7 @@ export default function Home() {
       <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between items-start">
         <div className="flex flex-col items-start">
           <Logo className="text-4xl sm:text-5xl" />
-          <p className="blurrable hidden lg:inline-block max-w-72 mt-6 text-secondary">
+          <p className="zen hidden lg:inline-block max-w-72 mt-6 text-secondary">
             Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.
           </p>
           {/* <div className="mt-6 space-y-2">
@@ -35,7 +35,7 @@ export default function Home() {
             className="mt-20 hidden lg:block"
           />
         </div>
-        <div className="blurrable hidden mt-6 text-secondary lg:flex items-center">
+        <div className="zen hidden mt-6 text-secondary lg:flex items-center">
           <div className="flex space-x-6">
             <IoLogoGithub size={24} />
             <IoLogoLinkedin size={24} />

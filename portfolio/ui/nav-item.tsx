@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
 
 const HIGHLIGHTED_ATTRIBUTE = 'data-highlighted';
@@ -26,13 +25,13 @@ const handleHover = (e: React.MouseEvent<HTMLElement>) => {
 
 export const NavItem = ({ section, className, scrollToTop = false }: NavItemProps) => (
   <li
-    className={`blurrable leading-relaxed uppercase ${className}`}
+    className={`zen leading-relaxed uppercase hover:text-primary ${className}`}
     onMouseEnter={handleHover}
     onMouseLeave={clearHighlights}
     data-section={section}
   >
-    <Link href={scrollToTop ? '#top' : `#${section}`}>
+    <a href={scrollToTop ? '#top' : `#${section}`}>
       {section}
-    </Link>
+    </a>
   </li>
 );

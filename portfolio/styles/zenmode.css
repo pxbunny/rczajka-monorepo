@@ -1,0 +1,43 @@
+.zen {
+  transition:
+    filter var(--transition),
+    opacity var(--transition),
+    transform var(--transition);
+  will-change: filter, opacity, transform;
+  /* Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
+}
+
+body:has(a:hover, button:hover):not(:has(.nav:hover)) {
+  .zen:hover {
+    transform: scale(1.05);
+  }
+
+  .zen:not(:hover) {
+    opacity: 0.8;
+  }
+}
+
+body:has(a:hover, button:hover):not(:has(.nav:hover)) .zen:hover {
+  transform: scale(1.05);
+}
+
+body:has(.nav li:hover) .zen:not([data-highlighted]) {
+  filter: blur(4px);
+  opacity: 0.4;
+}
+
+.nav {
+  li[data-highlighted] {
+    transform: scale(1.1);
+  }
+
+  &:has(li:hover) li.zen:not([data-highlighted]) {
+    filter: blur(2px);
+    opacity: 0.9;
+  }
+
+  &:hover li:not(:hover) {
+    filter: blur(1px);
+  }
+}

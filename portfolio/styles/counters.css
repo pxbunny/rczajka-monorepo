@@ -1,27 +1,27 @@
 main, .nav {
   counter-reset: number;
-}
 
-main h1::before,
-.nav li::before {
-  display: inline-block;
-  width: 2em;
-  content: '0' counter(number) '.';
-  counter-increment: number;
-  font-weight: bold;
-  text-shadow:
-    1px 1px 0 var(--color-accent-dimmed),
-    1px -1px 0 var(--color-accent-dimmed),
-    -1px 1px 0 var(--color-accent-dimmed),
-    -1px -1px 0 var(--color-accent-dimmed);
-  color: var(--background);
-  position: relative;
-  font-size: calc(1em - 2px);
-  top: -1px;
-  left: 1px;
-}
+  h1::before,
+  li::before {
+    display: inline-block;
+    width: 2em;
+    content: '0' counter(number) '.';
+    counter-increment: number;
+    font-weight: bold;
+    text-shadow:
+      1px 1px 0 var(--color-accent-dimmed),
+      1px -1px 0 var(--color-accent-dimmed),
+      -1px 1px 0 var(--color-accent-dimmed),
+      -1px -1px 0 var(--color-accent-dimmed);
+    color: var(--background);
+    position: relative;
+    font-size: calc(1em - 2px);
+    top: -1px;
+    left: 1px;
+  }
 
-main h1:nth-child(n+10)::before,
-.nav li:nth-child(n+10)::before {
-  content: counter(number) '.';
+  h1:nth-child(n+10)::before,
+  li:nth-child(n+10)::before {
+    content: counter(number) '.';
+  }
 }
