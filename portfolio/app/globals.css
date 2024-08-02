@@ -4,10 +4,14 @@
 
 :root {
   --color-primary: #E4E4E7;
-  --color-secondary: #B8BABE;
-  --color-dimmed: #E4E4E730;
-  --color-accent: #F59494;
+  --color-secondary: #a2a4aa;
+  --color-dimmed: #292e37;
+  /* --color-accent: #F59494; */
+  /* --color-accent: #827760; */
+  --color-accent: #918077;
+  --color-accent-dimmed: #5b5f67  ;
   --background: #08101B;
+  --blur-transition: 0.25s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,24 +25,52 @@ body {
   background-color: var(--background);
 }
 
+.blurable {
+  transition:
+    filter var(--blur-transition),
+    opacity var(--blur-transition);
+}
+
+body:has(.nav li:hover) .blurable:not(:hover) {
+  filter: blur(2px);
+  opacity: 0.6;
+}
+
+.nav li:hover {
+  position: relative;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.nav:hover li:not(:hover) {
+  filter: blur(1px);
+}
+
 .headers-numbered,
-.list-numbered {
+.nav {
   counter-reset: number;
 }
 
 .headers-numbered h1::before,
-.list-numbered li::before {
+.nav li::before {
   display: inline-block;
   width: 2em;
   content: '0' counter(number) '.';
   counter-increment: number;
-  -webkit-text-stroke: 1px var(--color-dimmed);
-  -webkit-text-fill-color: transparent;
-  text-stroke: 1px var(--color-dimmed);
-  text-fill-color: transparent;
+  font-weight: bold;
+  text-shadow:
+    1px 1px 0 var(--color-accent-dimmed),
+    1px -1px 0 var(--color-accent-dimmed),
+    -1px 1px 0 var(--color-accent-dimmed),
+    -1px -1px 0 var(--color-accent-dimmed);
+  color: var(--background);
+  position: relative;
+  font-size: calc(1em - 2px);
+  top: -1px;
+  left: 1px;
 }
 
 .headers-numbered h1:nth-child(n+10)::before,
-.list-numbered li:nth-child(n+10)::before {
+.nav li:nth-child(n+10)::before {
   content: counter(number) '.';
 }

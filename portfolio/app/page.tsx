@@ -8,34 +8,46 @@ import {
   IoTimeOutline
 } from "react-icons/io5";
 
+// const clearHighlights = () => {
+//   const elements = document.querySelectorAll('[data-highlighted]');
+//   elements.forEach(el => el.removeAttribute('data-highlighted'));
+// }
+
+// const handleHover = (e: React.MouseEvent<HTMLElement>) => {
+//   clearHighlights();
+//   const section = e.currentTarget.getAttribute('data-section');
+//   const elements = document.querySelectorAll(`[${section}]`);
+//   elements.forEach(el => el.setAttribute('data-highlighted', ''));
+// }
+
 export default function Home() {
   return (
-    <div className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 2xl:px-36 lg:flex">
-      <header className="lg:sticky top-0 lg:max-w-96 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between">
+    <div className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 lg:flex lg:gap-8">
+      <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between">
         <div>
-          <Link href="/">
+          <Link href="/" className="blurable">
             <div className="text-4xl sm:text-5xl font-bold">Rafał Czajka</div>
-            <div className="text-lg sm:text-xl font-medium text-accent">Software Developer</div>
+            <div className="text-lg sm:text-xl font-medium text-accent mt-1">Software Developer</div>
           </Link>
-          <p className="hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
-          <div className="mt-6 space-y-2">
+          <p className="blurable hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
+          {/* <div className="mt-6 space-y-2">
             <div className="flex items-center">
               <span className="w-8 text-secondary"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
             </div>
             <div className="flex items-center">
               <span className="w-8 text-secondary"><IoTimeOutline size={20} /></span><span>22:59<span className="text-secondary"> - same time</span></span>
             </div>
-          </div>
-          <nav className="mt-20 hidden lg:block">
-            <ul className="list-numbered space-y-5 font-bold text-lg text-secondary">
-              <li>ABOUT</li>
-              <li className="text-primary">PROJECTS</li>
-              <li>BLOG</li>
-              <li>CONTACT</li>
+          </div> */}
+          <nav className="nav mt-20 hidden lg:block">
+            <ul className="font-bold text-2xl text-secondary">
+              <li className="blurable py-2 pr-2" data-section="about">ABOUT</li>
+              <li className="blurable py-2 pr-2 text-primary" data-section="projects">PROJECTS</li>
+              <li className="blurable py-2 pr-2" data-section="blog">BLOG</li>
+              <li className="blurable py-2 pr-2" data-section="contact">CONTACT</li>
             </ul>
           </nav>
         </div>
-        <div className="hidden mt-6 text-secondary lg:flex items-center">
+        <div className="blurable hidden mt-6 text-secondary lg:flex items-center">
           <div className="flex space-x-6">
             <IoLogoGithub size={24} />
             <IoLogoLinkedin size={24} />
@@ -46,11 +58,11 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className="ml-auto pt-16 sm:pt-20 pb-8 sm:pb-16 md:py-20">
-        <main className="headers-numbered lg:max-w-lg space-y-16 sm:space-y-20">
+      <div className="blurable lg:w-1/2 pt-16 sm:pt-20 pb-8 sm:pb-16 md:py-20">
+        <main className="headers-numbered space-y-16 sm:space-y-20">
           <section>
-            <h1 className="font-bold text-xl">ABOUT</h1>
-            <p className="mt-6 text-secondary">
+            <h1 className="font-bold text-xl mb-6 lg:hidden">ABOUT</h1>
+            <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
               Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
               Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
@@ -60,8 +72,33 @@ export default function Home() {
             </p>
           </section>
           <section>
-            <h1 className="font-bold text-xl">PROJECTS</h1>
-            <p className="mt-6 text-secondary">
+            <h1 className="font-bold text-xl mb-6 lg:hidden">PROJECTS</h1>
+            <div className="space-y-8">
+
+              <div className="flex">
+                <div className="shrink-0 w-28 h-20 bg-secondary"></div>
+                <div className="grow ml-6 space-y-4">
+                  <h2 className="font-medium leading-none">
+                    My super extra project
+                  </h2>
+                  <p className="text-secondary text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <div className="w-20 h-5 bg-secondary"></div>
+                    <div className="w-20 h-5 bg-secondary"></div>
+                    <div className="w-20 h-5 bg-secondary"></div>
+                    <div className="w-20 h-5 bg-secondary"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <section>
+            <h1 className="font-bold text-xl mb-6 lg:hidden">BLOG</h1>
+            <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
               Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
               Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
@@ -71,19 +108,8 @@ export default function Home() {
             </p>
           </section>
           <section>
-            <h1 className="font-bold text-xl">BLOG</h1>
-            <p className="mt-6 text-secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
-              Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
-              Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
-              lacus mauris ullamcorper purus, id semper tellus sem id nunc. Quisque molestie quam id nulla venenatis,
-              eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
-              lacinia libero et, semper magna.
-            </p>
-          </section>
-          <section>
-            <h1 className="font-bold text-xl">CONTACT</h1>
-            <p className="mt-6 text-secondary">
+            <h1 className="font-bold text-xl mb-6 lg:hidden">CONTACT</h1>
+            <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
               Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
               Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
