@@ -26,7 +26,7 @@ const handleHover = (e: React.MouseEvent<HTMLElement>) => {
 
 export const NavItem = ({ section, className, scrollToTop = false }: NavItemProps) => (
   <li
-    className={`blurrable py-2 uppercase ${className}`}
+    className={`blurrable leading-relaxed uppercase ${className}`}
     onMouseEnter={handleHover}
     onMouseLeave={clearHighlights}
     data-section={section}
