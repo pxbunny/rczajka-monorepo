@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   IoLanguage,
   IoLocationOutline,
@@ -7,7 +6,7 @@ import {
   IoMoon,
   IoTimeOutline
 } from "react-icons/io5";
-import { Logo, Nav, Section } from "../ui";
+import { Logo, Nav, Section } from "@ui";
 
 export default function Home() {
   return (
