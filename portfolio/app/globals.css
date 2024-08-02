@@ -25,15 +25,20 @@ body {
   background-color: var(--background);
 }
 
-.blurable {
+.blurrable {
   transition:
     filter var(--blur-transition),
-    opacity var(--blur-transition);
+    opacity var(--blur-transition),
+    transform var(--blur-transition);
 }
 
-body:has(.nav li:hover) .blurable:not(:hover) {
-  filter: blur(2px);
+body:has(.nav li:hover) .blurrable:not([data-highlighted]) {
+  filter: blur(1px);
   opacity: 0.6;
+}
+
+.nav li[data-highlighted] {
+  transform: scale(1.1);
 }
 
 .nav li:hover {

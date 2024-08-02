@@ -7,29 +7,18 @@ import {
   IoMoon,
   IoTimeOutline
 } from "react-icons/io5";
-
-// const clearHighlights = () => {
-//   const elements = document.querySelectorAll('[data-highlighted]');
-//   elements.forEach(el => el.removeAttribute('data-highlighted'));
-// }
-
-// const handleHover = (e: React.MouseEvent<HTMLElement>) => {
-//   clearHighlights();
-//   const section = e.currentTarget.getAttribute('data-section');
-//   const elements = document.querySelectorAll(`[${section}]`);
-//   elements.forEach(el => el.setAttribute('data-highlighted', ''));
-// }
+import { Nav } from "../ui";
 
 export default function Home() {
   return (
     <div className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 lg:flex lg:gap-8">
-      <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between">
-        <div>
-          <Link href="/" className="blurable">
-            <div className="text-4xl sm:text-5xl font-bold">Rafał Czajka</div>
-            <div className="text-lg sm:text-xl font-medium text-accent mt-1">Software Developer</div>
+      <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between items-start">
+        <div className="flex flex-col items-start">
+          <Link href="/" className="blurrable">
+            <div className="text-[2.65rem] leading-none font-bold">Rafał Czajka</div>
+            <div className="text-xl font-medium text-accent mt-[-5px]">Software Developer</div>
           </Link>
-          <p className="blurable hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
+          <p className="blurrable hidden lg:inline-block max-w-72 mt-6 text-secondary">Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.</p>
           {/* <div className="mt-6 space-y-2">
             <div className="flex items-center">
               <span className="w-8 text-secondary"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
@@ -38,16 +27,17 @@ export default function Home() {
               <span className="w-8 text-secondary"><IoTimeOutline size={20} /></span><span>22:59<span className="text-secondary"> - same time</span></span>
             </div>
           </div> */}
-          <nav className="nav mt-20 hidden lg:block">
-            <ul className="font-bold text-2xl text-secondary">
-              <li className="blurable py-2 pr-2" data-section="about">ABOUT</li>
-              <li className="blurable py-2 pr-2 text-primary" data-section="projects">PROJECTS</li>
-              <li className="blurable py-2 pr-2" data-section="blog">BLOG</li>
-              <li className="blurable py-2 pr-2" data-section="contact">CONTACT</li>
-            </ul>
-          </nav>
+          <Nav
+            items={[
+              { section: 'about' },
+              { section: 'projects' },
+              { section: 'blog' },
+              { section: 'contact' }
+            ]}
+            className="mt-20 hidden lg:block"
+          />
         </div>
-        <div className="blurable hidden mt-6 text-secondary lg:flex items-center">
+        <div className="blurrable hidden mt-6 text-secondary lg:flex items-center">
           <div className="flex space-x-6">
             <IoLogoGithub size={24} />
             <IoLogoLinkedin size={24} />
@@ -58,9 +48,9 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className="blurable lg:w-1/2 pt-16 sm:pt-20 pb-8 sm:pb-16 md:py-20">
+      <div className="lg:w-1/2 pt-16 sm:pt-20 pb-8 sm:pb-16 md:py-20">
         <main className="headers-numbered space-y-16 sm:space-y-20">
-          <section>
+          <section className="blurrable" data-section="about">
             <h1 className="font-bold text-xl mb-6 lg:hidden">ABOUT</h1>
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
@@ -71,7 +61,7 @@ export default function Home() {
               lacinia libero et, semper magna.
             </p>
           </section>
-          <section>
+          <section className="blurrable" data-section="projects">
             <h1 className="font-bold text-xl mb-6 lg:hidden">PROJECTS</h1>
             <div className="space-y-8">
 
@@ -96,7 +86,7 @@ export default function Home() {
 
             </div>
           </section>
-          <section>
+          <section className="blurrable" data-section="blog">
             <h1 className="font-bold text-xl mb-6 lg:hidden">BLOG</h1>
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
@@ -107,7 +97,7 @@ export default function Home() {
               lacinia libero et, semper magna.
             </p>
           </section>
-          <section>
+          <section className="blurrable" data-section="contact">
             <h1 className="font-bold text-xl mb-6 lg:hidden">CONTACT</h1>
             <p className="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
