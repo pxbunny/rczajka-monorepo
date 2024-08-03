@@ -24,3 +24,14 @@ body {
   color: var(--color-primary);
   background-color: var(--background);
 }
+
+main::after {
+  pointer-events: none;
+  content: ' ';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, var(--background));
+  height: 5rem;
+}
