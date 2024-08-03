@@ -12,9 +12,15 @@ body:has(a:hover, button:hover, .block-focus:hover):not(:has(.nav:hover)) .zen:n
   opacity: 0.4;
 }
 
-body:has(.nav li:hover) .zen:not([data-highlighted]) {
-  filter: blur(4px);
-  opacity: 0.4;
+body:has(.nav li:hover) {
+  .zen:not([data-highlighted]) {
+    filter: blur(4px);
+    opacity: 0.4;
+  }
+
+  main section.zen[data-highlighted] {
+    transform: translateX(-4rem);
+  }
 }
 
 .nav {

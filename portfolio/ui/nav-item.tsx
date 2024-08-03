@@ -30,7 +30,7 @@ export const NavItem = ({ section, className, scrollToTop = false }: NavItemProp
     onMouseLeave={clearHighlights}
     data-section={section}
   >
-    <a href={scrollToTop ? '#top' : `#${section}`}>
+    <a href={scrollToTop ? '#hello' : `#${section}`}>
       {section}
     </a>
   </li>

@@ -10,7 +10,7 @@ import { Logo, Nav, Section } from "@ui";
 
 export default function Home() {
   return (
-    <div id="top" className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 lg:flex lg:gap-8">
+    <div id="hello" className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 xl:px-28 lg:flex lg:gap-8">
       <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-8 sm:pt-16 md:pt-20 lg:py-20 self-start flex flex-col justify-between items-start z-10">
         <div className="flex flex-col items-start">
           <Logo className="text-4xl sm:text-5xl" />
