@@ -35,14 +35,14 @@ export default function Home() {
             className="mt-20 hidden lg:block"
           />
         </div>
-        <div className="zen hidden mt-6 text-secondary lg:flex items-center">
+        <div className="zen block-focus hidden mt-6 text-secondary lg:flex items-center">
           <div className="flex space-x-6">
-            <IoLogoGithub size={24} />
-            <IoLogoLinkedin size={24} />
+            <a href="https://www.github.com/dae-ne/" className="hover:text-primary" target="_blank"><IoLogoGithub size={24} /></a>
+            <a href="#" className="hover:text-primary"><IoLogoLinkedin size={24} /></a>
           </div>
           <div className="flex space-x-6 before:border-r before:mx-6 before:border-r-dimmed">
-            <IoMoon size={24} />
-            <IoLanguage size={24} />
+            <a href="#" className="hover:text-primary"><IoMoon size={24} /></a>
+            <a href="#" className="hover:text-primary"><IoLanguage size={24} /></a>
           </div>
         </div>
       </header>
