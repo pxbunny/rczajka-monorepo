@@ -9,7 +9,7 @@
 }
 
 body:has(a:hover, button:hover, .block-focus:hover):not(:has(.nav:hover)) .zen:not(:hover) {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 body:has(.nav li:hover) {

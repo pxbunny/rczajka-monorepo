@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavItem, NavItemProps } from './nav-item';
+import { NavItem, NavItemProps } from '@ui';
 
 export type NavProps = {
   items: NavItemProps[];

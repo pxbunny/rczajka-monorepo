@@ -5,8 +5,8 @@ import {
   IoLogoLinkedin,
   IoMoon,
   IoTimeOutline
-} from "react-icons/io5";
-import { Logo, Nav, Section } from "@ui";
+} from 'react-icons/io5';
+import { Logo, Nav, Section, StateButton } from '@ui';
 
 export default function Home() {
   return (
@@ -18,13 +18,13 @@ export default function Home() {
             Pellentesque laoreet sit amet odio in consequat. Praesent magna risus.
           </p>
           {/* <div className="mt-6 space-y-2">
-            <div className="flex items-center">
-              <span className="w-8 text-secondary"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
-            </div>
-            <div className="flex items-center">
-              <span className="w-8 text-secondary"><IoTimeOutline size={20} /></span><span>22:59<span className="text-secondary"> - same time</span></span>
-            </div>
-          </div> */}
+              <div className="flex items-center">
+                <span className="w-8 text-secondary"><IoLocationOutline size={20} /></span><span>Cracow, Poland</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-8 text-secondary"><IoTimeOutline size={20} /></span><span>22:59<span className="text-secondary"> - same time</span></span>
+              </div>
+            </div> */}
           <Nav
             items={[
               { section: 'about', scrollToTop: true },
@@ -41,7 +41,7 @@ export default function Home() {
             <a href="#" className="hover:text-primary"><IoLogoLinkedin size={24} /></a>
           </div>
           <div className="flex space-x-6 before:border-r before:mx-6 before:border-r-dimmed">
-            <a href="#" className="hover:text-primary"><IoMoon size={24} /></a>
+            <StateButton className="hover:text-primary" state="theme"><IoMoon size={24} /></StateButton>
             <a href="#" className="hover:text-primary"><IoLanguage size={24} /></a>
           </div>
         </div>

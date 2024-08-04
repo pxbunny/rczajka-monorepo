@@ -1,0 +1,15 @@
+body {
+  & > *:not(#menu-outer) {
+    transition: filter var(--transition), opacity var(--transition);
+  }
+}
+
+body[data-menu='theme'] {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width);
+
+  & > *:not(#menu-outer) {
+    filter: blur(8px);
+    opacity: 0.4;
+  }
+}

@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Menu } from '@menu';
 
 import '@styles/globals.css';
 import '@styles/counters.css';
+import '@styles/menu.css';
 import '@styles/zenmode.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Rafał Czajka"
@@ -14,7 +16,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Menu />
+      </body>
     </html>
   );
 }

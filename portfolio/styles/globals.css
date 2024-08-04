@@ -12,6 +12,7 @@
   --color-accent-dimmed: #5b5f67  ;
   --background: #08101B;
   --transition: 0.25s;
+  --scrollbar-width: 0; /* value will be set by JS */
 }
 
 @media (prefers-color-scheme: dark) {
