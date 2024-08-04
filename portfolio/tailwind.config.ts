@@ -12,6 +12,7 @@ const config: Config = {
       secondary: "var(--color-secondary)",
       dimmed: "var(--color-dimmed)",
       accent: "var(--color-accent)",
+      background: "var(--background)",
     },
     screens: {
       'sm': '640px',

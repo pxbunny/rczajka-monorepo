@@ -8,9 +8,9 @@
   transform: translate3d(0, 0, 0);
 }
 
-body:has(a:hover, button:hover, .block-focus:hover):not(:has(.nav:hover)) .zen:not(:hover) {
+/* body:has(a:hover, button:hover, .block-focus:hover):not(:has(.nav:hover)) .zen:not(:hover) {
   opacity: 0.6;
-}
+} */
 
 body:has(.nav li:hover) {
   .zen:not([data-highlighted]) {
