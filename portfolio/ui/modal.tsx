@@ -23,7 +23,7 @@ export const Modal = ({ id, children, className, visible }: ModalProps) => (
         transition={{ duration: 0.25 }}
       >
         <div className="size-full bg-background/80 flex items-center justify-center">
-          <div className="bg-background rounded-xl border border-[#292e37]">
+          <div className="bg-background/80 rounded-xl border border-[#292e37]">
             <header className="flex items-center justify-between">
               <div className="font-bold p-4">Menu</div>
               <button

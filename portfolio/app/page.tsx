@@ -6,7 +6,7 @@ import {
   IoMoon,
   IoTimeOutline
 } from 'react-icons/io5';
-import { Logo, Nav, Section, StateButton } from '@ui';
+import { Button, Logo, Nav, Section } from '@ui';
 
 export default function Home() {
   return (
@@ -35,14 +35,14 @@ export default function Home() {
             className="mt-20 hidden lg:block"
           />
         </div>
-        <div className="zen block-focus hidden mt-6 text-secondary lg:flex items-center">
+        <div className="zen block-focus text-2xl hidden mt-6 text-secondary lg:flex items-center">
           <div className="flex space-x-6">
-            <a href="https://www.github.com/dae-ne/" className="hover:text-primary" target="_blank"><IoLogoGithub size={24} /></a>
-            <a href="#" className="hover:text-primary"><IoLogoLinkedin size={24} /></a>
+            <Button type="link" variant="icon" href="https://www.github.com/dae-ne/" target="_blank"><IoLogoGithub /></Button>
+            <Button type="link" variant="icon" href="https://www.github.com/dae-ne/" target="_blank"><IoLogoLinkedin /></Button>
           </div>
           <div className="flex space-x-6 before:border-r before:mx-6 before:border-r-dimmed">
-            <StateButton className="hover:text-primary" state="theme"><IoMoon size={24} /></StateButton>
-            <a href="#" className="hover:text-primary"><IoLanguage size={24} /></a>
+            <Button type="state" variant="icon" state="theme"><IoMoon /></Button>
+            <Button type="state" variant="icon" state="theme"><IoLanguage /></Button>
           </div>
         </div>
       </header>
