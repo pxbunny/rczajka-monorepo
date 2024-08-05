@@ -32,7 +32,39 @@ import * as ti from 'react-icons/ti'
 import * as vsc from 'react-icons/vsc'
 import * as wi from 'react-icons/wi'
 
-const sets = { ai, bi, bs, cg, ci, di, fa, fa6, fc, fi, gi, go, gr, hi, hi2, im, io, io5, lia, lu, md, pi, ri, rx, si, sl, tb, tfi, ti, vsc, wi };
+const sets = {
+  ai,
+  bi,
+  bs,
+  cg,
+  ci,
+  di,
+  fa,
+  fa6,
+  fc,
+  fi,
+  gi,
+  go,
+  gr,
+  hi,
+  hi2,
+  im,
+  io,
+  io5,
+  lia,
+  lu,
+  md,
+  pi,
+  ri,
+  rx,
+  si,
+  sl,
+  tb,
+  tfi,
+  ti,
+  vsc,
+  wi
+};
 
 type SetNames = keyof typeof sets;
 
@@ -46,4 +78,4 @@ export type IconProps<T extends SetNames> = IconBaseProps & {
 export const Icon = <T extends SetNames>({ set, name, ...props }: IconProps<T>) => {
   const SelectedIcon = sets[set][name] as React.ComponentType<IconBaseProps>;
   return SelectedIcon ? <SelectedIcon {...props} /> : <div>?</div>;
-}
+};
