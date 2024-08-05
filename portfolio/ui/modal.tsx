@@ -22,7 +22,7 @@ export const Modal = ({ id, children, className, visible }: ModalProps) => (
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25 }}
       >
-        <div className="size-full bg-[#08101B] bg-opacity-60 flex items-center justify-center">
+        <div className="size-full bg-background/80 flex items-center justify-center">
           <div className="bg-background rounded-xl border border-[#292e37]">
             <header className="flex items-center justify-between">
               <div className="font-bold p-4">Menu</div>

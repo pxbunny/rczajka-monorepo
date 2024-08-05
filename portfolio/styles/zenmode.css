@@ -8,11 +8,12 @@
   transform: translate3d(0, 0, 0);
 }
 
-/* body:has(a:hover, button:hover, .block-focus:hover):not(:has(.nav:hover)) .zen:not(:hover) {
-  opacity: 0.6;
-} */
+#page-content:has(a:hover, button:hover, .block-focus:hover):not(:has(.nav:hover)) .zen:not(:hover) {
+  opacity: 0.4;
+  filter: blur(4px);
+}
 
-body:has(.nav li:hover) {
+#page-content:has(.nav li:hover) {
   .zen:not([data-highlighted]) {
     filter: blur(4px);
     opacity: 0.4;

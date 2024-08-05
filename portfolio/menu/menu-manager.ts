@@ -6,7 +6,7 @@ export function setMenuState(state: MenuState) {
   document.body.setAttribute(ATTRIBUTE_NAME, state);
 };
 
-export function observeMenuState(setState: (menu: MenuState) => void) {
+export function observeMenuState(setLocalState: (state: MenuState) => void) {
   const body = document.body;
   body.setAttribute(ATTRIBUTE_NAME, 'none');
 
@@ -14,7 +14,7 @@ export function observeMenuState(setState: (menu: MenuState) => void) {
     mutations.forEach((mutation) => {
       if (mutation.attributeName === ATTRIBUTE_NAME) {
         const menu = body.getAttribute(ATTRIBUTE_NAME);
-        setState(menu as MenuState);
+        setLocalState(menu as MenuState);
       }
     });
   });

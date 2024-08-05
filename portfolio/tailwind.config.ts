@@ -8,11 +8,11 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      primary: "var(--color-primary)",
-      secondary: "var(--color-secondary)",
-      dimmed: "var(--color-dimmed)",
-      accent: "var(--color-accent)",
-      background: "var(--background)",
+      primary: 'rgb(var(--color-primary) / <alpha-value>)',
+      secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+      dimmed: 'rgb(var(--color-dimmed) / <alpha-value>)',
+      accent: 'rgb(var(--color-accent) / <alpha-value>)',
+      background: 'rgb(var(--background) / <alpha-value>)',
     },
     screens: {
       'sm': '640px',
@@ -20,6 +20,9 @@ const config: Config = {
       'lg': '1024px',
       'xl': '1152px',
       '2xl': '1280px',
+    },
+    transitionDuration: {
+      'DEFAULT': '250ms',
     },
     extend: {
       fontSize: {

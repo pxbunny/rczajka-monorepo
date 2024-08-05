@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #E4E4E7;
-  --color-secondary: #a2a4aa;
-  --color-dimmed: #292e37;
+  --color-primary: 228 228 231; /* #E4E4E7; */
+  --color-secondary: 162 164 170; /* #a2a4aa; */
+  --color-dimmed: 41 46 55; /* #292e37; */
   /* --color-accent: #F59494; */
   /* --color-accent: #827760; */
-  --color-accent: #918077;
-  --color-accent-dimmed: #5b5f67  ;
-  --background: #08101B;
+  --color-accent: 145 128 119; /* #918077; */
+  --color-accent-dimmed: 91 95 103; /* #5b5f67; */
+  --background: 8 16 27; /* #08101B; */
   --transition: 0.25s;
   --scrollbar-width: 0; /* value will be set by JS */
 }
@@ -22,8 +22,8 @@
 }
 
 body {
-  color: var(--color-primary);
-  background-color: var(--background);
+  color: rgb(var(--color-primary));
+  background-color: rgb(var(--background));
 }
 
 main::after {
@@ -33,7 +33,7 @@ main::after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, var(--background));
+  background: linear-gradient(transparent, rgb(var(--background)));
   height: 5rem;
 }
 

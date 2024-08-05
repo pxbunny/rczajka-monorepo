@@ -1,7 +1,5 @@
-body {
-  & > *:not(#menu) {
-    transition: filter var(--transition);
-  }
+#page-content {
+  transition: filter var(--transition);
 }
 
 body[data-menu='theme'] {
@@ -12,7 +10,7 @@ body[data-menu='theme'] {
     padding-right: var(--scrollbar-width);
   }
 
-  & > *:not(#menu) {
-    filter: blur(4px);
+  & > #page-content {
+    filter: blur(8px);
   }
 }

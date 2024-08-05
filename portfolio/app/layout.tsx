@@ -17,7 +17,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        {children}
+        <div id="page-content">
+          {children}
+        </div>
         <Menu />
       </body>
     </html>
