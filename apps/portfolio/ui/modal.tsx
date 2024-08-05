@@ -2,7 +2,6 @@
 
 import { setMenuState } from '@menu';
 import { AnimatePresence, motion } from 'framer-motion';
-import React from 'react';
 
 export type ModalProps = {
   id?: string;

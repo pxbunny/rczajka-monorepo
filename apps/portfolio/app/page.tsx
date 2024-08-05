@@ -1,4 +1,5 @@
-import { Button, Icon, Logo, Nav, Section } from '@ui';
+import { Button, DynamicIcon, Logo, Nav, Section } from '@ui';
+import { IoLanguage, IoMoon } from 'react-icons/io5';
 
 export default function Home() {
   return (
@@ -30,18 +31,18 @@ export default function Home() {
         <div className="zen block-focus text-2xl hidden mt-6 text-secondary lg:flex items-center">
           <div className="flex space-x-6">
             <Button type="link" variant="icon" href="https://www.github.com/dae-ne/" target="_blank">
-              <Icon set="io5" name="IoLogoGithub" />
+              <DynamicIcon set="io5" name="IoLogoGithub" />
             </Button>
             <Button type="link" variant="icon" href="https://www.github.com/dae-ne/" target="_blank">
-              <Icon set="io5" name="IoLogoLinkedin" />
+              <DynamicIcon set="io5" name="IoLogoLinkedin" />
             </Button>
           </div>
           <div className="flex space-x-6 before:border-r before:mx-6 before:border-r-dimmed">
             <Button type="state" variant="icon" state="theme">
-              <Icon set="io5" name="IoMoon" />
+              <IoMoon />
             </Button>
             <Button type="state" variant="icon" state="theme">
-              <Icon set="io5" name="IoLanguage" />
+              <IoLanguage />
             </Button>
           </div>
         </div>

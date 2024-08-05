@@ -3,7 +3,6 @@
 import { MenuState, setMenuState } from '@menu';
 import classNames from 'classnames';
 import Link from 'next/link';
-import React from 'react';
 
 type DefaultButtonProps = {
   type: 'button';

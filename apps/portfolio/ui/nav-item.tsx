@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 const HIGHLIGHTED_ATTRIBUTE = 'data-highlighted';
 const SECTION_NAME_ATTRIBUTE = 'data-section';
 

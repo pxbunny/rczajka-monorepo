@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavItem, NavItemProps } from '@ui';
 
 export type NavProps = {
