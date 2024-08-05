@@ -1,0 +1,13 @@
+{
+  "name": "rczajka",
+  "scripts": {
+    "dev": "turbo run dev"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "turbo": "^2.0.11"
+  },
+  "packageManager": "npm@10.2.4"
+}
