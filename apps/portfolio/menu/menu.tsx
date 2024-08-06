@@ -16,7 +16,10 @@ export const Menu = () => {
         hiddenElementId="page-content"
         close={() => setState('none')}
       >
-        asdf
+        <div>
+          <h2>Theme</h2>
+          <h2>Language</h2>
+        </div>
       </Modal>
     </>
   );

@@ -6,12 +6,12 @@ body[data-menu='theme'] {
   overflow: hidden;
   padding-right: var(--scrollbar-width);
 
-  & > #menu {
-    padding-right: var(--scrollbar-width);
+  #page-content > * {
+    filter: blur(8px);
   }
 
-  & > #page-content {
-    filter: blur(8px);
+  & > #menu {
+    padding-right: var(--scrollbar-width);
   }
 }
 

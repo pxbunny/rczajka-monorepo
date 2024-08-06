@@ -26,17 +26,15 @@ body {
   background-color: rgb(var(--background));
 }
 
-main::after {
+a, button {
+  transition: color var(--transition);
+}
+
+#page-content::after {
   pointer-events: none;
   content: ' ';
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: auto 0 0;
   background: linear-gradient(transparent, rgb(var(--background)));
-  height: 5rem;
-}
-
-a, button {
-  transition: color var(--transition);
+  height: 6rem;
 }
