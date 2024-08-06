@@ -30,7 +30,7 @@ export const Button = ({
   children,
   className,
   variant,
-  type = 'button',
+  type,
   ...rest
 }: ButtonProps) => {
 
@@ -40,7 +40,7 @@ export const Button = ({
     className,
     {'text-secondary hover:text-primary': isIconType},
     {'relative before:absolute before:transition-all': isIconType},
-    {'before:rounded-full before:z-[-1]': isIconType},
+    {'before:rounded-full rounded-full': isIconType},
     {'hover:before:bg-primary/10 hover:before:inset-[-0.35em]': isIconType}
   );
 

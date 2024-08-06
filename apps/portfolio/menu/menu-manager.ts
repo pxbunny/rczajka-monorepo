@@ -4,7 +4,7 @@ export type MenuState = 'main' | 'theme' | 'none';
 
 export function setMenuState(state: MenuState) {
   document.body.setAttribute(ATTRIBUTE_NAME, state);
-};
+}
 
 export function observeMenuState(setLocalState: (state: MenuState) => void) {
   const body = document.body;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { MenuState, observeMenuState } from './menu-manager';
+import { MenuState, observeMenuState, setMenuState } from './menu-manager';
 
-export const useMenuState = () => {
+export const useMenuState = (): [MenuState, typeof setMenuState] => {
   const [state, setState] = useState<MenuState>('none');
 
   useEffect(() => {
@@ -9,7 +9,7 @@ export const useMenuState = () => {
     return () => observer.disconnect();
   }, []);
 
-  return state;
+  return [state, setMenuState]
 };
 
 export const useScrollbarWidth = () => {

@@ -14,3 +14,7 @@ body[data-menu='theme'] {
     filter: blur(8px);
   }
 }
+
+body[data-menu='none'] #menu {
+  pointer-events: none;
+}

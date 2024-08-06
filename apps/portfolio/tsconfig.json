@@ -21,6 +21,7 @@
       "@app/*": ["./app/*"],
       "@ui": ["./ui"],
       "@menu": ["./menu"],
+      "@hooks": ["./hooks"],
       "@styles/*": ["./styles/*"],
     }
   },

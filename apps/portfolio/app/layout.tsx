@@ -13,15 +13,15 @@ export const metadata: Metadata = {
   title: "Rafał Czajka"
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
-  return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        <div id="page-content">
-          {children}
-        </div>
-        <Menu />
-      </body>
-    </html>
-  );
-}
+export const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => (
+  <html lang="en" className="scroll-smooth">
+    <body className={inter.className}>
+      <div id="page-content">
+        {children}
+      </div>
+      <Menu />
+    </body>
+  </html>
+);
+
+export default RootLayout;

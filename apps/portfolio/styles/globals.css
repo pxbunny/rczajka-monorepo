@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: 228 228 231; /* #E4E4E7; */
-  --color-secondary: 162 164 170; /* #a2a4aa; */
-  --color-dimmed: 41 46 55; /* #292e37; */
-  /* --color-accent: #F59494; */
-  /* --color-accent: #827760; */
-  --color-accent: 145 128 119; /* #918077; */
-  --color-accent-dimmed: 91 95 103; /* #5b5f67; */
-  --background: 8 16 27; /* #08101B; */
+  --color-primary: 228 228 231; /* #E4E4E7 */
+  --color-secondary: 162 164 170; /* #a2a4aa */
+  --color-dimmed: 41 46 55; /* #292e37 */
+  /* --color-accent: #F59494 */
+  /* --color-accent: #827760 */
+  --color-accent: 145 128 119; /* #918077 */
+  --color-accent-dimmed: 91 95 103; /* #5b5f67 */
+  --background: 8 16 27; /* #08101B */
   --transition: 0.25s;
   --scrollbar-width: 0; /* value will be set by JS */
 }

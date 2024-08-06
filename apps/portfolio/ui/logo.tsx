@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import Link from 'next/link';
 
 export type LogoProps = {
@@ -5,7 +6,7 @@ export type LogoProps = {
 };
 
 export const Logo = ({ className }: LogoProps) => (
-  <Link href="/" className={`zen ${className}`}>
+  <Link href="/" className={classNames('zen select-none', className)}>
     <div className="leading-none font-bold">Rafał Czajka</div>
     <div className="text-[0.475em] font-medium text-accent mt-[-0.2em]">Software Developer</div>
   </Link>
