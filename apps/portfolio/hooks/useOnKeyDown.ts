@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
 
-export const useKeyDown = (key: string, callback: () => void) => {
+export const useOnKeyDown = (
+  key: string,
+  callback: (event: KeyboardEvent) => void,
+) => {
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === key) {
-        callback();
+        callback(event);
       }
     };
 

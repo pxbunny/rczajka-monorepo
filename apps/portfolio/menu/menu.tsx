@@ -1,11 +1,11 @@
 'use client';
 
+import { useMenuState, useScrollbarWidth } from '@hooks';
 import { Modal } from '@ui';
-import { useMenuState, useScrollbarWidth } from './menu-hooks';
 
 export const Menu = () => {
   const [state, setState] = useMenuState();
-  useScrollbarWidth();
+  useScrollbarWidth('--scrollbar-width');
 
   return (
     <>

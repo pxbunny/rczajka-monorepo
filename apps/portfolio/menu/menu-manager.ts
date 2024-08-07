@@ -19,6 +19,9 @@ export function observeMenuState(setLocalState: (state: MenuState) => void) {
     });
   });
 
-  observer.observe(document.body, { attributes: true, attributeFilter: [ATTRIBUTE_NAME] });
+  observer.observe(
+    document.body,
+    { attributes: true, attributeFilter: [ATTRIBUTE_NAME] }
+  );
   return observer;
 }

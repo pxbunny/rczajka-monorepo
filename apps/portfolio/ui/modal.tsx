@@ -1,12 +1,11 @@
 'use client';
 
-import { useHidden, useKeyDown } from '@hooks';
+import { useOnClickOutside, useHidden, useOnKeyDown } from '@hooks';
 import { Button } from '@ui';
 import classNames from 'classnames';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { IoClose } from 'react-icons/io5';
-import { useOnClickOutside } from 'usehooks-ts';
 
 export type ModalProps = {
   id?: string;
@@ -21,7 +20,7 @@ export type ModalProps = {
 export const Modal = ({ id, children, className, visible, title, hiddenElementId, close }: ModalProps) => {
   const ref = useRef<HTMLDivElement>(null);
   useOnClickOutside(ref, close);
-  useKeyDown('Escape', close);
+  useOnKeyDown('Escape', close);
   useHidden(hiddenElementId ?? '', visible);
 
   return (

@@ -8,7 +8,8 @@
   --color-dimmed: 41 46 55; /* #292e37 */
   /* --color-accent: #F59494 */
   /* --color-accent: #827760 */
-  --color-accent: 145 128 119; /* #918077 */
+  --color-accent2: 145 128 119; /* #918077 */
+  --color-accent: 143 135 130; /* #918077 */
   --color-accent-dimmed: 91 95 103; /* #5b5f67 */
   --background: 8 16 27; /* #08101B */
   --transition: 0.25s;

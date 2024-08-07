@@ -1,4 +1,5 @@
-import { Button, DynamicIcon, Logo, Nav, Section } from '@ui';
+import { Badge, Button, DynamicIcon, Logo, Nav, Section } from '@ui';
+import Image from 'next/image';
 import { IoSettingsSharp } from 'react-icons/io5';
 
 export const Home = () => (
@@ -55,26 +56,53 @@ export const Home = () => (
           </p>
         </Section>
         <Section name="projects" className="pt-20">
-          <div className="space-y-8">
+          <div className="space-y-20">
 
-            <div className="flex">
-              <div className="shrink-0 w-28 h-20 bg-secondary"></div>
-              <div className="grow ml-6 space-y-4">
-                <h2 className="font-medium leading-none">
+            <div className="grid grid-cols-8 gap-6">
+              <div className="col-span-2">
+                <Image src="/image.jpg" className="text-primary" width={440} height={440} alt="Project" />
+              </div>
+              <div className="col-span-6 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
                   My super extra project
                 </h2>
                 <p className="text-secondary text-sm">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
                 </p>
-                <div className="flex flex-wrap gap-4">
-                  <div className="w-20 h-5 bg-secondary"></div>
-                  <div className="w-20 h-5 bg-secondary"></div>
-                  <div className="w-20 h-5 bg-secondary"></div>
-                  <div className="w-20 h-5 bg-secondary"></div>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Next.js" />
+                  <Badge label="Tailwind" />
+                  <Badge label="Sanity" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Tailwind" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Next.js" />
                 </div>
               </div>
             </div>
+
+            <div className="flex">
+              <div className="shrink-0 w-28 h-20 bg-secondary"></div>
+              <div className="grow ml-6 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
+                  My super extra project
+                </h2>
+                <p className="text-secondary text-sm">
+                  Suspendisse congue, risus eget suscipit feugiat,
+                  lacus mauris ullamcorper purus, id semper tellus sem id nunc. Quisque molestie quam id nulla venenatis,
+                  eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
+                  lacinia libero et, semper magna.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Next.js" />
+                  <Badge label="Tailwind" />
+                  <Badge label="Sanity" />
+                  <Badge label="Monorepo" />
+                </div>
+              </div>
+            </div>
+
 
           </div>
         </Section>
