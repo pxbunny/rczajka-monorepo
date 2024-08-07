@@ -2,7 +2,7 @@ main, .nav {
   counter-reset: number;
 
   h1::before,
-  li::before {
+  li a::before {
     display: inline-block;
     width: 2em;
     content: '0' counter(number) '.';
@@ -16,12 +16,13 @@ main, .nav {
     color: rgb(var(--background));
     position: relative;
     font-size: calc(1em - 2px);
+    line-height: 1;
     top: -1px;
     left: 1px;
   }
 
   h1:nth-child(n+10)::before,
-  li:nth-child(n+10)::before {
+  li:nth-child(n+10) a::before {
     content: counter(number) '.';
   }
 }

@@ -40,7 +40,7 @@ export const Button = ({
     className,
     {'text-secondary hover:text-primary': isIconType},
     {'relative before:absolute before:transition-all': isIconType},
-    {'before:rounded-full rounded-full': isIconType},
+    {'before:rounded-full': isIconType},
     {'hover:before:bg-primary/10 hover:before:inset-[-0.35em]': isIconType}
   );
 
