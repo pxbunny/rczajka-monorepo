@@ -1,5 +1,7 @@
 # Sanity Blogging Content Studio
 
+If it's not working on Windows with Turborepo, find `await nodeMachineId.machineId()` in `node_modules` and replace it with any string.
+
 Congratulations, you have now installed the Sanity Content Studio, an open-source real-time content editing environment connected to the Sanity backend.
 
 Now you can do the following things:
