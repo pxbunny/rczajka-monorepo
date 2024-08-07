@@ -1,11 +1,11 @@
 {
-  "name": "studio",
+  "name": "rczajkame",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev-tmp": "sanity dev",
+    "devx": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
@@ -15,12 +15,10 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/icons": "^2.11.0",
-    "@sanity/ui": "^2.0.0",
-    "@sanity/vision": "^3.52.2",
+    "@sanity/vision": "^3.53.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sanity": "^3.52.2",
+    "sanity": "^3.53.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {

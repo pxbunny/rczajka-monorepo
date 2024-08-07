@@ -1,22 +1,18 @@
-import {defineConfig, isDev} from 'sanity'
-import {visionTool} from '@sanity/vision'
+import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
+import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
-import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
-
-const devOnlyPlugins = [getStartedPlugin()]
 
 export default defineConfig({
   name: 'default',
-  title: 'rczajka.me',
+  title: 'rczajkame',
 
-  projectId: '4qhxtq19',
+  projectId: 'p7wzac3o',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
+  plugins: [structureTool(), visionTool()],
 
   schema: {
     types: schemaTypes,
   },
 })
-
