@@ -44,8 +44,8 @@ export const Modal = ({ id, children, className, visible, title, hiddenElementId
             role = "dialog"
             aria-modal="true"
           >
-            <header className="flex items-center justify-between px-6 py-4">
-              <h1 className="text-lg font-bold">{title}</h1>
+            <header className="flex items-center justify-between px-6 py-5">
+              <h1 className="text-xl font-bold">{title}</h1>
               <Button
                 type="button"
                 variant="icon"
@@ -55,7 +55,7 @@ export const Modal = ({ id, children, className, visible, title, hiddenElementId
                 <IoClose />
               </Button>
             </header>
-            <div className="px-6 py-4">
+            <div className="px-6 py-5">
               {children}
             </div>
           </motion.div>

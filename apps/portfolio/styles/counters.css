@@ -9,10 +9,10 @@ main, .nav {
     counter-increment: number;
     font-weight: bold;
     text-shadow:
-      1px 1px 0 rgb(var(--color-dimmed)),
-      1px -1px 0 rgb(var(--color-dimmed)),
-      -1px 1px 0 rgb(var(--color-dimmed)),
-      -1px -1px 0 rgb(var(--color-dimmed));
+      1px 1px 0 rgb(var(--color-accent-dimmed)),
+      1px -1px 0 rgb(var(--color-accent-dimmed)),
+      -1px 1px 0 rgb(var(--color-accent-dimmed)),
+      -1px -1px 0 rgb(var(--color-accent-dimmed));
     color: rgb(var(--background));
     position: relative;
     font-size: calc(1em - 2px);

@@ -46,7 +46,7 @@ export const Home = () => (
             eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
             lacinia libero et, semper magna.
           </p>
-          <p className="text-secondary">
+          <p className="text-secondary mt-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
             Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
             Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
@@ -58,9 +58,9 @@ export const Home = () => (
         <Section name="projects" className="pt-20">
           <div className="space-y-20">
 
-            <div className="grid grid-cols-8 gap-6">
+            {/* <div className="grid grid-cols-8 gap-6">
               <div className="col-span-2">
-                <Image src="/image.jpg" className="text-primary" width={440} height={440} alt="Project" />
+                <Image src="/image.jpg" width={440} height={440} alt="Project" />
               </div>
               <div className="col-span-6 space-y-4">
                 <h2 className="font-medium leading-none text-lg">
@@ -82,27 +82,98 @@ export const Home = () => (
               </div>
             </div>
 
-            <div className="flex">
-              <div className="shrink-0 w-28 h-20 bg-secondary"></div>
-              <div className="grow ml-6 space-y-4">
+            <div className="border-r border-dimmed/60">
+              <div className="space-y-4">
                 <h2 className="font-medium leading-none text-lg">
-                  My super extra project
+                  Different project
                 </h2>
                 <p className="text-secondary text-sm">
-                  Suspendisse congue, risus eget suscipit feugiat,
-                  lacus mauris ullamcorper purus, id semper tellus sem id nunc. Quisque molestie quam id nulla venenatis,
-                  eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
-                  lacinia libero et, semper magna.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge label="Next.js" />
                   <Badge label="Tailwind" />
                   <Badge label="Sanity" />
+                  <Badge label="Next.js" />
                   <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                </div>
+              </div>
+            </div> */}
+
+            <div className="bg-[#111721] rounded-xl">
+              <div className="aspect-[12/5] rounded-t-xl overflow-hidden">
+                <Image className="" src="/image.jpg" width={1040} height={1040} alt="Project" />
+              </div>
+              <div className="px-6 py-5 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
+                  Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
+                  lacus mauris ullamcorper purus, id semper tellus sem id nunc.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
                 </div>
               </div>
             </div>
 
+
+            <div className="bg-[#111721] rounded-xl">
+              <div className="aspect-[8/3] rounded-t-xl overflow-hidden">
+                <Image className="" src="/image.jpg" width={1040} height={1040} alt="Project" />
+              </div>
+              <div className="px-6 py-5 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
+                  Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
+                  lacus mauris ullamcorper purus, id semper tellus sem id nunc.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
+                </div>
+              </div>
+            </div>
+
+
+            <div className="bg-[#111721] rounded-xl">
+              <div className="aspect-[8/3] rounded-t-xl overflow-hidden">
+                <Image className="" src="/image.jpg" width={1040} height={1040} alt="Project" />
+              </div>
+              <div className="px-6 py-5 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
+                  Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
+                  lacus mauris ullamcorper purus, id semper tellus sem id nunc.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
+                </div>
+              </div>
+            </div>
 
           </div>
         </Section>
