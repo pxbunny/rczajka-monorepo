@@ -9,6 +9,6 @@ export const Logo = ({ className }: LogoProps) => (
   <Link href="/" className={classNames('zen select-none', className)}>
     <div className="leading-none font-bold">Rafał Czajka</div>
     {/* <div className="text-[0.475em] font-medium text-[#5b5f67] mt-[-0.2em]">Software Developer</div> */}
-    <div className="text-[0.475em] font-medium text-[#5b5f67] mt-[-0.2em]">Software Developer</div>
+    <div className="text-[0.475em] font-medium text-primary/50 mt-[-0.2em]">Software Developer</div>
   </Link>
 );

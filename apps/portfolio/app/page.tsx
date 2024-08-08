@@ -1,5 +1,6 @@
 import { Badge, Button, DynamicIcon, Logo, Nav, Section } from '@ui';
 import Image from 'next/image';
+import { FiExternalLink } from 'react-icons/fi';
 import { IoSettingsSharp } from 'react-icons/io5';
 
 export const Home = () => (
@@ -21,6 +22,12 @@ export const Home = () => (
       </div>
       <div className="zen block-focus text-2xl hidden mt-6 text-secondary lg:flex items-center">
         <div className="flex space-x-6">
+          <Button type="link" variant="icon" href="https://www.github.com/dae-ne/" target="_blank">
+            <DynamicIcon set="io5" name="IoLogoGithub" />
+          </Button>
+          <Button type="link" variant="icon" href="https://www.github.com/dae-ne/" target="_blank">
+            <DynamicIcon set="io5" name="IoLogoLinkedin" />
+          </Button>
           <Button type="link" variant="icon" href="https://www.github.com/dae-ne/" target="_blank">
             <DynamicIcon set="io5" name="IoLogoGithub" />
           </Button>
@@ -56,9 +63,9 @@ export const Home = () => (
           </p>
         </Section>
         <Section name="projects" className="pt-20">
-          <div className="space-y-20">
+          <div className="space-y-10">
 
-            {/* <div className="grid grid-cols-8 gap-6">
+            <div className="grid grid-cols-8 gap-6">
               <div className="col-span-2">
                 <Image src="/image.jpg" width={440} height={440} alt="Project" />
               </div>
@@ -99,7 +106,186 @@ export const Home = () => (
                   <Badge label="Sanity" />
                 </div>
               </div>
-            </div> */}
+            </div>
+
+
+            <div className="border-l-4 border-[#0ba1e7]/15">
+              <div className="ml-6 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
+                  Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
+                  lacus mauris ullamcorper purus, id semper tellus sem id nunc.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
+                </div>
+              </div>
+            </div>
+
+            <div className="border-l-2 bg-[#111721] border-[#0ba1e7]">
+              <div className="px-6 py-4 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
+                  Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,
+                  lacus mauris ullamcorper purus, id semper tellus sem id nunc.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
+                </div>
+              </div>
+            </div>
+
+            <div className="border-l rounded-xl bg-[#111721] border-[#0ba1e7]/50">
+              <div className="px-6 py-4 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
+                </div>
+              </div>
+            </div>
+
+            <div className="border-l rounded-xl bg-[#111721] border-[#0ba1e7]/50">
+              <div className="px-6 py-4 space-y-4">
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
+                </div>
+              </div>
+            </div>
+
+            <div className="border-l rounded-xl bg-[#111721] border-[#0ba1e7]/50">
+              <div className="px-6 py-4 space-y-4">
+                <div className="flex justify-between align-middle">
+                  <p className="text-secondary/60 text-sm italic">
+                    <span>April 1, 2021</span>
+                    <span className="inline-block px-2">·</span>
+                    <span>3 min read</span>
+                  </p>
+                  <FiExternalLink className="text-xl text-secondary/50" />
+                </div>
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
+                </div>
+              </div>
+            </div>
+
+
+            <div className="border-l rounded-xl bg-[#111721] border-[#0ba1e7]/50">
+              <div className="px-6 py-4 space-y-4">
+                <div className="flex justify-between">
+                  <p className="text-secondary/60 text-sm italic">
+                    April 1, 2021
+                  </p>
+                  <p className="text-secondary/60 text-sm italic">
+                    3 min read
+                  </p>
+                </div>
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                  <Badge label="Next.js" />
+                  <Badge label="Monorepo" />
+                  <Badge label="Sanity" />
+                  <Badge label="Next.js" />
+                </div>
+              </div>
+            </div>
+
+            <div className="border-l rounded-xl bg-[#111721] border-[#0ba1e7]/50">
+              <div className="px-6 py-4 space-y-4">
+                <div className="flex justify-between">
+                  <p className="text-secondary/60 text-sm italic">
+                    April 1, 2021
+                  </p>
+                  <p className="text-secondary/60 text-sm italic">
+                    3 min read
+                  </p>
+                </div>
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge label="Tailwind" />
+                </div>
+              </div>
+            </div>
+
+
+            <div className="border-l rounded-xl bg-[#111721] border-[#0ba1e7]/50">
+              <div className="px-6 py-4 space-y-4">
+                <div className="flex justify-between">
+                  <p className="text-secondary/60 text-sm italic">
+                    April 1, 2021 · 3 min read
+                  </p>
+                  <Badge label="Tailwind" />
+                </div>
+                <h2 className="font-medium leading-none text-lg">
+                  YouTube browser extension
+                </h2>
+                <p className="text-secondary text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
+                  Etiam vestibulum lectus nec erat lobortis commodo.
+                </p>
+
+              </div>
+            </div>
 
             <div className="bg-[#111721] rounded-xl">
               <div className="aspect-[12/5] rounded-t-xl overflow-hidden">
