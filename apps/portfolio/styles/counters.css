@@ -7,7 +7,7 @@ main, .nav {
     width: 2em;
     content: '0' counter(number) '.';
     counter-increment: number;
-    font-weight: bold;
+    font-weight: semibold;
     text-shadow:
       1px 1px 0 rgb(var(--color-accent-dimmed)),
       1px -1px 0 rgb(var(--color-accent-dimmed)),

@@ -19,22 +19,22 @@
     opacity: 0.4;
   }
 
-  main section.zen[data-highlighted] {
+  /* main section.zen[data-highlighted] {
     transform: translateX(-4rem);
-  }
+  } */
 }
 
 .nav {
-  li[data-highlighted] {
+  li.zen[data-highlighted] {
     transform: scale(1.1);
   }
 
-  &:has(li:hover) li.zen:not([data-highlighted]) {
+  &:has(li.zen:hover) li.zen:not([data-highlighted]) {
     filter: blur(2px);
     opacity: 0.9;
   }
 
-  &:hover li:not(:hover) {
+  &:hover li.zen:not(:hover) {
     filter: blur(1px);
   }
 }
