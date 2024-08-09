@@ -20,7 +20,7 @@ export const Home = () => (
           ]}
           className="mt-20 hidden lg:block" />
       </div>
-      <div className="zen block-focus text-2xl mt-6 text-secondary flex items-center">
+      <div className="zen block-focus text-2xl mt-8 text-secondary flex items-center">
         <div className="flex space-x-6">
           <Button type="link" variant="icon" href="https://www.github.com/dae-ne/" target="_blank">
             <DynamicIcon set="io5" name="IoLogoGithub" />

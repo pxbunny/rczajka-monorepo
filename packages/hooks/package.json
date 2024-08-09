@@ -1,4 +1,10 @@
 {
   "name": "@me/hooks",
-  "exports": "./index.ts"
+  "exports": "./index.ts",
+  "dependencies": {
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@types/react": "^18"
+  }
 }
