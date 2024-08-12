@@ -25,9 +25,9 @@
 }
 
 .nav {
-  li.zen[data-highlighted] {
+  /* li.zen[data-highlighted] {
     transform: scale(1.1);
-  }
+  } */
 
   &:has(li.zen:hover) li.zen:not([data-highlighted]) {
     filter: blur(2px);

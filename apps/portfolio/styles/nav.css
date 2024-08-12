@@ -1,0 +1,46 @@
+.nav {
+  counter-reset: number;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    &:hover span::before {
+      width: 4em;
+    }
+
+    &::before {
+      display: inline-block;
+      width: 2.5em;
+      content: '0' counter(number);
+      counter-increment: number;
+    }
+
+    & > span {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: ' ';
+        width: 2em;
+        height: 1px;
+        margin-right: 1em;
+        border-radius: 1px;
+        background-color: currentColor;
+        transition: width var(--transition);
+      }
+    }
+  }
+
+  a:nth-child(n+10) a::before {
+    content: counter(number);
+  }
+
+  li[data-active="true"] a {
+    color: var(--color-primary);
+
+    span::before {
+      width: 6em;
+    }
+  }
+}

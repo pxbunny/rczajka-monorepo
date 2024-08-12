@@ -1,6 +1,6 @@
 'use client';
 
-import classNames from "classnames";
+import classNames from 'classnames';
 
 const HIGHLIGHTED_ATTRIBUTE = 'data-highlighted';
 const SECTION_NAME_ATTRIBUTE = 'data-section';
@@ -25,14 +25,15 @@ const handleHover = (e: React.MouseEvent<HTMLElement>) => {
 
 export const NavItem = ({ section, className, scrollToTop = false }: NavItemProps) => (
   <li
-    // className={`zen leading-relaxed uppercase hover:text-primary ${className}`}
-    className={classNames('zen leading-relaxed uppercase hover:text-primary', className)}
+    className={classNames('zen my-4 hover:text-primary', className)}
     onMouseEnter={handleHover}
     onMouseLeave={clearHighlights}
     data-section={section}
   >
     <a href={scrollToTop ? '#hello' : `#${section}`}>
-      {section}
+      <span>
+        {section}
+      </span>
     </a>
   </li>
 );

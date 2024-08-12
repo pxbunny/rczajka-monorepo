@@ -3,9 +3,10 @@ import { Inter } from 'next/font/google';
 import { Menu } from '@menu';
 
 import '@styles/globals.css';
-import '@styles/counters.css';
+// import '@styles/counters.css';
 import '@styles/menu.css';
-import '@styles/zenmode.css';
+import '@styles/nav.css';
+import '@styles/zen.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
