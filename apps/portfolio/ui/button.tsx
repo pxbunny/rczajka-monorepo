@@ -1,96 +1,82 @@
-'use client';
-
-import { MenuState, setMenuState } from '@menu';
 import classNames from 'classnames';
 import Link from 'next/link';
+import { ReactElement, ReactNode } from 'react';
+import { IconBaseProps } from 'react-icons';
 
-type DefaultButtonProps = {
-  type: 'button';
+type ButtonComponentProps = {
+  component: 'button';
   onClick?: () => void;
 };
 
-type StateButtonProps = {
-  type: 'state';
-  state: MenuState;
-}
-
-type LinkProps = {
-  type: 'link' | 'smart-link';
+type LinkComponentProps = {
+  component: 'link' | 'next-link';
   href: string;
   target?: string;
 };
 
-export type ButtonProps = (DefaultButtonProps | StateButtonProps | LinkProps) & {
-  children: React.ReactNode;
+export type ButtonProps = (ButtonComponentProps | LinkComponentProps) & {
+  children: ReactNode;
+  variant?: 'primary' | 'secondary';
+  leftIcon?: ReactElement<IconBaseProps>;
+  rightIcon?: ReactElement<IconBaseProps>;
   className?: string;
-  variant?: 'basic' | 'icon';
 };
 
 export const Button = ({
   children,
+  leftIcon,
+  rightIcon,
   className,
-  variant,
-  type,
+  component,
+  variant = 'primary',
   ...rest
 }: ButtonProps) => {
+  const classes = classNames(
+    'px-[0.8em] py-[0.4em] rounded-full',
+    { 'bg-bgSecondary border border-[#ffffff10]' : variant === 'primary' },
+    className
+  );
 
-  const isIconType = variant === 'icon';
-
-  const newClassName = classNames(
-    className,
-    {'text-secondary hover:text-primary': isIconType},
-    {'relative before:absolute before:transition-all': isIconType},
-    {'before:rounded-full': isIconType},
-    {'hover:before:bg-primary/10 hover:before:inset-[-0.35em]': isIconType}
+  const renderContent = () => (
+    <div className="flex space-x-3 items-center font-medium">
+      {leftIcon}
+      <div className="text-sm">{children}</div>
+      {rightIcon}
+    </div>
   );
 
   const button = (
     <button
-      className={newClassName}
-      onClick={(rest as DefaultButtonProps).onClick}
+      className={classes}
+      onClick={(rest as ButtonComponentProps).onClick}
     >
-      {children}
-    </button>
-  );
-
-  const stateButton = (
-    <button
-      className={newClassName}
-      onClick={() => setMenuState((rest as StateButtonProps).state)}
-    >
-      {children}
+      {renderContent()}
     </button>
   );
 
   const link = (
     <a
-      href={(rest as LinkProps).href ?? '#'}
-      target={(rest as LinkProps).target}
-      className={newClassName}
+      href={(rest as LinkComponentProps).href ?? '#'}
+      target={(rest as LinkComponentProps).target}
+      className={classes}
     >
-      {children}
+      {renderContent()}
     </a>
   );
 
-  const smartLink = (
+  const nextLink = (
     <Link
-      href={(rest as LinkProps).href ?? '#'}
-      target={(rest as LinkProps).target}
-      className={newClassName}
+      href={(rest as LinkComponentProps).href ?? '#'}
+      target={(rest as LinkComponentProps).target}
+      className={classes}
     >
-      {children}
+      {renderContent()}
     </Link>
   );
 
-  switch (type) {
-    case 'state':
-      return stateButton;
-    case 'link':
-      return link;
-    case 'smart-link':
-      return smartLink;
-    case 'button':
-    default:
-      return button;
-  }
-};
+  return ({
+    button,
+    link,
+    'next-link': nextLink
+  })[component] ?? button;
+}

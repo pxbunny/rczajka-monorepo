@@ -36,7 +36,7 @@ export const Modal = ({ id, children, className, visible, title, hiddenElementId
         >
           <motion.div
             ref={ref}
-            className="absolute bg-[#111721] min-w-96 min-h-96 rounded-xl"
+            className="absolute bg-background min-w-96 min-h-96 rounded"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
@@ -46,14 +46,14 @@ export const Modal = ({ id, children, className, visible, title, hiddenElementId
           >
             <header className="flex items-center justify-between px-6 py-5">
               <h1 className="text-xl font-bold">{title}</h1>
-              <Button
+              {/* <Button
                 type="button"
                 variant="icon"
                 className="text-2xl"
                 onClick={close}
               >
                 <IoClose />
-              </Button>
+              </Button> */}
             </header>
             <div className="px-6 py-5">
               {children}

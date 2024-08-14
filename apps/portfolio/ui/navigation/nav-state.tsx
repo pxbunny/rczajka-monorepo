@@ -15,19 +15,22 @@ export const NavState = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const visibleSection = entries
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
         .find((entry) => entry.isIntersecting)?.target;
 
       if (visibleSection) {
         setLinkStates(visibleSection.id);
       }
-    }, { threshold: 0.5 });
+    }, { rootMargin: '0% 0% -50%' });
 
     const sections = document.querySelectorAll('section[data-section]');
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
     };
   }, []);
 

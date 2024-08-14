@@ -6,12 +6,12 @@
     align-items: center;
 
     &:hover span::before {
-      width: 4em;
+      width: 6em;
     }
 
     &::before {
       display: inline-block;
-      width: 2.5em;
+      width: 2.4em;
       content: '0' counter(number);
       counter-increment: number;
     }
@@ -22,7 +22,7 @@
 
       &::before {
         content: ' ';
-        width: 2em;
+        width: 3em;
         height: 1px;
         margin-right: 1em;
         border-radius: 1px;
