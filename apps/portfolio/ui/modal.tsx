@@ -1,6 +1,6 @@
 'use client';
 
-import { useOnClickOutside, useHidden, useOnKeyDown } from '@me/hooks';
+import { useOnClickOutside, useHidden, useOnKeyDown } from '@rczajka/hooks';
 import { Button } from '@ui';
 import classNames from 'classnames';
 import { AnimatePresence, motion } from 'framer-motion';

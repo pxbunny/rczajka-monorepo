@@ -1,1 +1,1 @@
-# rczajka.me
+# rczajka

@@ -1,6 +1,6 @@
 'use client';
 
-import { useScrollbarWidth } from '@me/hooks';
+import { useScrollbarWidth } from '@rczajka/hooks';
 import { Modal } from '@ui';
 import { MenuState, observeMenuState, setMenuState } from './menu-manager';
 import { useEffect, useState } from 'react';

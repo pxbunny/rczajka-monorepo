@@ -1,10 +1,11 @@
 {
-  "name": "@me/hooks",
+  "name": "@rczajka/hooks",
+  "version": "0.1.0",
   "exports": "./index.ts",
   "dependencies": {
-    "react": "^18"
+    "react": "^19.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18"
+    "@types/react": "^19.0.8"
   }
 }
