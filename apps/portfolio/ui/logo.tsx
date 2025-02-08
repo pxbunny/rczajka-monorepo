@@ -8,8 +8,6 @@ export type LogoProps = {
 export const Logo = ({ className }: LogoProps) => (
   <Link href="/" className={classNames('zen select-none', className)}>
     <div className="leading-none font-bold text-4xl sm:text-5xl md:text-6xl">Rafał Czajka</div>
-    {/* <div className="text-[0.475em] font-medium text-[#5b5f67] mt-[-0.2em]">Software Developer</div> */}
-    {/* <div className="text-[0.5em] font-medium text-[#5b5f67] mt-[-0.2em]">Software Engineer</div> */}
     <div className="text-lg sm:text-xl md:text-2xl mt-3 font-semibold">Full-Stack Software Engineer</div>
   </Link>
 );

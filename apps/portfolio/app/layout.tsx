@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Menu } from '@menu';
 
 import '@styles/globals.css';
-import '@styles/menu.css';
 import '@styles/nav.css';
 import '@styles/zen.css';
 
@@ -19,7 +17,6 @@ export const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }
       <div id="page-content">
         {children}
       </div>
-      <Menu />
     </body>
   </html>
 );
