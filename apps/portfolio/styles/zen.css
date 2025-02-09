@@ -1,8 +1,8 @@
 .zen {
   transition:
-    filter var(--transition),
-    opacity var(--transition),
-    transform var(--transition);
+    filter var(--transition-duration),
+    opacity var(--transition-duration),
+    transform var(--transition-duration);
   will-change: filter, opacity, transform;
   /* Force GPU acceleration */
   transform: translate3d(0, 0, 0);
@@ -25,10 +25,6 @@
 }
 
 .nav {
-  /* li.zen[data-highlighted] {
-    transform: scale(1.1);
-  } */
-
   &:has(li.zen:hover) li.zen:not([data-highlighted]) {
     filter: blur(2px);
     opacity: 0.9;
@@ -45,7 +41,7 @@
   &:hover::before {
     position: absolute;
     inset: -2.5rem;
-    content: ' ';
+    content: '';
     z-index: -1;
   }
 }

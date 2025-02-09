@@ -7,12 +7,12 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      primary:     'var(--color-primary)',
-      secondary:   'var(--color-secondary)',
-      dimmed:      'var(--color-dimmed)',
-      accent:      'var(--color-accent)',
-      bgPrimary:   'var(--bg-primary)',
-      bgSecondary: 'var(--bg-secondary)',
+      'primary':     'var(--color-primary)',
+      'secondary':   'var(--color-secondary)',
+      'dimmed':      'var(--color-dimmed)',
+      'accent':      'var(--color-accent)',
+      'bgPrimary':   'var(--bg-primary)',
+      'bgSecondary': 'var(--bg-secondary)',
     },
     screens: {
       'sm':  '640px',
@@ -35,4 +35,5 @@ const config: Config = {
     }
   },
 };
+
 export default config;

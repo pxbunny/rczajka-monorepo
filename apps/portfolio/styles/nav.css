@@ -1,4 +1,6 @@
 .nav {
+  --separator-width: 4em;
+
   counter-reset: number;
 
   a {
@@ -6,7 +8,7 @@
     align-items: center;
 
     &:hover span::before {
-      width: 6em;
+      width: calc(var(--separator-width) * 2)
     }
 
     &::before {
@@ -21,13 +23,13 @@
       align-items: center;
 
       &::before {
-        content: ' ';
-        width: 3em;
+        content: '';
+        width: var(--separator-width);
         height: 1px;
         margin-right: 1em;
         border-radius: 1px;
         background-color: currentColor;
-        transition: width var(--transition);
+        transition: width var(--transition-duration);
       }
     }
   }
@@ -40,7 +42,7 @@
     color: var(--color-primary);
 
     span::before {
-      width: 6em;
+      width: calc(var(--separator-width) * 2)
     }
   }
 }

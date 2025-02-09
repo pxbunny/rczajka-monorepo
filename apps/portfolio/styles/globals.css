@@ -7,8 +7,7 @@
   --bg-primary: #0f0f0f;
   --bg-secondary: #141414;
   --border: #1a1a1a;
-  --transition: 0.25s;
-  --scrollbar-width: 0; /* value will be set by JS */
+  --transition-duration: 250ms;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,14 +22,14 @@ body {
 }
 
 a, button {
-  transition: color var(--transition);
+  transition: color var(--transition-duration);
 }
 
 #page-content::after {
   pointer-events: none;
-  content: ' ';
+  content: '';
   position: fixed;
   inset: auto 0 0;
   background: linear-gradient(transparent, var(--bg-primary));
-  height: 4rem;
+  height: 2rem;
 }
