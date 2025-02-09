@@ -46,5 +46,5 @@ export type IconSets = keyof typeof imports;
 
 export const DynamicIcon = ({ set, name, ...iconBaseProps }: IconProps) => {
   const ImportedIcon = imports[set](name);
-  return <ImportedIcon {...iconBaseProps} /> ?? false;
+  return <ImportedIcon {...iconBaseProps} />;
 };

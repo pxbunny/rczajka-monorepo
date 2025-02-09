@@ -8,40 +8,7 @@
   transform: translate3d(0, 0, 0);
 }
 
-#page-content:has(a:hover, button:hover, .block-focus:hover):not(:has(.nav:hover)) .zen:not(:hover) {
+#page-content:has(.nav a:hover) .zen:not(:hover, [data-highlighted]) {
   opacity: 0.4;
   filter: blur(4px);
-}
-
-#page-content:has(.nav li:hover) {
-  .zen:not([data-highlighted]) {
-    filter: blur(4px);
-    opacity: 0.4;
-  }
-
-  /* main section.zen[data-highlighted] {
-    transform: translateX(-4rem);
-  } */
-}
-
-.nav {
-  &:has(li.zen:hover) li.zen:not([data-highlighted]) {
-    filter: blur(2px);
-    opacity: 0.9;
-  }
-
-  &:hover li.zen:not(:hover) {
-    filter: blur(1px);
-  }
-}
-
-.block-focus {
-  position: relative;
-
-  &:hover::before {
-    position: absolute;
-    inset: -2.5rem;
-    content: '';
-    z-index: -1;
-  }
 }

@@ -7,9 +7,9 @@ export type NavProps = {
 };
 
 export const Nav = ({ items, className }: NavProps) => (
-  <nav className={`nav block-focus ${className}`}>
+  <nav className={`nav ${className}`}>
     <ul className="text-xs uppercase tracking-widest font-bold text-secondary">
-      {items.map(item => <NavItem key={item.section} {...item} />)}
+      <li>{items.map(item => <NavItem key={item.section} {...item} />)}</li>
     </ul>
     <NavState />
   </nav>

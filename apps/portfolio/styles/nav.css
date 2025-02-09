@@ -1,14 +1,11 @@
 .nav {
-  --separator-width: 4em;
+  --separator-width: 3em;
 
   counter-reset: number;
 
   a {
-    display: flex;
-    align-items: center;
-
     &:hover span::before {
-      width: calc(var(--separator-width) * 2)
+      width: calc(var(--separator-width) * 2);
     }
 
     &::before {
@@ -18,11 +15,19 @@
       counter-increment: number;
     }
 
-    & > span {
-      display: flex;
-      align-items: center;
+    &:nth-child(n+10)::before {
+      content: counter(number);
+    }
 
-      &::before {
+    &[data-active="true"] {
+      color: var(--color-primary);
+
+      span::before {
+        width: calc(var(--separator-width) * 2)
+      }
+    }
+
+    & > span::before {
         content: '';
         width: var(--separator-width);
         height: 1px;
@@ -30,19 +35,6 @@
         border-radius: 1px;
         background-color: currentColor;
         transition: width var(--transition-duration);
-      }
-    }
-  }
-
-  a:nth-child(n+10) a::before {
-    content: counter(number);
-  }
-
-  li[data-active="true"] a {
-    color: var(--color-primary);
-
-    span::before {
-      width: calc(var(--separator-width) * 2)
     }
   }
 }

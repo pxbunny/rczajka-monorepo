@@ -24,16 +24,15 @@ const handleHover = (e: React.MouseEvent<HTMLElement>) => {
 };
 
 export const NavItem = ({ section, className, scrollToTop = false }: NavItemProps) => (
-  <li
-    className={classNames('zen my-4 hover:text-primary', className)}
+  <a
+    href={scrollToTop ? '#top' : `#${section}`}
+    className={classNames('flex items-center py-3 zen hover:text-primary', className)}
     onMouseEnter={handleHover}
     onMouseLeave={clearHighlights}
     data-section={section}
   >
-    <a href={scrollToTop ? '#hello' : `#${section}`}>
-      <span>
-        {section}
-      </span>
-    </a>
-  </li>
+    <span className="flex items-center">
+      {section}
+    </span>
+  </a>
 );

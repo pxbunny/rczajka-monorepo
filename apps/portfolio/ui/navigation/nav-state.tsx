@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 
 const setLinkStates = (section: string) => {
-  const items = document.querySelectorAll('.nav li');
+  const items = document.querySelectorAll('.nav a');
 
   items.forEach((item) => {
     const sectionName = item.getAttribute('data-section');
