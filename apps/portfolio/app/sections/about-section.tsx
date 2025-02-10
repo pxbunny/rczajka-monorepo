@@ -15,7 +15,7 @@ export const AboutSection = ({ className }: AboutSectionProps) => (
       eu facilisis dui gravida. Aenean eget fermentum turpis, a laoreet sapien. Quisque vitae mi sagittis,
       lacinia libero et, semper magna.
     </p>
-    <p className="mt-6">
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec blandit mauris.
       Etiam vestibulum lectus nec erat lobortis commodo. Maecenas sit amet ultrices mauris.
       Suspendisse id ornare ligula. Suspendisse congue, risus eget suscipit feugiat,

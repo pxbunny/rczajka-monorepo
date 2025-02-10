@@ -1,14 +1,15 @@
 .zen {
   transition:
-    filter var(--transition-duration),
-    opacity var(--transition-duration),
-    transform var(--transition-duration);
+    filter var(--default-transition-duration),
+    opacity var(--default-transition-duration),
+    transform var(--default-transition-duration);
   will-change: filter, opacity, transform;
   /* Force GPU acceleration */
   transform: translate3d(0, 0, 0);
 }
 
 #page-content:has(.nav a:hover) .zen:not(:hover, [data-highlighted]) {
-  opacity: 0.4;
+  opacity: .4;
   filter: blur(4px);
+  z-index: -20;
 }

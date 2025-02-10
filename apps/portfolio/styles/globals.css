@@ -13,10 +13,8 @@
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 72rem;
   --breakpoint-2xl: 80rem;
-}
 
-:root {
-  --transition-duration: 250ms;
+  --default-transition-duration: 250ms;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,11 +28,50 @@ body {
   background-color: var(--color-background1);
 }
 
-#page-content::after {
-  pointer-events: none;
-  content: '';
+/* #page-content {
+  &::before,
+  &::after {
+    pointer-events: none;
+    content: '';
+    position: fixed;
+    height: 2rem;
+    opacity: .8;
+    z-index: 100;
+  }
+
+  &::before {
+    inset: 0 0 auto;
+    background: linear-gradient(var(--color-background1), transparent);
+  }
+
+  &::after {
+    inset: auto 0 0;
+    background: linear-gradient(transparent, var(--color-background1));
+  }
+} */
+
+#bg {
   position: fixed;
-  inset: auto 0 0;
-  background: linear-gradient(transparent, var(--color-background1));
-  height: 2rem;
+  background-image: url('../public/bg-noise.png');
+  background-repeat: repeat;
+  inset: -50%;
+  width: 200%;
+  height: 200vh;
+  opacity: .8;
+  z-index: -10;
+  animation: bg-animation var(--default-transition-duration) infinite;
+}
+
+@keyframes bg-animation {
+  0%   { transform: translate(0,0)     }
+  10%  { transform: translate(-5%,-5%) }
+  20%  { transform: translate(-10%,5%) }
+  30%  { transform: translate(5%,-10%) }
+  40%  { transform: translate(-5%,15%) }
+  50%  { transform: translate(-10%,5%) }
+  60%  { transform: translate(15%,0)   }
+  70%  { transform: translate(0,10%)   }
+  80%  { transform: translate(-15%,0)  }
+  90%  { transform: translate(10%,5%)  }
+  100% { transform: translate(5%,0)    }
 }

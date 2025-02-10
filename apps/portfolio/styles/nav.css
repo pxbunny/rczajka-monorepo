@@ -28,13 +28,13 @@
     }
 
     & > span::before {
-        content: '';
-        width: var(--separator-width);
-        height: 1px;
-        margin-right: 1em;
-        border-radius: 1px;
-        background-color: currentColor;
-        transition: width var(--transition-duration);
+      content: '';
+      width: var(--separator-width);
+      height: 1px;
+      margin-right: 1em;
+      border-radius: 1px;
+      background-color: currentColor;
+      transition: width var(--default-transition-duration);
     }
   }
 }

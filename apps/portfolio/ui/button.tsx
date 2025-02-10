@@ -32,7 +32,7 @@ export const Button = ({
   ...rest
 }: ButtonProps) => {
   const classes = classNames(
-    'px-[0.8em] py-[0.4em] rounded-full',
+    'px-[.8em] py-[.4em] rounded-full',
     { 'bg-background2 border border-white/10' : variant === 'primary' },
     className
   );
