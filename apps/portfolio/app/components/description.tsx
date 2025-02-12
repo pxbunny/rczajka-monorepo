@@ -5,8 +5,16 @@ export type DescriptionProps = {
   className?: string;
 };
 
-const HighlightedText = ({ children }: { children: React.ReactNode }) => (
-  <span className="text-primary">{ children }</span>
+type TextBlockProps = {
+  highlight?: boolean;
+  noWrap?: boolean;
+  children?: React.ReactNode;
+};
+
+const TextBlock = ({ children, highlight = false, noWrap = false }: TextBlockProps) => (
+  <span className={classNames({ 'text-primary': highlight }, { 'whitespace-nowrap': noWrap })}>
+    { children }
+  </span>
 );
 
 const InlineIcon = (props: Omit<IconProps, 'className'>) => (
@@ -16,11 +24,11 @@ const InlineIcon = (props: Omit<IconProps, 'className'>) => (
 export const Description = ({ className }: DescriptionProps) => (
   <div className={classNames('zen text-secondary text-sm leading-loose space-y-2', className)}>
     <p>
-      I'm a <HighlightedText>Software Developer</HighlightedText> based in <HighlightedText><InlineIcon set="io5" name="IoLocationSharp" />Poland</HighlightedText>.
+      I'm a <TextBlock highlight>Software Developer</TextBlock> based in <TextBlock highlight noWrap><InlineIcon set="io5" name="IoLocationSharp" />Poland</TextBlock>.
       I enjoy solving complex problems and creating intuitive digital experiences.
     </p>
     <p>
-      <q className="italic">Inspired by the past, acting in the present to shape the future</q> <span className="whitespace-nowrap">(Me, 2025).</span>
+      <q className="italic">Inspired by the past, acting in the present to shape the future</q> <TextBlock noWrap>(Me, 2025).</TextBlock>
     </p>
   </div>
 );

@@ -3,11 +3,11 @@ import { AboutSection, BlogSection, ContactSection, ProjectsSection } from '@app
 import { Nav } from '@ui';
 
 const Home = () => (
-  <div id="top" className="max-w-screen-2xl mx-auto px-5 sm:px-12 md:px-20 lg:flex lg:gap-8">
+  <div id="top" className="max-w-screen-xl mx-auto px-5 sm:px-12 lg:flex lg:gap-8">
     <header className="lg:sticky lg:w-1/2 top-0 lg:min-h-screen pt-12 sm:pt-16 md:pt-20 lg:py-24 self-start flex flex-col justify-between items-start z-10">
-      <div className="flex flex-col items-start space-y-8">
+      <div className="flex flex-col items-start space-y-8 w-full">
         <Title />
-        <Description className="md:pr-20" />
+        <Description className="sm:pr-20" />
         <Nav
           className="lg:block hidden"
           items={[

@@ -9,7 +9,7 @@ import { Logo } from './components';
 
 export default defineConfig({
   name: 'default',
-  title: 'CMS - Rafał Czajka',
+  title: 'Rafał Czajka',
 
   projectId: process.env.SANITY_STUDIO_PROJECT_ID!,
   dataset: process.env.SANITY_STUDIO_DATASET!,

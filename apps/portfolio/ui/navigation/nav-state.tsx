@@ -20,7 +20,7 @@ export const NavState = () => {
       if (visibleSection) {
         setLinkStates(visibleSection.id);
       }
-    }, { rootMargin: '-30% 0% -50%' });
+    }, { rootMargin: '-50% 0%' });
 
     const sections = document.querySelectorAll('section[data-section]');
     sections.forEach((section) => {
@@ -34,5 +34,5 @@ export const NavState = () => {
     };
   }, []);
 
-  return null;
+  return false;
 };

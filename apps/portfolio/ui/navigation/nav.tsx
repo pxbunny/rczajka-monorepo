@@ -1,4 +1,5 @@
-import { NavItem, NavItemProps } from '@ui';
+import { NavEvents } from './nav-events';
+import { NavItem, NavItemProps } from './nav-item';
 import { NavState } from './nav-state';
 
 export type NavProps = {
@@ -9,8 +10,9 @@ export type NavProps = {
 export const Nav = ({ items, className }: NavProps) => (
   <nav className={`nav ${className}`}>
     <ul className="text-xs uppercase tracking-widest font-bold text-secondary">
-      <li>{items.map(item => <NavItem key={item.section} {...item} />)}</li>
+      {items.map(item => <li key={item.section}><NavItem {...item} /></li>)}
     </ul>
     <NavState />
+    <NavEvents />
   </nav>
 );

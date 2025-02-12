@@ -8,12 +8,6 @@
   --color-background1: #0f0f0f;
   --color-background2: #1c1c1e;
 
-  --breakpoint-sm: 40rem;
-  --breakpoint-md: 48rem;
-  --breakpoint-lg: 64rem;
-  --breakpoint-xl: 72rem;
-  --breakpoint-2xl: 80rem;
-
   --default-transition-duration: 250ms;
 }
 
@@ -27,28 +21,6 @@ body {
   color: var(--color-primary);
   background-color: var(--color-background1);
 }
-
-/* #page-content {
-  &::before,
-  &::after {
-    pointer-events: none;
-    content: '';
-    position: fixed;
-    height: 2rem;
-    opacity: .8;
-    z-index: 100;
-  }
-
-  &::before {
-    inset: 0 0 auto;
-    background: linear-gradient(var(--color-background1), transparent);
-  }
-
-  &::after {
-    inset: auto 0 0;
-    background: linear-gradient(transparent, var(--color-background1));
-  }
-} */
 
 #bg {
   position: fixed;
