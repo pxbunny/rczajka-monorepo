@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity';
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'portfolio',
@@ -6,15 +6,18 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'name',
+      title: 'Name',
       type: 'string',
-      readOnly: true,
-      initialValue: 'Rafał Czajka',
     }),
     defineField({
-      name: 'summary',
-      title: 'Summary',
+      name: 'job_position',
+      title: 'Job Position',
+      type: 'string',
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
       type: 'text',
     }),
   ]

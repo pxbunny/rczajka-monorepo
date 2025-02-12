@@ -4,31 +4,15 @@ import author from './documents/author';
 import portforlio from './documents/portfolio';
 import blockContent from './types/blockContent';
 
-export const types = [
-  post,
+const documents = [
   author,
   category,
   portforlio,
-  blockContent
+  post,
 ];
 
-// export const includedDocuments = [
-//   post,
-//   author,
-//   category
-// ];
-
-// export const excludedDocuments = [
-//   portforlio,
-//   blockContent
-// ];
-
-// export const types = [
-//   blockContent
-// ];
-
-// export const schemaTypes = [
-//   ...includedDocuments,
-//   ...excludedDocuments,
-//   ...types
-// ];
+export const types = [
+  ...documents,
+  // types
+  blockContent,
+];

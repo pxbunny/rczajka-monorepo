@@ -1,16 +1,44 @@
 import { defineConfig } from 'sanity';
+import { presentationTool } from 'sanity/presentation'
 import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
+
 import { types } from './schemas';
-import { structure } from './deskStructure';
+import { singletonActions, singletonTypes, structure } from './deskStructure';
+import { Logo } from './components';
 
 export default defineConfig({
   name: 'default',
-  title: 'www.rczajka.me',
+  title: 'CMS - Rafał Czajka',
 
-  projectId: 'p7wzac3o',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID!,
+  dataset: process.env.SANITY_STUDIO_DATASET!,
 
-  plugins: [structureTool({ structure }), visionTool()],
-  schema: { types },
-})
+  icon: Logo,
+  tasks: { enabled: false },
+  scheduledPublishing: { enabled: false },
+
+  plugins: [
+    structureTool({ structure }),
+    visionTool(),
+    // presentationTool({
+    //   previewUrl: {
+    //     origin: 'http://localhost:3000/'
+    //   },
+    // }),
+  ],
+
+  schema: {
+    types,
+    templates: (templates) =>
+      templates.filter(({ schemaType }) => !singletonTypes.has(schemaType)),
+  },
+
+  document: {
+    comments: { enabled: false },
+    actions: (input, context) =>
+      singletonTypes.has(context.schemaType)
+        ? input.filter(({ action }) => action && singletonActions.has(action))
+        : input,
+  },
+});
