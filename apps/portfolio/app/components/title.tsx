@@ -6,8 +6,8 @@ export type TitleProps = {
 };
 
 export const Title = ({ className }: TitleProps) => (
-  <Link href="/" className={classNames('zen select-none', className)}>
-    <div className="leading-none font-bold text-4xl sm:text-5xl md:text-6xl">Rafał Czajka</div>
-    <div className="text-lg sm:text-xl md:text-2xl mt-3 font-semibold">Full-Stack Software Engineer</div>
+  <Link href="/" className={classNames('zen', className)}>
+    <div className="leading-none font-bold text-[2.5rem] sm:text-5xl md:text-6xl">Rafał Czajka</div>
+    <div className="text-lg sm:text-xl md:text-2xl mt-1 font-semibold">Full-Stack Software Developer</div>
   </Link>
 );

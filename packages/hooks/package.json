@@ -1,6 +1,5 @@
 {
   "name": "@rczajka/hooks",
-  "version": "0.1.0",
   "exports": "./index.ts",
   "dependencies": {
     "react": "^19.0.0"

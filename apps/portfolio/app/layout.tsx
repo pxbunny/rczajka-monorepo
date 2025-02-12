@@ -13,9 +13,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => (
   <html lang="en" className="scroll-smooth">
     <body className={inter.className}>
       <div id="bg"></div>
-      <div id="page-content">
-        {children}
-      </div>
+      <div id="page-content">{children}</div>
     </body>
   </html>
 );
