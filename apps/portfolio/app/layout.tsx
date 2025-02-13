@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import '@styles/styles.css';
+import { SkipToContent } from '@ui';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,7 +14,10 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => (
   <html lang="en" className="scroll-smooth">
     <body className={inter.className}>
       <div id="bg"></div>
-      <div id="page-content">{children}</div>
+      <div id="page-content">
+        <SkipToContent />
+        {children}
+      </div>
     </body>
   </html>
 );
