@@ -21,11 +21,11 @@ export default defineConfig({
   plugins: [
     structureTool({ structure }),
     visionTool(),
-    // presentationTool({
-    //   previewUrl: {
-    //     origin: 'http://localhost:3000/'
-    //   },
-    // }),
+    presentationTool({
+      previewUrl: {
+        origin: 'http://localhost:3000/'
+      },
+    }),
   ],
 
   schema: {

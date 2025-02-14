@@ -5,6 +5,10 @@ const singletons = [
     type: 'portfolio',
     title: 'Portfolio',
   },
+  {
+    type: 'blog',
+    title: 'Blog',
+  }
 ];
 
 export const singletonActions = new Set(['publish', 'discardChanges', 'restore']);
