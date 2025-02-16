@@ -29,7 +29,7 @@ body {
   inset: -50%;
   width: 200%;
   height: 200vh;
-  opacity: .8;
+  opacity: .7;
   z-index: -10;
   animation: bg-animation var(--default-transition-duration) infinite;
 }
