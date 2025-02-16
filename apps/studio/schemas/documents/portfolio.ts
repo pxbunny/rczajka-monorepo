@@ -1,8 +1,13 @@
+import { ImProfile } from 'react-icons/im';
 import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const portfolioSingletonData = {
   name: 'portfolio',
   title: 'Portfolio',
+  icon: ImProfile,
+};
+
+export default defineType({
   type: 'document',
   fields: [
     defineField({
@@ -20,5 +25,6 @@ export default defineType({
       title: 'Description',
       type: 'text',
     }),
-  ]
+  ],
+  ...portfolioSingletonData,
 });

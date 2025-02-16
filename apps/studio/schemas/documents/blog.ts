@@ -1,8 +1,13 @@
+import { ImBlog } from 'react-icons/im';
 import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const blogSingletonData = {
   name: 'blog',
   title: 'Blog',
+  icon: ImBlog,
+};
+
+export default defineType({
   type: 'document',
   fields: [
     defineField({
@@ -15,5 +20,6 @@ export default defineType({
       title: 'Description',
       type: 'text',
     }),
-  ]
+  ],
+  ...blogSingletonData,
 });

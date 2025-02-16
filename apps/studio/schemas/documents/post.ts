@@ -1,9 +1,11 @@
-import { defineField, defineType } from 'sanity'
+import { MdEditDocument } from 'react-icons/md';
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
+  icon: MdEditDocument,
   fields: [
     defineField({
       name: 'title',

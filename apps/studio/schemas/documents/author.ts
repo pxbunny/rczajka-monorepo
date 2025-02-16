@@ -1,9 +1,11 @@
-import { defineField, defineType } from 'sanity'
+import { ImUser } from 'react-icons/im';
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'author',
   title: 'Author',
   type: 'document',
+  icon: ImUser,
   fields: [
     defineField({
       name: 'name',

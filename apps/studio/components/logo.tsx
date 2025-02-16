@@ -1,3 +1,4 @@
-import { SiSanity } from "react-icons/si";
+import { IoBriefcaseOutline } from 'react-icons/io5';
 
-export const Logo = SiSanity;
+
+export const Logo = IoBriefcaseOutline;

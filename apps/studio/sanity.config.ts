@@ -3,8 +3,8 @@ import { presentationTool } from 'sanity/presentation'
 import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
 
-import { types } from './schemas';
-import { singletonActions, singletonTypes, structure } from './deskStructure';
+import { singletonActions, singletonTypes, types } from './schemas';
+import { structure } from './deskStructure';
 import { Logo } from './components';
 
 export default defineConfig({

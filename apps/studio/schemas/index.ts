@@ -5,6 +5,8 @@ import author from './documents/author';
 import portforlio from './documents/portfolio';
 import blockContent from './types/blockContent';
 
+export * from './singletons';
+
 const documents = [
   author,
   blog,
