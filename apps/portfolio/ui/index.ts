@@ -1,4 +1,5 @@
 export * from './button';
+export * from './card';
 export * from './dynamic-icon';
 export * from './navigation';
 export * from './section';

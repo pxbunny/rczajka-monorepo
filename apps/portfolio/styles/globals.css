@@ -5,8 +5,8 @@
   --color-white: #ffffff;
   --color-primary: #f5f5f5;
   --color-secondary: #94949e;
-  --color-background1: #0f0f0f;
-  --color-background2: #1c1c1e;
+  --color-bgprimary: #0f0f0f;
+  --color-bgsecondary: #1c1c1e;
 
   --default-transition-duration: 250ms;
 }
@@ -19,7 +19,7 @@
 
 body {
   color: var(--color-primary);
-  background-color: var(--color-background1);
+  background-color: var(--color-bgprimary);
 }
 
 #bg {
