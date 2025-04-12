@@ -131,7 +131,7 @@ body {
   color: #FF0077;
 }
 
-.social {
+.socials {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,13 +139,13 @@ body {
   gap: 4rem;
 }
 
-.social__link,
-.social__link:visited {
+.socials__link,
+.socials__link:visited {
   color: #FFFFFF;
 }
 
-.social__link:hover,
-.social__link:focus {
+.socials__link:hover,
+.socials__link:focus {
   color: #cc005f;
 }
 
@@ -199,7 +199,7 @@ body {
   padding: 0;
 }
 
-.intro__social {
+.intro__socials {
   position: absolute;
   width: 100%;
   bottom: 4rem;
