@@ -1,7 +1,8 @@
+import path from 'path';
+
 import connectLiveReload from 'connect-livereload';
 import { createServer } from 'livereload';
 import express from 'express';
-import path from 'path';
 
 const PORT = 3001;
 const __dirname = path.resolve();
@@ -16,7 +17,6 @@ liveReloadServer.server.once('connection', () => {
 const app = express();
 
 app.use(connectLiveReload());
-
 app.use(express.static(__dirname + '/website'));
 
 app.get('/', (_, res) => {
