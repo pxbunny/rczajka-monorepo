@@ -1,14 +1,15 @@
 import connectLiveReload from 'connect-livereload';
-import express from 'express';
 import { createServer } from 'livereload';
+import express from 'express';
 import path from 'path';
 
 const PORT = 3001;
 const __dirname = path.resolve();
 
-createServer().server.once('connection', server => {
+const liveReloadServer = createServer();
+liveReloadServer.server.once('connection', () => {
   setTimeout(() => {
-    server.refresh('/');
+    liveReloadServer.refresh('/');
   }, 100);
 });
 

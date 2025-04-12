@@ -2,7 +2,7 @@
   "name": "portfolio.v0",
   "type": "module",
   "scripts": {
-    "dev": "nodemon ./index.js -e html,css,js -q"
+    "dev": "nodemon ./index.js -w ./website -e html,css,js -q"
   },
   "dependencies": {
     "connect-livereload": "^0.6.1",
