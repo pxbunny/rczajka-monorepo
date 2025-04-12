@@ -5,7 +5,6 @@
 }
 
 html {
-	font-size: 100%
 	box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -18,55 +17,51 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  /* font-optical-sizing: auto;
+  font-size: 100%;
   font-weight: 400;
-  font-style: normal; */
+  font-style: normal;
+  font-optical-sizing: auto;
   margin: 0;
   padding: 0;
 }
 
-.preloader {
-	position: fixed;
+.loader {
+	position: absolute;
   inset: 0;
 	background: var(--background-color);
   z-index: 800;
 	height: 100vh;
 	width: 100%;
+  transition: opacity 500ms ease-in-out;
 }
 
-.preloader__loader {
-	position: absolute;
+.loader--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader:before {
+  --total-size: 4rem;
+  --border-width: 0.5rem;
+  --inner-size: calc(var(--total-size) - var(--border-width));
+  --position-offset: calc(var(--total-size) / 2 - var(--total-size));
+  --loader-circle-bg: rgba(255, 255, 255, 0.1);
+  --animation-duration: 500ms;
+
+  content: '';
+  position: absolute;
+  display: block;
 	left: 50%;
 	top: 50%;
-	width: 60px;
-	height: 60px;
-	margin: -30px 0 0 -30px;
-	padding: 0;
-}
-
-.preloader__loader:before {
-	content: '';
-	border-top: 11px solid rgba(255, 255, 255, 0.1);
-	border-right: 11px solid rgba(255, 255, 255, 0.1);
-	border-bottom: 11px solid rgba(255, 255, 255, 0.1);
-	border-left: 11px solid #FF0077;
-	-webkit-animation: load 1s infinite linear;
-	animation: load 1s infinite linear;
-	display: block;
+  width: var(--inner-size);
+	height: var(--inner-size);
+  margin: var(--position-offset) 0 0 var(--position-offset);
 	border-radius: 50%;
-	width: 6rem;
-	height: 6rem;
-}
-
-@-webkit-keyframes load {
-	0% {
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-	100% {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
+	border-top: var(--border-width) solid var(--loader-circle-bg);
+	border-right: var(--border-width) solid var(--loader-circle-bg);
+	border-bottom: var(--border-width) solid var(--loader-circle-bg);
+	border-left: var(--border-width) solid #FF0077;
+	animation: load var(--animation-duration) infinite linear;
 }
 
 @keyframes load {
