@@ -29,9 +29,11 @@ function setCarousel(technologies) {
   const template = document.querySelector('#carousel-item-template');
   const fragment = document.createDocumentFragment();
 
-  technologies.forEach(({ icon }) => {
+  technologies.forEach(({ name, src }) => {
     const clone = template.content.cloneNode(true);
-    clone.querySelector('i').setAttribute('class', icon);
+    const img = clone.querySelector('img');
+    img.setAttribute('src', src);
+    img.setAttribute('alt', name);
     fragment.appendChild(clone);
   });
 

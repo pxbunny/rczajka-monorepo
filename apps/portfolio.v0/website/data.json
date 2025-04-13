@@ -13,41 +13,44 @@
   ],
   "technologies": [
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": ".NET Core",
+      "src": "assets/logos/dotnet.svg"
     },
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": "React.js",
+      "src": "assets/logos/react.svg"
     },
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": "Node.js",
+      "src": "assets/logos/node.svg"
     },
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": "Python",
+      "src": "assets/logos/python.svg"
     },
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": "C++",
+      "src": "assets/logos/cpp.svg"
     },
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": "JavaScript",
+      "src": "assets/logos/javascript.svg"
     },
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": "Azure",
+      "src": "assets/logos/azure.svg"
     },
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": "GitHub",
+      "src": "assets/logos/github.svg"
     },
     {
-      "name": "React",
-      "icon": "fa-brands fa-react"
+      "name": "Azure DevOps",
+      "src": "assets/logos/azure-devops.svg"
+    },
+    {
+      "name": "TypeScript",
+      "src": "assets/logos/typescript.svg"
     }
-
   ]
 }
