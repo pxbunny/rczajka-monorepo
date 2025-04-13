@@ -1,13 +1,9 @@
 {
   "name": "portfolio.v0",
-  "type": "module",
   "scripts": {
-    "dev": "nodemon ./index.js -w ./website -e html,css,js -q"
+    "dev": "vite ./website"
   },
   "dependencies": {
-    "connect-livereload": "^0.6.1",
-    "express": "^5.1.0",
-    "livereload": "^0.9.3",
-    "nodemon": "^3.1.9"
+    "vite": "^6.2.6"
   }
 }

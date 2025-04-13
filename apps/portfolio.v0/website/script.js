@@ -22,7 +22,7 @@ function handleLoader() {
 }
 
 function setSocialLinks(socials) {
-  const template = document.querySelector('#socials-template');
+  const template = document.querySelector('#social-list-item-template');
   const fragment = document.createDocumentFragment();
 
   socials.forEach(({ url, icon }) => {
