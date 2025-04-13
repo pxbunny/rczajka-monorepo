@@ -1,0 +1,18 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  gap: 4rem;
+
+  &__link,
+  &__link:visited {
+    color: var(--color-primary-dark-bg);
+    transition: color var(--transition-duration) ease-in-out;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--color-accent);
+  }
+}

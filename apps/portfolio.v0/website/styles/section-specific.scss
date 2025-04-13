@@ -1,0 +1,58 @@
+#hero {
+  background: var(--bg-dark) var(--hero-image) no-repeat center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.hero {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+    z-index: 100;
+  }
+
+  &__name {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+
+  &__title {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    margin-top: .8rem;
+  }
+
+  &__button {
+    opacity: .8;
+    margin-top: 3rem;
+    transition: all var(--transition-duration) ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__socials {
+    position: absolute;
+    width: 100%;
+    bottom: 4rem;
+  }
+}
+
+#skills {
+  background: var(--bg-dark) var(--bg-image) no-repeat center;
+  background-size: cover;
+}
+
+#footer {
+  padding: 0 0 4rem;
+}
