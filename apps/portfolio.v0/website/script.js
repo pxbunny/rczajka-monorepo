@@ -3,12 +3,12 @@ const data = {
     {
       name: 'GitHub',
       url: 'https://github.com/dae-ne',
-      icon: 'fa-github'
+      icon: 'fa-brands fa-github'
     },
     {
       name: 'Linkedin',
       url: 'https://github.com/dae-ne',
-      icon: 'fa-linkedin'
+      icon: 'fa-brands fa-linkedin'
     }
   ]
 };
@@ -25,10 +25,10 @@ function setSocialLinks(socials) {
   const template = document.querySelector('#socials-template');
   const fragment = document.createDocumentFragment();
 
-  socials.forEach(({ name, url, icon }) => {
+  socials.forEach(({ url, icon }) => {
     const clone = template.content.cloneNode(true);
     clone.querySelector('.socials__link').setAttribute('href', url);
-    clone.querySelector('.fa').setAttribute('class', `fa ${icon}`);
+    clone.querySelector('i').setAttribute('class', icon);
     fragment.appendChild(clone);
   });
 

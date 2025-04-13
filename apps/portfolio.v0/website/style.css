@@ -169,7 +169,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   width: 100%;
   padding: 10rem 0;
 }
@@ -280,7 +280,7 @@ body {
 }
 
 .hero__button {
-  opacity: .6;
+  opacity: .8;
   margin-top: 3rem;
   transition: all var(--transition-duration) ease-in-out;
 }
@@ -296,7 +296,7 @@ body {
 }
 
 #services {
-  background: var(--bg-primary) var(--bg-image) no-repeat center;
+  background: var(--bg-dark) var(--bg-image) no-repeat center;
   background-size: cover;
 }
 
