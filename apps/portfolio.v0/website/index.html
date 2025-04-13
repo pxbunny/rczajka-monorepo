@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script src="script.js" type="module" defer></script>
 </head>
 <body>
   <div class="loader"></div>
@@ -84,11 +84,11 @@
       </div>
     </section>
 
-    <section id="services" class="section section--dark">
+    <section id="skills" class="section section--dark">
       <div class="section__overlay"></div>
       <div class="section__intro">
         <p class="section__subtitle">Skills</p>
-        <h2 class="section__title">What I do.</h2>
+        <h2 class="section__title">What I do?</h2>
         <p class="section__text">
           Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
           nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
@@ -136,8 +136,11 @@
       </div>
     </section>
 
-    <section id="technologies" class="section">
-    </section>
+    <div class="carousel">
+      <div class="carousel__inner">
+        <!-- placeholder for icons -->
+      </div>
+    </div>
 
     <section id="contact" class="section section--dark">
       <div class="section__intro">
@@ -160,8 +163,14 @@
     </ul>
   </footer>
 
+  <!-- templates -->
+
   <template id="social-list-item-template">
     <li><a href="#" class="socials__link"><i></i></a></li>
+  </template>
+
+  <template id="carousel-item-template">
+    <div class="carousel__item"><i></i></div>
   </template>
 </body>
 </html>

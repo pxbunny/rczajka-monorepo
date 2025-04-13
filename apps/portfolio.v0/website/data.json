@@ -1,0 +1,53 @@
+{
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/dae-ne",
+      "icon": "fa-brands fa-github"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://github.com/dae-ne",
+      "icon": "fa-brands fa-linkedin"
+    }
+  ],
+  "technologies": [
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    }
+
+  ]
+}

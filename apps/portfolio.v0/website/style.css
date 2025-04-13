@@ -66,7 +66,7 @@ p {
   pointer-events: none;
 }
 
-.loader:before {
+.loader::before {
   --total-size: 4rem;
   --border-width: .5rem;
   --inner-size: calc(var(--total-size) - var(--border-width));
@@ -245,6 +245,36 @@ p {
   color: var(--color-secondary-dark-bg);
 }
 
+.carousel {
+  display: flex;
+  background: var(--color-accent);
+  color: var(--color-primary-dark-bg);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+.carousel__inner {
+  width: fit-content;
+  white-space: nowrap;
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+.carousel__item {
+  display: inline-block;
+  font-size: 5rem;
+  margin-right: 5rem;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 #hero {
   background: var(--bg-dark) var(--hero-image) no-repeat center bottom;
   background-size: cover;
@@ -293,7 +323,7 @@ p {
   bottom: 4rem;
 }
 
-#services {
+#skills {
   background: var(--bg-dark) var(--bg-image) no-repeat center;
   background-size: cover;
 }
