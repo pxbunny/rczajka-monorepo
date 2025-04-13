@@ -16,14 +16,14 @@
     background: var(--bg-dark);
     color: var(--color-primary-dark-bg);
 
-    &:hover,
-    &:focus {
-      background: var(--color-accent);
-    }
-
     &.button--inverted {
       background: var(--bg-primary);
       color: var(--color-primary);
+    }
+
+    &:hover,
+    &:focus {
+      background: var(--color-accent);
     }
   }
 
@@ -32,15 +32,15 @@
     color: var(--color-primary);
     box-shadow: inset 0 0 0 1px var(--color-primary);
 
+    &.button--inverted {
+      color: var(--color-primary-dark-bg);
+      box-shadow: inset 0 0 0 1px var(--color-primary-dark-bg);
+    }
+
     &:hover,
     &:focus {
       box-shadow: inset 0 0 0 1px var(--color-accent);
       color: var(--color-accent);
-    }
-
-    &.button--inverted {
-      color: var(--color-primary-dark-bg);
-      box-shadow: inset 0 0 0 1px var(--color-primary-dark-bg);
     }
   }
 }

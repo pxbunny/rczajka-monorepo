@@ -49,6 +49,18 @@ function setCarousel(technologies) {
   }
 }
 
-setSocialLinks(data.socials);
-setCarousel(data.technologies);
-handleLoader();
+function handleScrollButton() {
+  window.addEventListener('scroll', () => {
+    const button = document.querySelector('.scroll-to-top');
+    window.scrollY > window.innerHeight / 2
+      ? button.classList.add('scroll-to-top--visible')
+      : button.classList.remove('scroll-to-top--visible');
+  });
+}
+
+(function init() {
+  setSocialLinks(data.socials);
+  setCarousel(data.technologies);
+  handleScrollButton();
+  handleLoader();
+})();
