@@ -1,9 +1,13 @@
 {
   "name": "portfolio.v0",
   "scripts": {
-    "dev": "vite ./website"
+    "dev": "vite ./website",
+    "lint": "eslint"
   },
   "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0",
     "sass": "^1.86.3",
     "vite": "^6.2.6"
   }

@@ -17,6 +17,10 @@
       "src": "assets/logos/dotnet.svg"
     },
     {
+      "name": "ASP.NET",
+      "src": "assets/logos/aspnet.svg"
+    },
+    {
       "name": "Azure",
       "src": "assets/logos/azure.svg"
     },
