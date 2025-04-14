@@ -6,3 +6,9 @@ indent_style = space
 indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[*.{js,ty}]
+quote_type = single
+
+[apps/portfolio.v0/**.js]
+indent_size = 4
