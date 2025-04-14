@@ -13,64 +13,72 @@
   ],
   "technologies": [
     {
-      "name": "Figma",
-      "src": "assets/logos/figma.svg"
-    },
-    {
       "name": ".NET",
       "src": "assets/logos/dotnet.svg"
-    },
-    {
-      "name": "React.js",
-      "src": "assets/logos/react.svg"
-    },
-    {
-      "name": "Node.js",
-      "src": "assets/logos/node.svg"
-    },
-    {
-      "name": "GitHub",
-      "src": "assets/logos/github.svg"
-    },
-    {
-      "name": "Python",
-      "src": "assets/logos/python.svg"
-    },
-    {
-      "name": "TypeScript",
-      "src": "assets/logos/typescript.svg"
-    },
-    {
-      "name": "Svelte",
-      "src": "assets/logos/svelte.svg"
-    },
-    {
-      "name": "C++",
-      "src": "assets/logos/cpp.svg"
     },
     {
       "name": "Azure",
       "src": "assets/logos/azure.svg"
     },
     {
-      "name": "JavaScript",
-      "src": "assets/logos/javascript.svg"
-    },
-    {
       "name": "Azure DevOps",
       "src": "assets/logos/azure-devops.svg"
-    },
-    {
-      "name": "Next.js",
-      "src": "assets/logos/next.svg"
     },
     {
       "name": "Azure Functions",
       "src": "assets/logos/azure-functions.svg"
     },
     {
+      "name": "C#",
+      "src": "assets/logos/csharp.svg"
+    },
+    {
+      "name": "C++",
+      "src": "assets/logos/cpp.svg"
+    },
+    {
+      "name": "Figma",
+      "src": "assets/logos/figma.svg"
+    },
+    {
+      "name": "GitHub",
+      "src": "assets/logos/github.svg"
+    },
+    {
+      "name": "Go",
+      "src": "assets/logos/go.svg"
+    },
+    {
+      "name": "JavaScript",
+      "src": "assets/logos/javascript.svg"
+    },
+    {
+      "name": "Next.js",
+      "src": "assets/logos/next.svg"
+    },
+    {
+      "name": "Node.js",
+      "src": "assets/logos/node.svg"
+    },
+    {
       "name": "PostgreSQL",
       "src": "assets/logos/postgres.svg"
+    },
+    {
+      "name": "Python",
+      "src": "assets/logos/python.svg"
+    },
+    {
+      "name": "React.js",
+      "src": "assets/logos/react.svg"
+    },
+    {
+      "name": "Svelte",
+      "src": "assets/logos/svelte.svg"
+    },
+    {
+      "name": "TypeScript",
+      "src": "assets/logos/typescript.svg"
     }
   ]
 }

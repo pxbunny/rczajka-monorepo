@@ -48,7 +48,7 @@
 
   &__intro,
   &__row {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -56,6 +56,10 @@
 
   &__intro {
     max-width: 700px;
+  }
+
+  &__row--gap {
+    margin-top: 2rem;
   }
 
   &__subtitle {

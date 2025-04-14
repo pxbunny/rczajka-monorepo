@@ -15,7 +15,7 @@
     <section id="hero" class="section section--dark">
       <div class="section__overlay"></div>
       <div class="hero__content">
-        <p class="section__subtitle">Hello</p>
+        <p class="hero__subtitle section__subtitle">Hello</p>
         <h1 class="hero__name">I'm Rafał Czajka</h1>
         <p class="hero__title">Full-Stack Software Developer</p>
         <a class="button button--secondary button--inverted hero__button" href="#about">
@@ -86,18 +86,11 @@
 
     <section id="section" class="section section--secondary">
       <div class="section__intro">
-        <p class="section__subtitle">Section</p>
-        <h2 class="section__title">About everything and nothing.</h2>
+        <h2 class="section__title">Skip this section.</h2>
         <p class="section__text">
-          Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
-          nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+          A white background on the section right before the dark one creates too much contrast
+          and doesn't look right, so here's a grey one. Let's just pretend it doesn't exist.
         </p>
-      </div>
-      <div class="section__row">
-        <button class="button button--primary" disabled>
-          Go To Blog
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </button>
       </div>
     </section>
 
@@ -111,45 +104,39 @@
           nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
         </p>
       </div>
-      <!-- <div class="row services-content">
-        <div id="owl-slider" class="owl-carousel services-list">
-        <div class="service">
-          <span class="icon"><i class="icon-earth"></i></span>
-          <div class="service-content">
-            <h3>Webdesign</h3>
-            <p class="desc">
+      <div class="section__row section__row--gap">
+        <ul class="cards-container">
+          <li class="card">
+            <p class="card__icon"><i class="fa-solid fa-code"></i></p>
+            <h3 class="card__title">Web Development</h3>
+            <p class="card__description">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
               doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
               veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
               voluptatem quia voluptas sit aspernatur aut odit aut fugit.
             </p>
-          </div>
-        </div>
-        <div class="service">
-          <span class="icon"><i class="icon-window"></i></span>
-          <div class="service-content">
-            <h3>Web Development</h3>
-            <p class="desc">
+          </li>
+          <li class="card">
+            <p class="card__icon"><i class="fa-solid fa-cloud"></i></p>
+            <h3 class="card__title">DevOps</h3>
+            <p class="card__description">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
               doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
               veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
               voluptatem quia voluptas sit aspernatur aut odit aut fugit.
             </p>
-          </div>
-        </div>
-        <div class="service">
-          <span class="icon"><i class="icon-window"></i></span>
-          <div class="service-content">
-            <h3>Web Development</h3>
-            <p class="desc">
+          </li>
+          <li class="card">
+            <p class="card__icon"><i class="fa-solid fa-calculator"></i></p>
+            <h3 class="card__title">Data Science</h3>
+            <p class="card__description">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
               doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
               veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
               voluptatem quia voluptas sit aspernatur aut odit aut fugit.
             </p>
-          </div>
-        </div>
-        </div> -->
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -162,10 +149,10 @@
     <section id="contact" class="section section--dark">
       <div class="section__intro">
         <p class="section__subtitle">Contact me</p>
-        <h2 class="section__title">I'd love to hear from you.</h2>
+        <h2 class="section__title">Get in Touch.</h2>
         <p class="section__text">
-          Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
-          nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+          Have a question, feedback, or a project in mind? I'm here to listen and help turn your
+          ideas into reality. Let's connect and make something great!
         </p>
       </div>
       <div class="section__row">
@@ -189,7 +176,7 @@
   <!-- templates -->
 
   <template id="social-list-item-template">
-    <li><a href="#" class="socials__link"><i></i></a></li>
+    <li><a href="#" class="socials__link" target="_blank"><i></i></a></li>
   </template>
 
   <template id="carousel-item-template">

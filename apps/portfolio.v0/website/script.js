@@ -1,3 +1,4 @@
+import { shuffle } from './utils';
 import data from './data.json';
 
 function handleLoader() {
@@ -61,8 +62,12 @@ function handleScrollButton() {
 }
 
 (function init() {
-  setSocialLinks(data.socials);
-  setCarousel(data.technologies);
+  const { socials, technologies } = data;
+
+  shuffle(technologies);
+
+  setSocialLinks(socials);
+  setCarousel(technologies);
   handleScrollButton();
   handleLoader();
 })();

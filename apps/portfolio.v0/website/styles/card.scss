@@ -1,0 +1,29 @@
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-width: 250px;
+  gap: 1.5rem;
+
+  &__icon {
+    color: var(--color-accent);
+    font-size: 4rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: var(--color-secondary-dark-bg);
+  }
+}
