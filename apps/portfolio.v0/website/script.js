@@ -24,8 +24,8 @@ function setSocialLinks(socials) {
     });
 }
 
-function setCarousel(technologies) {
-    const getExpectedNumberOfInnerItems = (barWidth) => {
+function setSkillsCarousel(technologies) {
+    const getExpectedNumberOfDuplicates = (barWidth) => {
         const windowWidth = window.innerWidth;
         const divider = barWidth ? barWidth : Number.MAX_SAFE_INTEGER;
         return Math.ceil(windowWidth / divider) + 1;
@@ -35,13 +35,13 @@ function setCarousel(technologies) {
         return expectedNumberOfInnerItems > carousel.children.length;
     };
 
-    const carousel = document.querySelector('.carousel');
-    const carouselInner = carousel.querySelector('.carousel__inner');
-    const expectedNumberOfInnerItems = getExpectedNumberOfInnerItems(carouselInner.offsetWidth);
+    const carousel = document.querySelector('.skills');
+    const carouselInner = carousel.querySelector('.skills__inner');
+    const expectedNumberOfInnerItems = getExpectedNumberOfDuplicates(carouselInner.offsetWidth);
 
     if (!shouldBeUpdated(carousel, expectedNumberOfInnerItems)) return;
 
-    const template = document.querySelector('#carousel-item-template');
+    const template = document.querySelector('#skills-item-template');
     const fragment = document.createDocumentFragment();
 
     technologies.forEach(({ name, src }) => {
@@ -78,7 +78,7 @@ function handleScrollButtonVisibility() {
     shuffle(technologies);
 
     setSocialLinks(socials);
-    setCarousel(technologies);
+    setSkillsCarousel(technologies);
 
     window.addEventListener('scroll', () => {
         handleScrollButtonVisibility();
@@ -86,7 +86,7 @@ function handleScrollButtonVisibility() {
 
     window.addEventListener('resize', () => {
         handleScrollButtonVisibility();
-        setCarousel(technologies);
+        setSkillsCarousel(technologies);
     });
 
     setTimeout(hideLoader, 500);
