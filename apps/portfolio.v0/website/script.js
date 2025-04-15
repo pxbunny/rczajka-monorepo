@@ -1,12 +1,10 @@
 import { shuffle } from './utils';
 import data from './data.json';
 
-function handleLoader() {
-    setTimeout(() => {
-        const loader = document.querySelector('.loader');
-        loader.classList.add('loader--hidden');
-        setTimeout(() => loader.remove(), 3000);
-    }, 500);
+function hideLoader() {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('loader--hidden');
+    setTimeout(() => loader.remove(), 3000);
 }
 
 function setSocialLinks(socials) {
@@ -27,6 +25,22 @@ function setSocialLinks(socials) {
 }
 
 function setCarousel(technologies) {
+    const getExpectedNumberOfInnerItems = (barWidth) => {
+        const windowWidth = window.innerWidth;
+        const divider = barWidth ? barWidth : Number.MAX_SAFE_INTEGER;
+        return Math.ceil(windowWidth / divider) + 1;
+    };
+
+    const shouldBeUpdated = (carousel, expectedNumberOfInnerItems) => {
+        return expectedNumberOfInnerItems > carousel.children.length;
+    };
+
+    const carousel = document.querySelector('.carousel');
+    const carouselInner = carousel.querySelector('.carousel__inner');
+    const expectedNumberOfInnerItems = getExpectedNumberOfInnerItems(carouselInner.offsetWidth);
+
+    if (!shouldBeUpdated(carousel, expectedNumberOfInnerItems)) return;
+
     const template = document.querySelector('#carousel-item-template');
     const fragment = document.createDocumentFragment();
 
@@ -38,27 +52,24 @@ function setCarousel(technologies) {
         fragment.appendChild(clone);
     });
 
-    const carousel = document.querySelector('.carousel');
-    const carouselinner = carousel.querySelector('.carousel__inner');
-    carouselinner.appendChild(fragment);
+    carouselInner.appendChild(fragment);
 
-    const screenWidth = window.screen.width;
-    const innerWidth = carouselinner.offsetWidth;
-    const numberOfInnerItems = Math.ceil(screenWidth / innerWidth);
-
-    for (let i = 0; i < numberOfInnerItems; i++) {
-        const clone = carouselinner.cloneNode(true);
+    for (let i = 1; i < expectedNumberOfInnerItems; i++) {
+        const clone = carouselInner.cloneNode(true);
         carousel.appendChild(clone);
     }
 }
 
-function handleScrollButton() {
-    window.addEventListener('scroll', () => {
-        const button = document.querySelector('.scroll-to-top');
-        window.scrollY > window.innerHeight / 2
-            ? button.classList.add('scroll-to-top--visible')
-            : button.classList.remove('scroll-to-top--visible');
-    });
+function handleScrollButtonVisibility() {
+    const button = document.querySelector('.scroll-to-top');
+    const scrolledToTop = window.scrollY < window.innerHeight / 2
+
+    if (scrolledToTop) {
+        button.classList.remove('scroll-to-top--visible');
+        return;
+    }
+
+    button.classList.add('scroll-to-top--visible');
 }
 
 (function init() {
@@ -68,6 +79,15 @@ function handleScrollButton() {
 
     setSocialLinks(socials);
     setCarousel(technologies);
-    handleScrollButton();
-    handleLoader();
+
+    window.addEventListener('scroll', () => {
+        handleScrollButtonVisibility();
+    });
+
+    window.addEventListener('resize', () => {
+        handleScrollButtonVisibility();
+        setCarousel(technologies);
+    });
+
+    setTimeout(hideLoader, 500);
 })();
