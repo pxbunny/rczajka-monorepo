@@ -22,6 +22,8 @@ function setSocialLinks(socials) {
         const clone = fragment.cloneNode(true);
         socials.appendChild(clone);
     });
+
+    template.remove();
 }
 
 function setSkillsCarousel(technologies) {
@@ -58,6 +60,8 @@ function setSkillsCarousel(technologies) {
         const clone = carouselInner.cloneNode(true);
         carousel.appendChild(clone);
     }
+
+    template.remove();
 }
 
 function handleScrollButtonVisibility() {
