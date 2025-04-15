@@ -51,14 +51,15 @@
 
   &__intro,
   &__row {
-    max-width: 1200px;
+    max-width: calc(1200px + spacing.$space-32 * 2);
     margin: 0 auto;
     text-align: center;
     position: relative;
+    padding: 0 spacing.$space-32;
   }
 
   &__intro {
-    max-width: 700px;
+    max-width: calc(720px + spacing.$space-32 * 2);
   }
 
   &__row--gap {
@@ -76,12 +77,12 @@
   &__subtitle {
     @include typography.uppercase-md;
     color: var(--color-accent);
-    margin-bottom: spacing.$space-4;
+    margin-bottom: spacing.$space-8;
   }
 
   &__title {
     @include typography.title-md;
-    margin-bottom: spacing.$space-32;
+    margin-bottom: spacing.$space-24;
     color: var(--color-primary);
   }
 

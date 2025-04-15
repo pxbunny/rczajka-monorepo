@@ -13,7 +13,6 @@ $bg-image-url: url('../assets/bg.jpg');
   align-items: center;
   position: relative;
   min-height: 100vh;
-  padding: 0;
 }
 
 .hero {
@@ -22,13 +21,12 @@ $bg-image-url: url('../assets/bg.jpg');
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: spacing.$space-32;
+    padding: 0 spacing.$space-32 spacing.$space-32;
     z-index: 100;
   }
 
   &__subtitle {
     @include typography.uppercase-lg;
-    margin-bottom: spacing.$space-6;
   }
 
   &__name {
