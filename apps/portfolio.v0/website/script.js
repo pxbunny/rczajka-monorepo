@@ -1,4 +1,4 @@
-import { shuffle } from './utils';
+import { shuffle } from './lib/utils';
 import data from './data.json';
 
 function hideLoader() {
