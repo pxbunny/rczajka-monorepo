@@ -1,12 +1,13 @@
+@use 'spacing';
 @use 'typography';
 
 .section {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: spacing.$space-32;
   width: 100%;
-  padding: 10rem 0;
+  padding: spacing.$space-160 0;
   background: var(--bg-primary);
   color: var(--color-primary);
 
@@ -61,26 +62,26 @@
   }
 
   &__row--gap {
-    margin-top: 2rem;
+    margin-top: spacing.$space-32;
   }
 
   &__row {
     @Include typography.text-md;
 
     &--gap {
-      margin-top: 2rem;
+      margin-top: spacing.$space-32;
     }
   }
 
   &__subtitle {
     @include typography.uppercase-md;
     color: var(--color-accent);
-    margin-bottom: .2rem;
+    margin-bottom: spacing.$space-4;
   }
 
   &__title {
     @include typography.title-md;
-    margin-bottom: 2rem;
+    margin-bottom: spacing.$space-32;
     color: var(--color-primary);
   }
 

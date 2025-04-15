@@ -1,10 +1,12 @@
+@use 'spacing';
+
 .skills {
   display: flex;
   background: var(--color-accent);
   color: var(--color-primary-dark-bg);
   overflow: hidden;
   white-space: nowrap;
-  padding: 2rem 0;
+  padding: spacing.$space-32 0;
   pointer-events: none;
 
   &__inner {

@@ -1,9 +1,10 @@
+@use 'spacing';
 @use 'typography';
 
 .button {
   @include typography.uppercase-sm;
   display: inline-block;
-  padding: 1.2rem 2rem;
+  padding: spacing.$space-20 spacing.$space-32;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
@@ -44,6 +45,6 @@
   }
 
   i {
-    margin-left: 0.2rem;
+    margin-left: spacing.$space-2;
   }
 }

@@ -1,7 +1,11 @@
+@use 'spacing';
 @use 'typography';
 
+$hero-image-url: url('../assets/hero.jpg');
+$bg-image-url: url('../assets/bg.jpg');
+
 #hero {
-  background: var(--bg-dark) var(--hero-image) no-repeat center bottom;
+  background: var(--bg-dark) $hero-image-url no-repeat center bottom;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -18,26 +22,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: spacing.$space-32;
     z-index: 100;
   }
 
   &__subtitle {
     @include typography.uppercase-lg;
+    margin-bottom: spacing.$space-6;
   }
 
   &__name {
     @include typography.title-lg;
+    margin-bottom: spacing.$space-16;
   }
 
   &__title {
-    @include typography.uppercase-md;
-    margin-top: .8rem;
+    @include typography.uppercase-md($font-weight: normal);
   }
 
   &__button {
     opacity: .8;
-    margin-top: 3rem;
+    margin-top: spacing.$space-48;
     transition: all var(--transition-duration) ease-in-out;
 
     &:hover {
@@ -48,16 +53,16 @@
   &__socials {
     position: absolute;
     width: 100%;
-    bottom: 4rem;
+    bottom: spacing.$space-64;
   }
 }
 
 #services {
-  background: var(--bg-dark) var(--bg-image) no-repeat center bottom;
+  background: var(--bg-dark) $bg-image-url no-repeat center bottom;
   background-size: cover;
   background-attachment: fixed;
 }
 
 #footer {
-  padding: 0 0 4rem;
+  padding: 0 0 spacing.$space-64;
 }

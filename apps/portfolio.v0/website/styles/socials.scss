@@ -1,9 +1,11 @@
+@use 'spacing';
+
 .socials {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  gap: 4rem;
+  gap: spacing.$space-64;
 
   &__link,
   &__link:visited {
