@@ -5,6 +5,7 @@
   overflow: hidden;
   white-space: nowrap;
   padding: 2rem 0;
+  pointer-events: none;
 
   &__inner {
     width: fit-content;

@@ -2,6 +2,10 @@
   background: var(--bg-dark) var(--hero-image) no-repeat center bottom;
   background-size: cover;
   background-attachment: fixed;
+
+  // background: var(--bg-dark) var(--bg-image) no-repeat center;
+  // background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,8 +57,12 @@
 }
 
 #skills {
-  background: var(--bg-dark) var(--bg-image) no-repeat center;
+  // background: var(--bg-dark) var(--bg-image) no-repeat center;
+  // background-size: cover;
+
+  background: var(--bg-dark) var(--bg-image) no-repeat center bottom;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #footer {
