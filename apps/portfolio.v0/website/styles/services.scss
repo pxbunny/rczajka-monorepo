@@ -1,14 +1,17 @@
-.cards-container {
+.services-container {
   display: flex;
   justify-content: center;
   gap: 4rem;
+  flex-wrap: wrap;
 }
 
-.card {
+.services-item {
   display: flex;
   flex-direction: column;
   text-align: center;
   min-width: 250px;
+  max-width: 400px;
+  flex: 1 0;
   gap: 1.5rem;
 
   &__icon {
