@@ -1,3 +1,5 @@
+@use 'typography';
+
 #hero {
   background: var(--bg-dark) var(--hero-image) no-repeat center bottom;
   background-size: cover;
@@ -21,17 +23,15 @@
   }
 
   &__subtitle {
-    font-size: 1.5rem;
+    @include typography.uppercase-lg;
   }
 
   &__name {
-    font-size: 5rem;
-    font-weight: 700;
+    @include typography.title-lg;
   }
 
   &__title {
-    letter-spacing: .2rem;
-    text-transform: uppercase;
+    @include typography.uppercase-md;
     margin-top: .8rem;
   }
 

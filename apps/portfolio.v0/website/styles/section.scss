@@ -1,3 +1,5 @@
+@use 'typography';
+
 .section {
   position: relative;
   display: flex;
@@ -62,23 +64,28 @@
     margin-top: 2rem;
   }
 
+  &__row {
+    @Include typography.text-md;
+
+    &--gap {
+      margin-top: 2rem;
+    }
+  }
+
   &__subtitle {
-    letter-spacing: .2rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    @include typography.uppercase-md;
     color: var(--color-accent);
     margin-bottom: .2rem;
   }
 
   &__title {
-    font-size: 3rem;
-    font-weight: 700;
+    @include typography.title-md;
     margin-bottom: 2rem;
     color: var(--color-primary);
   }
 
   &__text {
-    line-height: 2rem;
+    @include typography.text-lg;
     color: var(--color-secondary);
   }
 }

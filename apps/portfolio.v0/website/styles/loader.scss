@@ -18,7 +18,7 @@
     $inner-size: calc($total-size - $border-width);
     $position-offset: calc($total-size / 2 - $total-size);
     $loader-circle-bg: rgba(255, 255, 255, .1);
-    $animation-duration: 500ms;
+    $animation-duration: 0.5s;
 
     content: '';
     position: absolute;

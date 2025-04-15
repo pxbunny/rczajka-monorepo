@@ -1,9 +1,8 @@
+@use 'typography';
+
 .button {
+  @include typography.uppercase-sm;
   display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
   padding: 1.2rem 2rem;
   text-decoration: none;
   cursor: pointer;

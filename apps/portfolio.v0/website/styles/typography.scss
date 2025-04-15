@@ -1,0 +1,113 @@
+$title-lg: 5rem;
+$title-md: 3rem;
+$title-sm: 1.5rem;
+
+$uppercase-lg: 1.5rem;
+$uppercase-md: 1.25rem;
+$uppercase-sm: .875rem;
+
+$text-lg: 1.25rem;
+$text-md: 1rem;
+$text-sm: .875rem;
+
+@mixin title-lg(
+  $line-height: 1,
+  $font-weight: bold,
+  $letter-spacing: normal
+) {
+  font-size: $title-lg;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin title-md(
+  $line-height: 1,
+  $font-weight: bold,
+  $letter-spacing: normal
+) {
+  font-size: $title-md;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin title-sm(
+  $line-height: 1,
+  $font-weight: bold,
+  $letter-spacing: normal
+) {
+  font-size: $title-sm;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin uppercase-lg(
+  $line-height: 1,
+  $font-weight: bold,
+  $letter-spacing: .2em
+) {
+  font-size: $uppercase-lg;
+  text-transform: uppercase;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin uppercase-md(
+  $line-height: 1,
+  $font-weight: bold,
+  $letter-spacing: .2em
+) {
+  font-size: $uppercase-md;
+  text-transform: uppercase;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin uppercase-sm(
+  $line-height: 1,
+  $font-weight: bold,
+  $letter-spacing: .2em
+) {
+  font-size: $uppercase-sm;
+  text-transform: uppercase;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin text-lg(
+  $line-height: 2rem,
+  $font-weight: normal,
+  $letter-spacing: 0.5px
+) {
+  font-size: $text-lg;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin text-md(
+  $line-height: 1.75rem,
+  $font-weight: normal,
+  $letter-spacing: 0.5px
+) {
+  font-size: $text-md;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin text-sm(
+  $line-height: 1.5rem,
+  $font-weight: normal,
+  $letter-spacing: 0.25px
+) {
+  font-size: $text-sm;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}

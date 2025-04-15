@@ -1,4 +1,7 @@
+@use 'typography';
+
 .scroll-to-top {
+  @include typography.text-lg($line-height: 1);
   position: fixed;
   bottom: 0;
   right: 0;
@@ -6,7 +9,6 @@
   height: 4rem;
   background: var(--color-accent);
   color: var(--color-primary-dark-bg);
-  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
