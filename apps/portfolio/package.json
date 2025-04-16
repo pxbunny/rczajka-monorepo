@@ -1,5 +1,5 @@
 {
-  "name": "portfolio.v0",
+  "name": "portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
