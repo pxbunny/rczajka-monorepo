@@ -11,6 +11,10 @@
   background: var(--bg-primary);
   color: var(--color-primary);
 
+  @media screen and (max-width: 768px) {
+    padding: spacing.$space-96 0;
+  }
+
   &--primary {
     background: var(--bg-primary);
     color: var(--color-primary);
@@ -78,16 +82,28 @@
     @include typography.uppercase-md;
     color: var(--color-accent);
     margin-bottom: spacing.$space-8;
+
+    @media screen and (max-width: 768px) {
+      @include typography.uppercase-sm;
+    }
   }
 
   &__title {
     @include typography.title-md;
     margin-bottom: spacing.$space-24;
     color: var(--color-primary);
+
+    @media screen and (max-width: 768px) {
+      @include typography.title-sm;
+    }
   }
 
   &__text {
-    @include typography.text-lg;
+    @include typography.text-xl;
     color: var(--color-secondary);
+
+    @media screen and (max-width: 768px) {
+      @include typography.text-lg;
+    }
   }
 }

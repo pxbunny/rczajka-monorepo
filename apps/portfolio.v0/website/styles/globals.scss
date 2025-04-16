@@ -11,6 +11,7 @@
 }
 
 html {
+  font-size: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -25,6 +26,14 @@ html {
   outline: none;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -37,13 +46,4 @@ ul {
 
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  font-size: 100%;
-  font-style: normal;
-  font-optical-sizing: auto;
-  margin: 0;
-  padding: 0;
 }

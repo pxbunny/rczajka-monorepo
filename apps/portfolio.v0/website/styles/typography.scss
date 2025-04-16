@@ -1,12 +1,14 @@
 $title-lg: 5rem;
 $title-md: 3rem;
 $title-sm: 1.75rem;
+$title-xs: 1.25rem;
 
 $uppercase-lg: 1.5rem;
 $uppercase-md: 1.25rem;
 $uppercase-sm: .875rem;
 
-$text-lg: 1.25rem;
+$text-xl: 1.25rem;
+$text-lg: 1.125rem;
 $text-md: 1rem;
 $text-sm: .875rem;
 
@@ -43,6 +45,17 @@ $text-sm: .875rem;
   letter-spacing: $letter-spacing;
 }
 
+@mixin title-xs(
+  $line-height: 1,
+  $font-weight: bold,
+  $letter-spacing: normal
+) {
+  font-size: $title-xs;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
 @mixin uppercase-lg(
   $line-height: 1,
   $font-weight: bold,
@@ -74,6 +87,17 @@ $text-sm: .875rem;
 ) {
   font-size: $uppercase-sm;
   text-transform: uppercase;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin text-xl(
+  $line-height: 2rem,
+  $font-weight: normal,
+  $letter-spacing: normal
+) {
+  font-size: $text-xl;
   line-height: $line-height;
   font-weight: $font-weight;
   letter-spacing: $letter-spacing;

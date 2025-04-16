@@ -27,15 +27,27 @@ $bg-image-url: url('../assets/bg.jpg');
 
   &__subtitle {
     @include typography.uppercase-lg;
+
+    @media screen and (max-width: 768px) {
+      @include typography.uppercase-md;
+    }
   }
 
   &__name {
     @include typography.title-lg;
     margin-bottom: spacing.$space-16;
+
+    @media screen and (max-width: 768px) {
+      @include typography.title-md;
+    }
   }
 
   &__title {
     @include typography.uppercase-md($font-weight: normal);
+
+    @media screen and (max-width: 768px) {
+      @include typography.uppercase-sm;
+    }
   }
 
   &__button {
@@ -59,6 +71,14 @@ $bg-image-url: url('../assets/bg.jpg');
   background: var(--bg-dark) $bg-image-url no-repeat center bottom;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.contact__email {
+  @include typography.text-sm;
+  color: var(--color-secondary-dark-bg);
+  margin-top: spacing.$space-8;
+  text-align: center;
+  font-style: italic;
 }
 
 #footer {

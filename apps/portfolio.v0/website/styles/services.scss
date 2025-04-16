@@ -20,10 +20,18 @@
   &__icon {
     color: var(--color-accent);
     font-size: 3.5rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
 
   &__title {
     @include typography.title-sm;
+
+    @media screen and (max-width: 768px) {
+      @include typography.title-xs;
+    }
   }
 
   &__description {
