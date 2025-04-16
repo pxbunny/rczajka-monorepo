@@ -1,6 +1,13 @@
 @use 'spacing';
 @use 'typography';
 
+@mixin section-row-defaults {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 0 spacing.$space-32;
+}
+
 .section {
   position: relative;
   display: flex;
@@ -53,25 +60,15 @@
     opacity: 0.9;
   }
 
-  &__intro,
-  &__row {
-    max-width: calc(1200px + spacing.$space-32 * 2);
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    padding: 0 spacing.$space-32;
-  }
-
   &__intro {
+    @include section-row-defaults;
     max-width: calc(720px + spacing.$space-32 * 2);
-  }
-
-  &__row--gap {
-    margin-top: spacing.$space-32;
   }
 
   &__row {
     @Include typography.text-md;
+    @include section-row-defaults;
+    max-width: calc(1200px + spacing.$space-32 * 2);
 
     &--gap {
       margin-top: spacing.$space-32;
