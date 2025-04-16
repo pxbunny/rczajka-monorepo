@@ -1,7 +1,8 @@
 {
   "name": "portfolio.v0",
   "scripts": {
-    "dev": "vite ./website",
+    "dev": "vite",
+    "build": "vite build",
     "lint": "eslint"
   },
   "devDependencies": {

@@ -5,6 +5,10 @@
       "cache": false,
       "persistent": true
     },
+    "build": {
+      "cache": false,
+      "persistent": true
+    },
     "lint": {}
   }
 }

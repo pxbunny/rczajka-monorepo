@@ -76,7 +76,7 @@ function handleScrollButtonVisibility() {
     button.classList.add('scroll-to-top--visible');
 }
 
-(function init() {
+(function() {
     const { socials, technologies } = data;
 
     shuffle(technologies);
