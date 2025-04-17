@@ -1,5 +1,4 @@
 import { defineConfig } from 'sanity';
-import { presentationTool } from 'sanity/presentation'
 import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
 
@@ -20,12 +19,7 @@ export default defineConfig({
 
   plugins: [
     structureTool({ structure }),
-    visionTool(),
-    presentationTool({
-      previewUrl: {
-        origin: 'http://localhost:3000/'
-      },
-    }),
+    visionTool()
   ],
 
   schema: {
