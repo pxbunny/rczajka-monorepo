@@ -8,7 +8,6 @@
   z-index: 800;
   height: 100vh;
   width: 100%;
-  transition: opacity $animation-short ease-in-out;
 
   &--hidden {
     pointer-events: none;
