@@ -2,8 +2,8 @@ import { blogSingletonData } from './documents/blog';
 import { portfolioSingletonData } from './documents/portfolio';
 
 export const singletons = [
-  blogSingletonData,
   portfolioSingletonData,
+  blogSingletonData,
 ];
 
 export const singletonTypes = new Set(singletons.map(s => s.name));
