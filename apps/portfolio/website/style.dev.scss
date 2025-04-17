@@ -1,0 +1,13 @@
+#dev-links {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  a {
+    color: var(--color-accent);
+  }
+}

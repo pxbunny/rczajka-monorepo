@@ -8,6 +8,7 @@
   z-index: 800;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 
   &--hidden {
     pointer-events: none;
@@ -23,6 +24,7 @@
       height: 4px;
       background: var(--color-accent);
       left: -200%;
+      border-radius: 2px;
     }
 
     &::before {

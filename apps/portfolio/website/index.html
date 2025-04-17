@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="style.scss">
   <script src="script.js" type="module" defer></script>
+
+  <!-- development environment only -->
+  <link rel="stylesheet" href="style.dev.scss" data-env="dev">
+  <script src="script.dev.js" type="module" data-env="dev" defer></script>
 </head>
 <body>
   <main>
@@ -175,6 +179,21 @@
   <div class="loader">
     <div class="loader__spinner"></div>
   </div>
+
+  <ul id="dev-links" data-env="dev">
+    <!-- development environment only -->
+
+    <li>
+      <a href="http://localhost:3333" target="_blank">
+        studio
+      </a>
+    </li>
+    <li>
+      <a href="http://localhost:3333" target="_blank">
+        blog
+      </a>
+    </li>
+  </ul>
 
   <template id="social-list-item-template">
     <li><a href="#" class="socials__link" target="_blank"><i></i></a></li>

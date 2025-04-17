@@ -1,3 +1,5 @@
+'use strict';
+
 import { shuffle } from './lib/utils';
 import data from './data.json';
 
