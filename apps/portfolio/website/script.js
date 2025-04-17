@@ -4,7 +4,7 @@ import data from './data.json';
 function hideLoader() {
     const loader = document.querySelector('.loader');
     loader.classList.add('loader--hidden');
-    setTimeout(() => loader.remove(), 600);
+    setTimeout(() => loader.remove(), 2000);
 }
 
 function setSocialLinks(socials) {

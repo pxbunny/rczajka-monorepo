@@ -1,26 +1,49 @@
 .loader {
+  $animation-short: .5s;
+  $animation-long: .75s;
+
   position: fixed;
   inset: 0;
   background: var(--bg-dark);
   z-index: 800;
   height: 100vh;
   width: 100%;
-  transition: opacity .5s ease-in-out;
+  transition: opacity $animation-short ease-in-out;
 
   &--hidden {
-    opacity: 0;
     pointer-events: none;
+    animation: fade-out $animation-short ease-in-out forwards;
+    animation-delay: $animation-long;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: var(--color-accent);
+      left: -200%;
+    }
+
+    &::before {
+      top: 0;
+      animation: slide-left $animation-long ease-in-out forwards;
+    }
+
+    &::after {
+      bottom: 0;
+      animation: slide-right $animation-long ease-in-out forwards;
+    }
   }
 
-  &::before {
+  &__spinner {
     $total-size: 4rem;
     $border-width: .5rem;
     $inner-size: calc($total-size - $border-width);
     $position-offset: calc($total-size / 2 - $total-size);
     $loader-circle-bg: rgba(255, 255, 255, .1);
-    $animation-duration: 0.5s;
 
-    content: '';
     position: absolute;
     display: block;
     left: 50%;
@@ -33,15 +56,42 @@
     border-right: $border-width solid $loader-circle-bg;
     border-bottom: $border-width solid $loader-circle-bg;
     border-left: $border-width solid var(--color-accent);
-    animation: load $animation-duration infinite linear;
+    animation: spin $animation-short infinite linear;
   }
 
-  @keyframes load {
+  @keyframes spin {
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
 }
