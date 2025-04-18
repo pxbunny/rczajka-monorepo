@@ -1,9 +1,10 @@
-import * as cheerio from 'cheerio';
+import { load } from 'cheerio';
 
-export default function buildPlugin() {
+export default function buildPlugin(handleAdditionalScripts) {
   return {
     transformIndexHtml(html) {
-      const $ = cheerio.load(html);
+      const $ = load(html);
+      handleAdditionalScripts && handleAdditionalScripts($);
       removeComments($);
       removeCustomAttributes($);
       return removeEmptyLines($.html());

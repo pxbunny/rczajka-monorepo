@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import ssgBuild from './ssg/build-plugin.mjs';
+import { buildContent } from './src/script.ssg.js';
 
 export default defineConfig({
   root: './src',
@@ -28,6 +29,6 @@ export default defineConfig({
         }
       ],
     }),
-    ssgBuild(),
+    ssgBuild(buildContent),
   ],
 });

@@ -9,6 +9,3 @@ trim_trailing_whitespace = true
 
 [*.{js,ts,mjs}]
 quote_type = single
-
-[apps/portfolio/**.js]
-indent_size = 4
