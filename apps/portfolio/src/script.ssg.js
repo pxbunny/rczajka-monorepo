@@ -13,6 +13,7 @@ function setSocialLinks($) {
 
   socials.forEach(({ url, icon }) => {
     item('.socials__link').attr('href', url);
+    item('i').removeClass();
     item('i').addClass(icon);
     socialsContainer.append(item.html());
   });
