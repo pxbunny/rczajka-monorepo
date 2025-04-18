@@ -1,13 +1,27 @@
+@use 'styles/typography';
+
 #dev-links {
+  @include typography.uppercase-sm;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  padding: 40px;
+  left: 4px;
+  bottom: 4px;
+  background: var(--bg-dark);
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  border: 1px solid var(--bg-primary);
+  border-radius: 8px;
+  text-align: center;
 
   a {
-    color: var(--color-accent);
+    color: var(--color-primary-dark-bg);
+    opacity: .8;
+    transition: opacity var(--transition-duration) ease-in-out;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
   }
 }
