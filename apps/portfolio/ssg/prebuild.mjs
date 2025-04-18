@@ -1,10 +1,11 @@
 import fs from 'fs';
-import * as cheerio from 'cheerio';
+import { load } from 'cheerio';
 import { htmlPath, tmpHtmlPath } from './paths.mjs';
 
+const file = fs.readFileSync(htmlPath, 'utf-8');
 fs.renameSync(htmlPath, tmpHtmlPath);
 
-const $ = cheerio.load(fs.readFileSync(tmpHtmlPath, 'utf-8'));
+const $ = load(file);
 
 $('[data-env="development" i]').remove();
 $('[data-env="dev" i]').remove();
