@@ -3,10 +3,10 @@
 import { shuffle } from './lib/utils';
 import data from './data.json';
 
-function hideLoader() {
+function hideLoader(removeTimeout = 10) {
   const loader = document.querySelector('.loader');
   loader.classList.add('loader--hidden');
-  setTimeout(() => loader.remove(), 2000);
+  setTimeout(() => loader.remove(), removeTimeout);
 }
 
 function setSkillsCarousel(technologies) {
@@ -76,5 +76,5 @@ function handleScrollButtonVisibility() {
     setSkillsCarousel(technologies);
   });
 
-  setTimeout(hideLoader, 500);
+  setTimeout(() => hideLoader(1000), 100);
 })();

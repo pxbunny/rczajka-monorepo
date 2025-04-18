@@ -1,7 +1,4 @@
 .loader {
-  $animation-short: .5s;
-  $animation-long: .75s;
-
   position: fixed;
   inset: 0;
   background: var(--bg-dark);
@@ -12,8 +9,8 @@
 
   &--hidden {
     pointer-events: none;
-    animation: fade-out $animation-short ease-in-out forwards;
-    animation-delay: $animation-long;
+    animation: fade-out .5s ease-in-out forwards;
+    animation-delay: .5s;
 
     &::before,
     &::after {
@@ -29,12 +26,12 @@
 
     &::before {
       top: 0;
-      animation: slide-left $animation-long ease-in-out forwards;
+      animation: slide-left .5s ease-in-out forwards;
     }
 
     &::after {
       bottom: 0;
-      animation: slide-right $animation-long ease-in-out forwards;
+      animation: slide-right .5s ease-in-out forwards;
     }
   }
 
@@ -57,7 +54,7 @@
     border-right: $border-width solid $loader-circle-bg;
     border-bottom: $border-width solid $loader-circle-bg;
     border-left: $border-width solid var(--color-accent);
-    animation: spin $animation-short infinite linear;
+    animation: spin .5s infinite linear;
   }
 
   @keyframes spin {

@@ -11,8 +11,9 @@ function setSocialLinks($) {
   const item = loadTemplateContent($, '#social-list-item-template', true);
   const socialsContainer = $('.socials');
 
-  socials.forEach(({ url, icon }) => {
+  socials.forEach(({ name, url, icon }) => {
     item('.socials__link').attr('href', url);
+    item('.socials__link').attr('aria-label', name);
     item('i').removeClass();
     item('i').addClass(icon);
     socialsContainer.append(item.html());

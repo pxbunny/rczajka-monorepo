@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Rafał Czajka</title>
+
+  <meta name="author" content="Rafał Czajka">
+  <!-- <meta name="keywords" content="">
+  <meta name="description" content=""> -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
   <link rel="stylesheet" href="style.scss">
   <script src="script.js" type="module" defer></script>
 
   <!-- development only -->
   <link rel="stylesheet" href="style.dev.scss" data-env="dev">
-  <script src="script.dev.js" type="module" defer data-env="dev"></script>
+  <script src="script.dev.js" type="module" data-env="dev" defer></script>
+  <!---------------------->
 </head>
 <body>
   <main>
@@ -173,7 +181,7 @@
     </ul>
   </footer>
 
-  <a href="#top" class="scroll-to-top">
+  <a href="#top" class="scroll-to-top" aria-label="Scroll to top">
     <i class="fa-solid fa-arrow-up"></i>
   </a>
 
@@ -181,12 +189,12 @@
     <div class="loader__spinner"></div>
   </div>
 
+  <!-- development only -->
   <ul id="dev-links" data-env="dev">
-    <!-- development only -->
-
     <li><a href="http://localhost:3333/" target="_blank">CMS</a></li>
     <li><a href="http://localhost:3333/" target="_blank">Blog</a></li>
   </ul>
+  <!---------------------->
 
   <template id="social-list-item-template">
     <li><a href="#" class="socials__link" target="_blank"><i></i></a></li>
