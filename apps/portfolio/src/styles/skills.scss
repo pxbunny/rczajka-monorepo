@@ -12,14 +12,14 @@
   &__inner {
     width: fit-content;
     white-space: nowrap;
-    animation: scroll-horizontal 40s linear infinite;
+    animation: scroll-horizontal 50s linear infinite;
   }
 
   &__item {
     display: inline-block;
     width: 5rem;
     height: 5rem;
-    margin-right: 8rem;
+    margin-right: spacing.$space-160;
 
     @media screen and (max-width: 768px) {
       width: 4rem;
