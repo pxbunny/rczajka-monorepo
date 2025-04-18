@@ -19,10 +19,9 @@ function removeComments($) {
 }
 
 function removeCustomAttributes($) {
-  const prefix = 'data-';
   $('*').each((_, el) => {
     Object.keys(el.attribs)
-      .filter(key => key.startsWith(prefix))
+      .filter(key => key.startsWith('data-') && key !== 'data-i18n')
       .forEach(key => delete el.attribs[key]);
   });
 }
