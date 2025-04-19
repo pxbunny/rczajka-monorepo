@@ -22,11 +22,25 @@ function setSkillsCarousel(technologies) {
 
   const carousel = document.querySelector('.skills');
   const carouselInner = carousel.querySelector('.skills__inner');
-  const expectedNumberOfInnerItems = getExpectedNumberOfDuplicates(
-    carouselInner.offsetWidth,
-  );
+  const expectedNumberOfInnerItems = getExpectedNumberOfDuplicates(carouselInner.offsetWidth);
+  const isAlreadyPopulated = carouselInner.children.length > 0;
 
   if (!shouldBeUpdated(carousel, expectedNumberOfInnerItems)) return;
+
+  if (!isAlreadyPopulated) {
+    const template = document.querySelector('#skills-item-template');
+    const fragment = document.createDocumentFragment();
+
+    technologies.forEach(({ name, src }) => {
+      const clone = template.content.cloneNode(true);
+      const img = clone.querySelector('img');
+      img.setAttribute('src', src);
+      img.setAttribute('alt', name);
+      fragment.appendChild(clone);
+    });
+
+    carouselInner.appendChild(fragment);
+  }
 
   const template = document.querySelector('#skills-item-template');
   const fragment = document.createDocumentFragment();
