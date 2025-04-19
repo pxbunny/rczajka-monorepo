@@ -2,14 +2,37 @@
 @use 'typography';
 
 #hero {
-  background: var(--bg-dark) url('../assets/hero.jpg') no-repeat center bottom;
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
+  position: relative;
   justify-content: center;
+  background: var(--bg-dark);
+  color: var(--color-primary-dark-bg);
   align-items: center;
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg-dark) url('../assets/hero.jpg') no-repeat center bottom;
+    background-size: cover;
+    transform: translateZ(0);
+    will-change: transform, opacity;
+    animation: bg-magic 2s ease-in-out forwards;
+
+    @keyframes bg-magic {
+      0% {
+        transform: scale(3) rotateX(15deg) rotateY(15deg) rotateZ(-15deg);
+        opacity: .5;
+      }
+      100% {
+        transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        opacity: .1;
+      }
+    }
+  }
 }
 
 .hero {
@@ -28,6 +51,8 @@
 
   &__subtitle {
     @include typography.uppercase-lg;
+    margin-bottom: spacing.$space-8;
+    color: var(--color-accent);
 
     @media screen and (max-width: 768px) {
       @include typography.uppercase-md;
@@ -52,12 +77,26 @@
   }
 
   &__button {
-    opacity: .8;
+    opacity: 0;
     margin-top: spacing.$space-48;
     transition: all var(--transition-duration) ease-in-out;
+    animation: appear .5s ease-in-out forwards;
+    animation-delay: 1.5s;
+    transform: translateY(-100vh);
 
     &:hover {
       opacity: 1;
+    }
+
+    @keyframes appear {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: .8;
+        transform: translateY(0);
+      }
     }
   }
 

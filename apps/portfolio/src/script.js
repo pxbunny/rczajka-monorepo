@@ -40,27 +40,13 @@ function setSkillsCarousel(technologies) {
     });
 
     carouselInner.appendChild(fragment);
+    template.remove();
   }
-
-  const template = document.querySelector('#skills-item-template');
-  const fragment = document.createDocumentFragment();
-
-  technologies.forEach(({ name, src }) => {
-    const clone = template.content.cloneNode(true);
-    const img = clone.querySelector('img');
-    img.setAttribute('src', src);
-    img.setAttribute('alt', name);
-    fragment.appendChild(clone);
-  });
-
-  carouselInner.appendChild(fragment);
 
   for (let i = 1; i < expectedNumberOfInnerItems; i++) {
     const clone = carouselInner.cloneNode(true);
     carousel.appendChild(clone);
   }
-
-  template.remove();
 }
 
 function handleScrollButtonVisibility() {
