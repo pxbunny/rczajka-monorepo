@@ -1,10 +1,14 @@
 @use 'spacing';
 @use 'typography';
 
-#services {
+#services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: var(--bg-dark) url('../assets/bg.jpg') no-repeat center bottom;
   background-size: cover;
   background-attachment: fixed;
+  opacity: .1;
 }
 
 .contact__email {

@@ -53,13 +53,6 @@
     }
   }
 
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    background: var(--bg-primary);
-    opacity: 0.9;
-  }
-
   &__intro {
     @include section-row-defaults;
     max-width: calc(720px + spacing.$space-32 * 2);
