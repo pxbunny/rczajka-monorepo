@@ -87,22 +87,33 @@
     &:hover {
       opacity: 1;
     }
-
-    @keyframes appear {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: .8;
-        transform: translateY(0);
-      }
-    }
   }
 
   &__socials {
     position: absolute;
     width: 100%;
     bottom: spacing.$space-64;
+
+    li {
+      transform: translateY(-200vh);
+      animation: appear .5s ease-in-out forwards;
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{1.8 + $i * .1}s;
+        }
+      }
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: .8;
+      transform: translateY(0);
+    }
   }
 }
