@@ -1,19 +1,24 @@
 import { load } from 'cheerio';
 
-export default function buildPlugin(handleAdditionalScripts) {
+export default function buildPlugin(handleAdditionalScripts = undefined, cleanup = false) {
   return {
     transformIndexHtml(html) {
       const $ = load(html);
       handleAdditionalScripts && handleAdditionalScripts($);
+
+      if (!cleanup) return $.html();
+
       removeComments($);
       removeCustomAttributes($);
+
       return removeEmptyLines($.html());
-    }
-  }
+    },
+  };
 }
 
 function removeComments($) {
-  $('*').contents()
+  $('*')
+    .contents()
     .filter((_, node) => node.type === 'comment')
     .remove();
 }
@@ -21,8 +26,8 @@ function removeComments($) {
 function removeCustomAttributes($) {
   $('*').each((_, el) => {
     Object.keys(el.attribs)
-      .filter(key => key.startsWith('data-') && key !== 'data-i18n')
-      .forEach(key => delete el.attribs[key]);
+      .filter((key) => key.startsWith('data-') && key !== 'data-i18n')
+      .forEach((key) => delete el.attribs[key]);
   });
 }
 

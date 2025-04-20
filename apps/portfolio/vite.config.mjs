@@ -3,12 +3,9 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import ssgBuild from './ssg/build-plugin.mjs';
 import { buildContent } from './src/script.ssg.js';
 
-export default defineConfig({
+const buildConfig = {
   root: './src',
   base: './',
-  server: {
-    open: true,
-  },
   build: {
     outDir: '../../../dist/portfolio',
     emptyOutDir: true,
@@ -26,9 +23,31 @@ export default defineConfig({
         {
           src: './assets',
           dest: './',
-        }
+        },
       ],
     }),
+    ssgBuild(buildContent, true),
+  ],
+};
+
+const devConfig = {
+  root: './src',
+  base: './',
+  server: {
+    open: true,
+  },
+  css: {
+    preprocessorOptions: {
+      scss: { api: 'modern' },
+    },
+  },
+  plugins: [
     ssgBuild(buildContent),
   ],
+};
+
+export default defineConfig(({ command }) => {
+  if (command === 'serve') return devConfig;
+
+  return buildConfig;
 });
