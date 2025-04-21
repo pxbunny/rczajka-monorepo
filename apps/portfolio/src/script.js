@@ -5,8 +5,8 @@ import data from './data.json';
 
 function hideLoader(removeTimeout = 10) {
   const loader = document.querySelector('.loader');
-  loader.classList.add('loader--hidden');
-  setTimeout(() => loader.remove(), removeTimeout);
+  loader?.classList.add('loader--hidden');
+  setTimeout(() => loader?.remove(), removeTimeout);
 }
 
 function setSkillsCarousel(technologies) {
@@ -76,5 +76,29 @@ function handleScrollButtonVisibility() {
     setSkillsCarousel(technologies);
   });
 
-  setTimeout(() => hideLoader(1000), 100);
+  const heroBackground = document.querySelector('.hero__background');
+
+  if (!heroBackground) {
+    return;
+  }
+
+  const hero = document.querySelector('#hero');
+  const animationClass = 'hero--animated';
+  const removeAfterMs = 1000;
+
+  heroBackground.addEventListener('load', () => {
+    hero.classList.add(animationClass);
+    hideLoader(removeAfterMs);
+  });
+
+  heroBackground.addEventListener('error', () => {
+    console.error('Failed to load hero background image');
+    hero.classList.add(animationClass);
+    hideLoader(removeAfterMs);
+  });
+
+  if (heroBackground.complete) {
+    hero.classList.add(animationClass);
+    hideLoader(removeAfterMs);
+  }
 })();

@@ -11,32 +11,16 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: var(--bg-dark) url('../assets/tmp.jpg') no-repeat center;
-    background-size: cover;
-    transform: translateZ(0);
-    will-change: transform, opacity;
-    animation: bg-magic 2s ease-out forwards;
-
-    @keyframes bg-magic {
-      0% {
-        transform: scale(3) rotateX(15deg) rotateY(15deg) rotateZ(-15deg);
-        opacity: .5;
-      }
-      100% {
-        transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-        opacity: .05;
-      }
-    }
-  }
 }
 
 .hero {
+  &__background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -82,10 +66,8 @@
   &__button {
     opacity: 0;
     margin-top: spacing.$space-48;
-    transition: all var(--transition-duration) ease-in-out;
-    animation: appear .5s ease-in-out forwards;
-    animation-delay: 1.5s;
     transform: translateY(-100vh);
+    transition: all var(--transition-duration) ease-in-out;
 
     &:hover {
       opacity: 1;
@@ -99,6 +81,35 @@
 
     li {
       transform: translateY(-200vh);
+    }
+  }
+}
+
+.hero--animated {
+  .hero {
+    &__background {
+      transform: translateZ(0);
+      will-change: transform, opacity;
+      animation: bg-magic 2s ease-out forwards;
+
+      @keyframes bg-magic {
+        0% {
+          transform: scale(3) rotateX(15deg) rotateY(15deg) rotateZ(-15deg);
+          opacity: .9;
+        }
+        100% {
+          transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+          opacity: .05;
+        }
+      }
+    }
+
+    &__button {
+      animation: appear .5s ease-in-out forwards;
+      animation-delay: 1.5s;
+    }
+
+    &__socials li {
       animation: appear .5s ease-in-out forwards;
 
       @for $i from 1 through 3 {
@@ -107,16 +118,16 @@
         }
       }
     }
-  }
 
-  @keyframes appear {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: .8;
-      transform: translateY(0);
+    @keyframes appear {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: .8;
+        transform: translateY(0);
+      }
     }
   }
 }
