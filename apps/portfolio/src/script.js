@@ -84,21 +84,23 @@ function handleScrollButtonVisibility() {
 
   const hero = document.querySelector('#hero');
   const animationClass = 'hero--animated';
-  const removeAfterMs = 1000;
 
-  heroBackground.addEventListener('load', () => {
+  const handlePageLoaded = () => {
+    const removeAfterMs = 1000;
     hero.classList.add(animationClass);
     hideLoader(removeAfterMs);
+  };
+
+  heroBackground.addEventListener('load', () => {
+    handlePageLoaded();
   });
 
   heroBackground.addEventListener('error', () => {
     console.error('Failed to load hero background image');
-    hero.classList.add(animationClass);
-    hideLoader(removeAfterMs);
+    handlePageLoaded();
   });
 
   if (heroBackground.complete) {
-    hero.classList.add(animationClass);
-    hideLoader(removeAfterMs);
+    handlePageLoaded();
   }
 })();

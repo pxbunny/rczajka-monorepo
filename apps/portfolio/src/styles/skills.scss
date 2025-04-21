@@ -2,6 +2,7 @@
 
 .skills {
   display: flex;
+  position: relative;
   background: var(--color-theme-dark);
   color: var(--color-primary-inv);
   overflow: hidden;
