@@ -13,10 +13,14 @@
 
 .contact__email {
   @include typography.text-sm;
-  color: var(--color-secondary-dark-bg);
+
+  color: var(--color-secondary-inv);
   margin-top: spacing.$space-8;
   text-align: center;
-  font-style: italic;
+
+  & > span {
+    font-style: italic;
+  }
 }
 
 #footer {

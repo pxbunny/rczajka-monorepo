@@ -14,12 +14,12 @@
 
   &__link,
   &__link:visited {
-    color: var(--color-primary-dark-bg);
+    color: var(--color-primary-inv);
     transition: color var(--transition-duration) ease-in-out;
   }
 
   &__link:hover,
   &__link:focus {
-    color: var(--color-accent);
+    color: var(--color-theme);
   }
 }

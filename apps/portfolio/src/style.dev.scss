@@ -2,6 +2,7 @@
 
 #dev-links {
   @include typography.uppercase-sm;
+
   position: fixed;
   left: 4px;
   bottom: 4px;
@@ -16,7 +17,7 @@
   z-index: 1000;
 
   a {
-    color: var(--color-primary-dark-bg);
+    color: var(--color-primary-inv);
     opacity: .8;
     transition: opacity var(--transition-duration) ease-in-out;
 
@@ -44,11 +45,13 @@
 
   &__inner {
     @include ruler;
+
     width: 720px;
   }
 
   &__outer {
     @include ruler;
+
     width: 1200px;
   }
 }

@@ -2,8 +2,8 @@
 
 .skills {
   display: flex;
-  background: var(--color-accent);
-  color: var(--color-primary-dark-bg);
+  background: var(--color-theme-dark);
+  color: var(--color-primary-inv);
   overflow: hidden;
   white-space: nowrap;
   padding: spacing.$space-32 0;

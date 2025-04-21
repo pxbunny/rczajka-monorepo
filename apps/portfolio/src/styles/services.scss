@@ -4,7 +4,7 @@
 .services-container {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: spacing.$space-40;
   flex-wrap: wrap;
 }
 
@@ -18,7 +18,7 @@
   gap: spacing.$space-24;
 
   &__icon {
-    color: var(--color-accent);
+    color: var(--color-theme);
     font-size: 3.5rem;
 
     @media screen and (max-width: 768px) {
@@ -36,6 +36,7 @@
 
   &__description {
     @include typography.text-md;
-    color: var(--color-secondary-dark-bg);
+
+    color: var(--color-secondary-inv);
   }
 }

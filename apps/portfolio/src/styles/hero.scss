@@ -6,7 +6,7 @@
   position: relative;
   justify-content: center;
   background: var(--bg-dark);
-  color: var(--color-primary-dark-bg);
+  color: var(--color-primary-inv);
   align-items: center;
   position: relative;
   min-height: 100vh;
@@ -51,8 +51,9 @@
 
   &__subtitle {
     @include typography.uppercase-lg;
+
     margin-bottom: spacing.$space-8;
-    color: var(--color-accent);
+    color: var(--color-theme);
 
     @media screen and (max-width: 768px) {
       @include typography.uppercase-md;
@@ -61,6 +62,7 @@
 
   &__name {
     @include typography.title-lg;
+
     margin-bottom: spacing.$space-16;
 
     @media screen and (max-width: 768px) {

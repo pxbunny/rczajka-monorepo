@@ -2,13 +2,14 @@
 
 .scroll-to-top {
   @include typography.text-lg($line-height: 1);
+
   position: fixed;
   bottom: 0;
   right: 0;
   width: 4rem;
   height: 4rem;
-  background: var(--color-accent);
-  color: var(--color-primary-dark-bg);
+  background: var(--color-theme);
+  color: var(--color-primary-inv);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -45,22 +45,24 @@
     }
 
     .section__title {
-      color: var(--color-primary-dark-bg);
+      color: var(--color-primary-inv);
     }
 
     .section__text {
-      color: var(--color-secondary-dark-bg);
+      color: var(--color-secondary-inv);
     }
   }
 
   &__intro {
     @include section-row-defaults;
+
     max-width: calc(720px + spacing.$space-32 * 2);
   }
 
   &__row {
     @Include typography.text-md;
     @include section-row-defaults;
+
     max-width: calc(1200px + spacing.$space-32 * 2);
 
     &--gap {
@@ -70,7 +72,8 @@
 
   &__subtitle {
     @include typography.uppercase-md;
-    color: var(--color-accent);
+
+    color: var(--color-theme);
     margin-bottom: spacing.$space-8;
 
     @media screen and (max-width: 768px) {
@@ -80,6 +83,7 @@
 
   &__title {
     @include typography.title-md;
+
     margin-bottom: spacing.$space-24;
     color: var(--color-primary);
 
@@ -90,6 +94,7 @@
 
   &__text {
     @include typography.text-xl;
+
     color: var(--color-secondary);
 
     @media screen and (max-width: 768px) {
