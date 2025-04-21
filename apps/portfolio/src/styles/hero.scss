@@ -17,11 +17,11 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: var(--bg-dark) url('../assets/hero.webp') no-repeat center;
+    background: var(--bg-dark) url('../assets/tmp.jpg') no-repeat center;
     background-size: cover;
     transform: translateZ(0);
     will-change: transform, opacity;
-    animation: bg-magic 2s ease-in-out forwards;
+    animation: bg-magic 2s ease-out forwards;
 
     @keyframes bg-magic {
       0% {
@@ -30,7 +30,7 @@
       }
       100% {
         transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-        opacity: .1;
+        opacity: .05;
       }
     }
   }
