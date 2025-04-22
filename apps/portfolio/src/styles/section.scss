@@ -1,25 +1,18 @@
 @use 'spacing';
 @use 'typography';
 
-@mixin section-row-defaults {
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  padding: 0 spacing.$space-32;
-}
-
 .section {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: spacing.$space-32;
   width: 100%;
-  padding: spacing.$space-160 0;
   background: var(--bg-primary);
   color: var(--color-primary);
+  padding: spacing.$space-96 0;
 
-  @media screen and (max-width: 768px) {
-    padding: spacing.$space-96 0;
+  @media screen and (min-width: 768px) {
+    padding: spacing.$space-160 0;
   }
 
   &--primary {
@@ -30,19 +23,11 @@
   &--secondary {
     background: var(--bg-secondary);
     color: var(--color-primary);
-
-    .section__overlay {
-      background: var(--bg-secondary);
-    }
   }
 
   &--dark {
     background: var(--bg-dark);
     color: var(--bg-primary);
-
-    .section__overlay {
-      background: var(--bg-dark);
-    }
 
     .section__title {
       color: var(--color-primary-inv);
@@ -53,17 +38,47 @@
     }
   }
 
-  &__intro {
-    @include section-row-defaults;
+  &__inner {
+    width: 100%;
+    padding: 0 spacing.$space-16;
+    margin: 0 auto;
+    display: grid;
+    gap: spacing.$space-40;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: spacing.$space-16;
 
-    max-width: calc(720px + spacing.$space-32 * 2);
+    @media screen and (min-width: 768px) {
+      padding: 0 spacing.$space-32;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-gap: spacing.$space-32;
+    }
+
+    @media screen and (min-width: 1280px) {
+      max-width: calc(1200px + spacing.$space-40 * 2);
+      padding: 0 spacing.$space-40;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-gap: spacing.$space-40;
+    }
+  }
+
+  &__intro {
+    grid-column: 1 / span 4;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      grid-column: 2 / span 6;
+    }
+
+    @media screen and (min-width: 1280px) {
+      grid-column: 3 / span 8;
+    }
   }
 
   &__row {
     @Include typography.text-md;
-    @include section-row-defaults;
 
-    max-width: calc(1200px + spacing.$space-32 * 2);
+    text-align: center;
+    grid-column: 1 / -1;
 
     &--gap {
       margin-top: spacing.$space-32;

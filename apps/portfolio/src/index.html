@@ -20,9 +20,6 @@
   <!-- development only -->
   <link rel="stylesheet" href="style.dev.scss" data-env="dev">
   <script src="script.dev.js" type="module" data-env="dev"></script>
-
-  <link rel="stylesheet" href="designer/main.scss" data-env="dev">
-  <script src="designer/main.js" type="module" data-env="dev"></script>
   <!---------------------->
 </head>
 <body>
@@ -31,15 +28,6 @@
     <li><a href="http://localhost:3333/" target="_blank">CMS</a></li>
     <li><a href="http://localhost:3333/" target="_blank">Blog</a></li>
   </ul>
-
-  <div class="ruler" data-env="dev">
-    <div class="ruler__inner"></div>
-    <div class="ruler__outer"></div>
-  </div>
-
-  <div class="designer" data-env="dev">
-    <div class="designer__grid-col"></div>
-  </div>
   <!---------------------->
 
   <!---------------------------------->
@@ -67,24 +55,22 @@
   <!---------------------------------->
 
   <section id="about" class="section">
-    <div class="section__intro">
-      <p class="section__subtitle">About</p>
-      <h2 class="section__title">Let me introduce myself.</h2>
-      <p class="section__text">
-        Lorem ipsum Exercitation culpa qui dolor consequat exercitation fugiat laborum ex ea
-        eiusmod ad do aliqua occaecat nisi ad irure sunt id pariatur Duis laboris amet
-        exercitation veniam labore consectetur ea id quis eiusmod.
-      </p>
-    </div>
-    <div class="section__row">
-      <a href="#" class="button button--secondary">
-        Button One
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </a>
-      <a href="#" class="button button--primary">
-        Button Two
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </a>
+    <div class="section__inner">
+      <div class="section__intro">
+        <p class="section__subtitle">About</p>
+        <h2 class="section__title">Let me introduce myself.</h2>
+        <p class="section__text">
+          Lorem ipsum Exercitation culpa qui dolor consequat exercitation fugiat laborum ex ea
+          eiusmod ad do aliqua occaecat nisi ad irure sunt id pariatur Duis laboris amet
+          exercitation veniam labore consectetur ea id quis eiusmod.
+        </p>
+      </div>
+      <div class="section__row">
+        <a href="#" class="button button--secondary">
+          Button One
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -93,19 +79,21 @@
   <!---------------------------------->
 
   <section id="projects" class="section section--secondary">
-    <div class="section__intro">
-      <p class="section__subtitle">Projects</p>
-      <h2 class="section__title">About everything and nothing.</h2>
-      <p class="section__text">
-        Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
-        nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
-      </p>
-    </div>
-    <div class="section__row">
-      <button class="button button--primary" disabled="">
-        Go To Blog
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </button>
+    <div class="section__inner">
+      <div class="section__intro">
+        <p class="section__subtitle">Projects</p>
+        <h2 class="section__title">About everything and nothing.</h2>
+        <p class="section__text">
+          Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
+          nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+        </p>
+      </div>
+      <div class="section__row">
+        <button class="button button--primary" disabled="">
+          Go To Blog
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -114,19 +102,21 @@
   <!---------------------------------->
 
   <section id="blog" class="section">
-    <div class="section__intro">
-      <p class="section__subtitle">Blog</p>
-      <h2 class="section__title">About everything and nothing.</h2>
-      <p class="section__text">
-        Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
-        nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
-      </p>
-    </div>
-    <div class="section__row">
-      <button class="button button--primary" disabled="">
-        Go To Blog
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </button>
+    <div class="section__inner">
+      <div class="section__intro">
+        <p class="section__subtitle">Blog</p>
+        <h2 class="section__title">About everything and nothing.</h2>
+        <p class="section__text">
+          Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
+          nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+        </p>
+      </div>
+      <div class="section__row">
+        <button class="button button--primary" disabled="">
+          Go To Blog
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -135,12 +125,14 @@
   <!---------------------------------->
 
   <section id="section" class="section section--secondary">
-    <div class="section__intro">
-      <h2 class="section__title">Skip this section.</h2>
-      <p class="section__text">
-        A white background on the section right before the dark one creates too much contrast
-        and doesn't look right, so here's a grey one. Let's just pretend it doesn't exist.
-      </p>
+    <div class="section__inner">
+      <div class="section__intro">
+        <h2 class="section__title">Skip this section.</h2>
+        <p class="section__text">
+          A white background on the section right before the dark one creates too much contrast
+          and doesn't look right, so here's a grey one. Let's just pretend it doesn't exist.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -149,53 +141,55 @@
   <!---------------------------------->
 
   <section id="services" class="section section--dark">
-    <div class="section__intro">
-      <p class="section__subtitle">Services</p>
-      <h2 class="section__title">What can I do for you?</h2>
-      <p class="section__text">
-        Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
-        nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
-      </p>
-    </div>
-    <div class="section__row section__row--gap">
-      <ul class="services-container">
-        <li class="services-item">
-          <p class="services-item__icon">
-            <i class="fa-solid fa-code"></i>
-          </p>
-          <h3 class="services-item__title">Web Development</h3>
-          <p class="services-item__description">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-            voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-          </p>
-        </li>
-        <li class="services-item">
-          <p class="services-item__icon">
-            <i class="fa-solid fa-cloud"></i>
-          </p>
-          <h3 class="services-item__title">DevOps</h3>
-          <p class="services-item__description">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-            voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-          </p>
-        </li>
-        <li class="services-item">
-          <p class="services-item__icon">
-            <i class="fa-solid fa-calculator"></i>
-          </p>
-          <h3 class="services-item__title">Data Science</h3>
-          <p class="services-item__description">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-            voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-          </p>
-        </li>
-      </ul>
+    <div class="section__inner">
+      <div class="section__intro">
+        <p class="section__subtitle">Services</p>
+        <h2 class="section__title">What can I do for you?</h2>
+        <p class="section__text">
+          Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
+          nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+        </p>
+      </div>
+      <div class="section__row section__row--gap">
+        <ul class="services-container">
+          <li class="services-item">
+            <p class="services-item__icon">
+              <i class="fa-solid fa-code"></i>
+            </p>
+            <h3 class="services-item__title">Web Development</h3>
+            <p class="services-item__description">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+              voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            </p>
+          </li>
+          <li class="services-item">
+            <p class="services-item__icon">
+              <i class="fa-solid fa-cloud"></i>
+            </p>
+            <h3 class="services-item__title">DevOps</h3>
+            <p class="services-item__description">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+              voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            </p>
+          </li>
+          <li class="services-item">
+            <p class="services-item__icon">
+              <i class="fa-solid fa-calculator"></i>
+            </p>
+            <h3 class="services-item__title">Data Science</h3>
+            <p class="services-item__description">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+              voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -210,17 +204,19 @@
   <!---------------------------------->
 
   <section id="contact" class="section section--dark">
-    <div class="section__intro">
-      <p class="section__subtitle">Contact</p>
-      <h2 class="section__title">Get in touch.</h2>
-      <p class="section__text">
-        Have a question, feedback, or a project in mind? I'm here to listen and help turn your
-        ideas into reality. Let's connect and make something great together!
-      </p>
-    </div>
-    <div class="section__row">
-      <a href="mailto:contact@rczajka.me" class="button button--secondary-inv">Contact Me</a>
-      <p class="contact__email">(<span>contact@rczajka.me</span>)</p>
+    <div class="section__inner">
+      <div class="section__intro">
+        <p class="section__subtitle">Contact</p>
+        <h2 class="section__title">Get in touch.</h2>
+        <p class="section__text">
+          Have a question, feedback, or a project in mind? I'm here to listen and help turn your
+          ideas into reality. Let's connect and make something great together!
+        </p>
+      </div>
+      <div class="section__row">
+        <a href="mailto:contact@rczajka.me" class="button button--secondary-inv">Contact Me</a>
+        <p class="contact__email">(<span>contact@rczajka.me</span>)</p>
+      </div>
     </div>
   </section>
 

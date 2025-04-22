@@ -27,31 +27,3 @@
     }
   }
 }
-
-.ruler {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1000;
-
-  @mixin ruler {
-    position: absolute;
-    height: 100vh;
-    border-left: 1px dashed grey;
-    border-right: 1px dashed grey;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &__inner {
-    @include ruler;
-
-    width: 720px;
-  }
-
-  &__outer {
-    @include ruler;
-
-    width: 1200px;
-  }
-}

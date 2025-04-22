@@ -78,9 +78,7 @@ function handleScrollButtonVisibility() {
 
   const heroBackground = document.querySelector('.hero__background');
 
-  if (!heroBackground) {
-    return;
-  }
+  if (!heroBackground) return;
 
   const hero = document.querySelector('#hero');
   const animationClass = 'hero--animated';
