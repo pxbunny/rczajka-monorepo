@@ -76,10 +76,15 @@ function handleScrollButtonVisibility() {
     setSkillsCarousel(technologies);
   });
 
+  new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('services-container--animated');
+      }
+    });
+  }, { rootMargin: '-200px' }).observe(document.querySelector('.services-container'));
+
   const heroBackground = document.querySelector('.hero__background');
-
-  if (!heroBackground) return;
-
   const hero = document.querySelector('#hero');
   const animationClass = 'hero--animated';
 

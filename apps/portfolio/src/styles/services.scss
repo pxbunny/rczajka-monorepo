@@ -19,12 +19,36 @@
     grid-template-rows: repeat(1, auto);
     grid-column-gap: spacing.$space-40;
   }
+
+  &--animated {
+    & > li {
+      animation: appear 1s ease-in-out forwards;
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * .2}s;
+        }
+      }
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 .services-item {
   display: flex;
   flex-direction: column;
   text-align: center;
+  opacity: 0;
   gap: spacing.$space-24;
 
   &--1 {
