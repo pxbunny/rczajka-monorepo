@@ -1,0 +1,21 @@
+$gutter: 40px;
+
+.designer {
+  position: fixed;
+  display: flex;
+  max-width: 1200px + $gutter * 2;
+  height: 100vh;
+  inset: 0;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  z-index: 999999;
+  gap: $gutter;
+  pointer-events: none;
+
+  &__grid-col {
+    flex: 1 0;
+    height: 100%;
+    background-color: red;
+    opacity: .1;
+  }
+}
