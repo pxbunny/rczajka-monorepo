@@ -1,5 +1,6 @@
 @use 'spacing';
 @use 'typography';
+@use 'breakpoints';
 
 #hero {
   display: flex;
@@ -26,40 +27,40 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 spacing.$space-32;
     z-index: 100;
+    padding: 0 spacing.$space-8;
 
-    @media screen and (max-width: 768px) {
-      padding: 0 spacing.$space-8;
+    @media screen and (min-width: breakpoints.$mobile) {
+      padding: 0 spacing.$space-32;
     }
   }
 
   &__subtitle {
-    @include typography.uppercase-lg;
+    @include typography.uppercase-md;
 
     margin-bottom: spacing.$space-8;
     color: var(--color-theme);
 
-    @media screen and (max-width: 768px) {
-      @include typography.uppercase-md;
+    @media screen and (min-width: breakpoints.$mobile) {
+      @include typography.uppercase-lg;
     }
   }
 
   &__name {
-    @include typography.title-lg;
+    @include typography.title-md;
 
     margin-bottom: spacing.$space-16;
 
-    @media screen and (max-width: 768px) {
-      @include typography.title-md;
+    @media screen and (min-width: breakpoints.$mobile) {
+      @include typography.title-lg;
     }
   }
 
   &__title {
-    @include typography.uppercase-md($font-weight: normal);
+    @include typography.uppercase-sm;
 
-    @media screen and (max-width: 768px) {
-      @include typography.uppercase-sm;
+    @media screen and (min-width: breakpoints.$mobile) {
+      @include typography.uppercase-md($font-weight: normal);
     }
   }
 

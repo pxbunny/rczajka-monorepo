@@ -1,5 +1,6 @@
 @use 'spacing';
 @use 'typography';
+@use 'breakpoints';
 
 .services-container {
   display: flex;
@@ -19,18 +20,18 @@
 
   &__icon {
     color: var(--color-theme);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 
-    @media screen and (max-width: 768px) {
-      font-size: 2.5rem;
+    @media screen and (min-width: breakpoints.$mobile) {
+      font-size: 3.5rem;
     }
   }
 
   &__title {
-    @include typography.title-sm;
+    @include typography.title-xs;
 
-    @media screen and (max-width: 768px) {
-      @include typography.title-xs;
+    @media screen and (min-width: breakpoints.$mobile) {
+      @include typography.title-sm;
     }
   }
 

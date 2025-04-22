@@ -1,15 +1,16 @@
 @use 'spacing';
+@use 'breakpoints';
 
 .socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  gap: spacing.$space-64;
+  font-size: 1.75rem;
+  gap: spacing.$space-48;
 
-  @media screen and (max-width: 768px) {
-    font-size: 1.75rem;
-    gap: spacing.$space-48;
+  @media screen and (min-width: breakpoints.$mobile) {
+    font-size: 2rem;
+    gap: spacing.$space-64;
   }
 
   &__link,
