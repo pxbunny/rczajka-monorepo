@@ -40,10 +40,13 @@
   }
 
   &__inner {
+    @Include typography.text-md;
+
     width: 100%;
     padding: 0 spacing.$space-16;
     margin: 0 auto;
     display: grid;
+    text-align: center;
     gap: spacing.$space-40;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: spacing.$space-16;
@@ -62,24 +65,64 @@
     }
   }
 
-  &__intro {
-    grid-column: 1 / span 4;
-    text-align: center;
-
-    @media screen and (min-width: breakpoints.$mobile) {
-      grid-column: 2 / span 6;
-    }
-
-    @media screen and (min-width: breakpoints.$desktop) {
-      grid-column: 3 / span 8;
-    }
-  }
-
   &__row {
-    @Include typography.text-md;
-
-    text-align: center;
     grid-column: 1 / -1;
+
+    &--xs {
+      grid-column: 2 / span 2;
+
+      @media screen and (min-width: breakpoints.$mobile) {
+        grid-column: 4 / span 2;
+      }
+
+      @media screen and (min-width: breakpoints.$desktop) {
+        grid-column: 6 / span 2;
+      }
+    }
+
+    &--sm {
+      grid-column: 1 / -1;
+
+      @media screen and (min-width: breakpoints.$mobile) {
+        grid-column: 3 / span 4;
+      }
+
+      @media screen and (min-width: breakpoints.$desktop) {
+        grid-column: 5 / span 4;
+      }
+    }
+
+    &--md {
+      grid-column: 1 / -1;
+
+      @media screen and (min-width: breakpoints.$mobile) {
+        grid-column: 3 / span 4;
+      }
+
+      @media screen and (min-width: breakpoints.$desktop) {
+        grid-column: 4 / span 6;
+      }
+    }
+
+    &--lg {
+      grid-column: 1 / -1;
+
+      @media screen and (min-width: breakpoints.$mobile) {
+        grid-column: 2 / span 6;
+      }
+
+      @media screen and (min-width: breakpoints.$desktop) {
+        grid-column: 3 / span 8;
+      }
+    }
+
+    &--xl {
+      grid-column: 1 / -1;
+
+      @media screen and (min-width: breakpoints.$desktop) {
+        grid-column: 2 / span 10;
+      }
+    }
 
     &--gap {
       margin-top: spacing.$space-32;

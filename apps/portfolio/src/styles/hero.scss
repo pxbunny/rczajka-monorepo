@@ -91,9 +91,9 @@
     &__background {
       transform: translateZ(0);
       will-change: transform, opacity;
-      animation: bg-magic 2s ease-out forwards;
+      animation: hero-bg-magic 2s ease-out forwards;
 
-      @keyframes bg-magic {
+      @keyframes hero-bg-magic {
         0% {
           transform: scale(3) rotateX(15deg) rotateY(15deg) rotateZ(-15deg);
           opacity: .9;
