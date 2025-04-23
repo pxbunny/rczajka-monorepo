@@ -22,24 +22,24 @@
 
   &--animated {
     & > li {
-      animation: appear 1s ease-in-out forwards;
+      animation: services-appear .5s ease-out forwards;
 
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
-          animation-delay: #{$i * .2}s;
+          animation-delay: #{$i * .15}s;
         }
       }
     }
   }
 
-  @keyframes appear {
+  @keyframes services-appear {
     0% {
       opacity: 0;
-      transform: translateY(2rem);
+      transform: translateY(2rem) scale(0.95);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
   }
 }

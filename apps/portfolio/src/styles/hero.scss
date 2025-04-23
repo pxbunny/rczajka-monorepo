@@ -106,12 +106,12 @@
     }
 
     &__button {
-      animation: appear .5s ease-in-out forwards;
+      animation: hero-element-appear .5s ease-in-out forwards;
       animation-delay: 1.5s;
     }
 
     &__socials li {
-      animation: appear .5s ease-in-out forwards;
+      animation: hero-element-appear .5s ease-in-out forwards;
 
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
@@ -120,7 +120,7 @@
       }
     }
 
-    @keyframes appear {
+    @keyframes hero-element-appear {
       0% {
         opacity: 0;
         transform: translateY(20px);
