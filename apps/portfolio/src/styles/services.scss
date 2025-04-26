@@ -22,11 +22,11 @@
 
   &--animated {
     & > li {
-      animation: services-appear .5s ease-out forwards;
+      animation: services-appear 1.5s ease-out forwards;
 
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
-          animation-delay: #{$i * .15}s;
+          animation-delay: #{($i - 1) * .2}s;
         }
       }
     }
@@ -35,7 +35,7 @@
   @keyframes services-appear {
     0% {
       opacity: 0;
-      transform: translateY(2rem) scale(0.95);
+      transform: translateY(5rem) scale(0.9);
     }
     100% {
       opacity: 1;
