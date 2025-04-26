@@ -17,8 +17,8 @@
 .hero {
   &__background {
     position: fixed;
-    width: 100%;
-    height: 100vh;
+    max-width: 100%;
+    height: auto;
   }
 
   &__content {
@@ -37,7 +37,7 @@
     }
 
     @keyframes hero-content-hide {
-      to { transform: translateY(-10vh) }
+      to { transform: translateY(-15vh) }
     }
   }
 
@@ -85,9 +85,19 @@
     position: absolute;
     width: 100%;
     bottom: spacing.$space-64;
+    animation: hero-socials-hide 1ms linear forwards;
+    animation-timeline: scroll(root);
+    animation-range: 0 70vh;
 
     li {
       transform: translateY(-200vh);
+    }
+
+    @keyframes hero-socials-hide {
+      to {
+        opacity: 0;
+        pointer-events: none;
+      }
     }
   }
 }
@@ -100,21 +110,25 @@
       animation:
         hero-bg-magic 2s ease-out forwards,
         hero-scroll-magic 1ms linear;
-      animation-timeline: auto, view();
+      animation-timeline: auto, scroll(root);
+      animation-range: 0 100vh;
 
       @keyframes hero-bg-magic {
         from {
-          transform: scale(3) rotateX(15deg) rotateY(15deg) rotateZ(-15deg);
-          opacity: .8;
+          transform: scale(3) rotateZ(-15deg);
+          opacity: .9;
         }
         to {
-          transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-          opacity: .05;
+          transform: scale(1) rotateZ(0deg);
+          opacity: .1;
         }
       }
 
       @keyframes hero-scroll-magic {
-        to { transform: scale(1.2) }
+        to {
+          transform: scale(1.5) rotateZ(-5deg);
+          opacity: .5;
+        }
       }
     }
 
