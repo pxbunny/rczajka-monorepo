@@ -65,7 +65,15 @@ function handleScrollButtonVisibility() {
   const { technologies } = data;
 
   shuffle(technologies);
-  setSkillsCarousel(technologies);
+
+  const hero = document.querySelector('#hero');
+  const animationClass = 'hero--animated';
+
+  window.addEventListener('load', () => {
+    const removeAfterMs = 1000;
+    hero.classList.add(animationClass);
+    hideLoader(removeAfterMs);
+  });
 
   window.addEventListener('scroll', () => {
     handleScrollButtonVisibility();
@@ -76,6 +84,8 @@ function handleScrollButtonVisibility() {
     setSkillsCarousel(technologies);
   });
 
+  setSkillsCarousel(technologies);
+
   new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -83,27 +93,4 @@ function handleScrollButtonVisibility() {
       }
     });
   }, { rootMargin: '-200px' }).observe(document.querySelector('.services-container'));
-
-  const heroBackground = document.querySelector('.hero__background');
-  const hero = document.querySelector('#hero');
-  const animationClass = 'hero--animated';
-
-  const handlePageLoaded = () => {
-    const removeAfterMs = 1000;
-    hero.classList.add(animationClass);
-    hideLoader(removeAfterMs);
-  };
-
-  heroBackground.addEventListener('load', () => {
-    handlePageLoaded();
-  });
-
-  heroBackground.addEventListener('error', () => {
-    console.error('Failed to load hero background image');
-    handlePageLoaded();
-  });
-
-  if (heroBackground.complete) {
-    handlePageLoaded();
-  }
 })();
