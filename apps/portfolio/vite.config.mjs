@@ -48,6 +48,5 @@ const devConfig = {
 
 export default defineConfig(({ command }) => {
   if (command === 'serve') return devConfig;
-
   return buildConfig;
 });

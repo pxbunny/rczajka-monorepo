@@ -71,8 +71,10 @@ function handleScrollButtonVisibility() {
 
   window.addEventListener('load', () => {
     const removeAfterMs = 1000;
-    hero.classList.add(animationClass);
     hideLoader(removeAfterMs);
+
+    hero.classList.add(animationClass);
+    setSkillsCarousel(technologies);
   });
 
   window.addEventListener('scroll', () => {
@@ -84,13 +86,10 @@ function handleScrollButtonVisibility() {
     setSkillsCarousel(technologies);
   });
 
-  setSkillsCarousel(technologies);
-
   new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('services-container--animated');
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('services-container--animated');
     });
   }, { rootMargin: '-200px' }).observe(document.querySelector('.services-container'));
 })();
