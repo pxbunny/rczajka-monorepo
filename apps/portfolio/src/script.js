@@ -69,7 +69,7 @@ function handleScrollButtonVisibility() {
   const hero = document.querySelector('#hero');
   const animationClass = 'hero--animated';
 
-  let prevScrollTop = 0;
+  let prevScrollY = 0;
 
   window.addEventListener('load', () => {
     const removeAfterMs = 1000;
@@ -82,9 +82,17 @@ function handleScrollButtonVisibility() {
   window.addEventListener('scroll', () => {
     handleScrollButtonVisibility();
 
-    const isScrollingUp = window.scrollY < prevScrollTop;
-    prevScrollTop = window.scrollY;
-    document.documentElement.style.scrollSnapType = isScrollingUp ? 'y proximity' : '';
+    const fullPageHeight = document.documentElement.scrollHeight;
+    const isScrollingUp = window.scrollY < prevScrollY;
+    prevScrollY = window.scrollY;
+
+    if (isScrollingUp && window.scrollY < fullPageHeight / 2 ||
+        !isScrollingUp && window.scrollY > fullPageHeight / 2) {
+      document.documentElement.style.scrollSnapType = 'y';
+      return;
+    }
+
+    document.documentElement.style.scrollSnapType = '';
   });
 
   window.addEventListener('resize', () => {
