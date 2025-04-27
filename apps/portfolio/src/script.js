@@ -86,7 +86,7 @@ function handleScrollButtonVisibility() {
     const isScrollingUp = window.scrollY < prevScrollY;
     prevScrollY = window.scrollY;
 
-    if (isScrollingUp && window.scrollY < windowHeight * 0.9) {
+    if (isScrollingUp && window.scrollY < windowHeight * 0.9 && window.scrollY > 0) {
       document.documentElement.style.scrollSnapType = 'y mandatory';
       return;
     }
