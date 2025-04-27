@@ -69,6 +69,8 @@ function handleScrollButtonVisibility() {
   const hero = document.querySelector('#hero');
   const animationClass = 'hero--animated';
 
+  let prevScrollTop = 0;
+
   window.addEventListener('load', () => {
     const removeAfterMs = 1000;
     hideLoader(removeAfterMs);
@@ -79,6 +81,10 @@ function handleScrollButtonVisibility() {
 
   window.addEventListener('scroll', () => {
     handleScrollButtonVisibility();
+
+    const isScrollingUp = window.scrollY < prevScrollTop;
+    prevScrollTop = window.scrollY;
+    document.documentElement.style.scrollSnapType = isScrollingUp ? 'y proximity' : '';
   });
 
   window.addEventListener('resize', () => {
