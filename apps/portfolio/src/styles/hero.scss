@@ -32,7 +32,7 @@
     animation-timeline: scroll(root);
     animation-range: 0 50vh;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       padding: 0 spacing.$space-32;
     }
 
@@ -47,7 +47,7 @@
     margin-bottom: spacing.$space-8;
     color: var(--color-theme);
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       @include typography.uppercase-lg;
     }
   }
@@ -57,7 +57,7 @@
 
     margin-bottom: spacing.$space-16;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       @include typography.title-lg;
     }
   }
@@ -65,7 +65,7 @@
   &__title {
     @include typography.uppercase-sm;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       @include typography.uppercase-md($font-weight: normal);
     }
   }
@@ -126,7 +126,7 @@
 
       @keyframes hero-scroll-magic {
         to {
-          transform: scale(1.5) rotateZ(-5deg);
+          transform: scale(1.5) rotateZ(-2deg);
           opacity: .5;
         }
       }

@@ -22,7 +22,7 @@
     height: 4rem;
     margin-right: spacing.$space-160;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       width: 5rem;
       height: 5rem;
     }

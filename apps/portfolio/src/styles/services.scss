@@ -9,12 +9,12 @@
   grid-column-gap: spacing.$space-16;
   grid-row-gap: spacing.$space-40;
 
-  @media screen and (min-width: breakpoints.$mobile) {
+  @media (min-width: breakpoints.$mobile) {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: spacing.$space-32;
   }
 
-  @media screen and (min-width: breakpoints.$desktop) {
+  @media (min-width: breakpoints.$desktop) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, auto);
     grid-column-gap: spacing.$space-40;
@@ -54,11 +54,11 @@
   &--1 {
     grid-column: 1 / -1;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       grid-column: 1 / span 2;
     }
 
-    @media screen and (min-width: breakpoints.$desktop) {
+    @media (min-width: breakpoints.$desktop) {
       grid-column: 1;
       grid-row: 1;
     }
@@ -68,12 +68,12 @@
     grid-column: 1 / -1;
     grid-row: 2;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       grid-column: 3 / span 2;
       grid-row: 1;
     }
 
-    @media screen and (min-width: breakpoints.$desktop) {
+    @media (min-width: breakpoints.$desktop) {
       grid-column: 2;
       grid-row: 1;
     }
@@ -83,12 +83,12 @@
     grid-column: 1 / -1;
     grid-row: 3;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       grid-column: 2 / span 2;
       grid-row: 2;
     }
 
-    @media screen and (min-width: breakpoints.$desktop) {
+    @media (min-width: breakpoints.$desktop) {
       grid-column: 3;
       grid-row: 1;
     }
@@ -98,7 +98,7 @@
     color: var(--color-theme);
     font-size: 2.5rem;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       font-size: 3.5rem;
     }
   }
@@ -106,7 +106,7 @@
   &__title {
     @include typography.title-xs;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       @include typography.title-sm;
     }
   }

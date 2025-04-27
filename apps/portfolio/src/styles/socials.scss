@@ -8,7 +8,7 @@
   font-size: 1.75rem;
   gap: spacing.$space-48;
 
-  @media screen and (min-width: breakpoints.$mobile) {
+  @media (min-width: breakpoints.$mobile) {
     font-size: 2rem;
     gap: spacing.$space-64;
   }

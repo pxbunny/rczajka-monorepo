@@ -12,7 +12,7 @@
   color: var(--color-primary);
   padding: spacing.$space-96 0;
 
-  @media screen and (min-width: breakpoints.$mobile) {
+  @media (min-width: breakpoints.$mobile) {
     padding: spacing.$space-160 0;
   }
 
@@ -51,13 +51,13 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: spacing.$space-16;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       padding: 0 spacing.$space-32;
       grid-template-columns: repeat(8, 1fr);
       grid-column-gap: spacing.$space-32;
     }
 
-    @media screen and (min-width: breakpoints.$desktop) {
+    @media (min-width: breakpoints.$desktop) {
       max-width: calc(1200px + spacing.$space-40 * 2);
       padding: 0 spacing.$space-40;
       grid-template-columns: repeat(12, 1fr);
@@ -71,11 +71,11 @@
     &--xs {
       grid-column: 2 / span 2;
 
-      @media screen and (min-width: breakpoints.$mobile) {
+      @media (min-width: breakpoints.$mobile) {
         grid-column: 4 / span 2;
       }
 
-      @media screen and (min-width: breakpoints.$desktop) {
+      @media (min-width: breakpoints.$desktop) {
         grid-column: 6 / span 2;
       }
     }
@@ -83,11 +83,11 @@
     &--sm {
       grid-column: 1 / -1;
 
-      @media screen and (min-width: breakpoints.$mobile) {
+      @media (min-width: breakpoints.$mobile) {
         grid-column: 3 / span 4;
       }
 
-      @media screen and (min-width: breakpoints.$desktop) {
+      @media (min-width: breakpoints.$desktop) {
         grid-column: 5 / span 4;
       }
     }
@@ -95,11 +95,11 @@
     &--md {
       grid-column: 1 / -1;
 
-      @media screen and (min-width: breakpoints.$mobile) {
+      @media (min-width: breakpoints.$mobile) {
         grid-column: 3 / span 4;
       }
 
-      @media screen and (min-width: breakpoints.$desktop) {
+      @media (min-width: breakpoints.$desktop) {
         grid-column: 4 / span 6;
       }
     }
@@ -107,11 +107,11 @@
     &--lg {
       grid-column: 1 / -1;
 
-      @media screen and (min-width: breakpoints.$mobile) {
+      @media (min-width: breakpoints.$mobile) {
         grid-column: 2 / span 6;
       }
 
-      @media screen and (min-width: breakpoints.$desktop) {
+      @media (min-width: breakpoints.$desktop) {
         grid-column: 3 / span 8;
       }
     }
@@ -119,7 +119,7 @@
     &--xl {
       grid-column: 1 / -1;
 
-      @media screen and (min-width: breakpoints.$desktop) {
+      @media (min-width: breakpoints.$desktop) {
         grid-column: 2 / span 10;
       }
     }
@@ -135,7 +135,7 @@
     color: var(--color-theme);
     margin-bottom: spacing.$space-8;
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       @include typography.uppercase-md;
     }
   }
@@ -146,7 +146,7 @@
     margin-bottom: spacing.$space-24;
     color: var(--color-primary);
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       @include typography.title-md;
     }
   }
@@ -156,7 +156,7 @@
 
     color: var(--color-secondary);
 
-    @media screen and (min-width: breakpoints.$mobile) {
+    @media (min-width: breakpoints.$mobile) {
       @include typography.text-xl;
     }
   }
