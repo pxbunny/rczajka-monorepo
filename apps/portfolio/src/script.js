@@ -82,13 +82,12 @@ function handleScrollButtonVisibility() {
   window.addEventListener('scroll', () => {
     handleScrollButtonVisibility();
 
-    const fullPageHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
     const isScrollingUp = window.scrollY < prevScrollY;
     prevScrollY = window.scrollY;
 
-    if (isScrollingUp && window.scrollY < fullPageHeight / 2 ||
-        !isScrollingUp && window.scrollY > fullPageHeight / 2) {
-      document.documentElement.style.scrollSnapType = 'y';
+    if (isScrollingUp && window.scrollY < windowHeight * 0.9) {
+      document.documentElement.style.scrollSnapType = 'y mandatory';
       return;
     }
 
