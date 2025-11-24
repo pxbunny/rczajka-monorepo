@@ -1,16 +1,13 @@
 {
-  "name": "portfolio-playground",
+  "name": "portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint",
-    "prebuild": "node ssg/prebuild.mjs",
-    "postbuild": "node ssg/postbuild.mjs"
+    "lint": "eslint"
   },
   "devDependencies": {
     "@eslint/js": "^9.24.0",
     "autoprefixer": "^10.4.21",
-    "cheerio": "^1.0.0",
     "eslint": "^9.24.0",
     "globals": "^16.0.0",
     "postcss": "^8.5.3",
