@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rafał Czajka</title>
   <link rel="icon" type="image/x-icon" href="assets/pxbunny.png">
-  <link rel="stylesheet" href="style.scss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:opsz,wght@14..32,100..900&display=swap">
+  <link rel="stylesheet" href="style.scss">
+  <script src="script.js" type="module" defer></script>
 </head>
 <body>
   <div class="container">
@@ -31,26 +32,30 @@
         <ul class="links">
           <li>
             <a class="button link" href="#">
-              <img class="button--image" src="assets/pxbunny.png" />
-              <p class="button--text link link--external" style="text-decoration: line-through;">Visit my blog</p>
+              <img class="button__image" src="assets/pxbunny.png" />
+              <p class="button__text link link--external" style="text-decoration: line-through;">Visit my blog</p>
             </a>
           </li>
           <li>
             <a class="button" href="https://github.com/pxbunny" target="_blank">
-              <img class="button--image" src="assets/github.png" />
-              <p class="button--text link link--external">Go to my GitHub</p>
+              <img class="button__image" src="assets/github.png" />
+              <p class="button__text link link--external">Go to my GitHub</p>
             </a>
           </li>
           <li>
             <a class="button" href="mailto:contact@rczajka.me">
-              <img class="button--image" src="assets/gmail.png" />
-              <p class="button--text link link--email">Contact me</p>
+              <img class="button__image" src="assets/gmail.png" />
+              <p class="button__text link link--email">Contact me</p>
             </a>
           </li>
         </ul>
       </main>
     </div>
   </div>
+
   <div class="background"></div>
+  <div class="loader">
+    <p class="loader__info">Loading...</p>
+  </div>
 </body>
 </html>
