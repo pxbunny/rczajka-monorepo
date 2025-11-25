@@ -156,6 +156,7 @@ p, h1 {
   width: 200%;
   height: 200vh;
   z-index: -10;
+  opacity: 0.8;
   animation: bg-noise var(--transition-duration) infinite;
 
   @keyframes bg-noise {
