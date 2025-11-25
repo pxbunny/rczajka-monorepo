@@ -138,7 +138,7 @@ p, h1 {
   }
 
   &:hover {
-    p {
+    .button__text {
       color: var(--fgColor-primary);
     }
 
