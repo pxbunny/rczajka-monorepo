@@ -12,37 +12,7 @@ importers:
         specifier: ^2.5.0
         version: 2.5.0
 
-  apps/portfolio:
-    devDependencies:
-      '@eslint/js':
-        specifier: ^9.24.0
-        version: 9.24.0
-      autoprefixer:
-        specifier: ^10.4.21
-        version: 10.4.21(postcss@8.5.3)
-      eslint:
-        specifier: ^9.24.0
-        version: 9.24.0(jiti@2.4.2)
-      globals:
-        specifier: ^16.0.0
-        version: 16.0.0
-      postcss:
-        specifier: ^8.5.3
-        version: 8.5.3
-      postcss-sort-media-queries:
-        specifier: ^5.2.0
-        version: 5.2.0(postcss@8.5.3)
-      sass:
-        specifier: ^1.86.3
-        version: 1.86.3
-      vite:
-        specifier: ^6.2.6
-        version: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)(yaml@2.7.1)
-      vite-plugin-static-copy:
-        specifier: ^2.3.1
-        version: 2.3.1(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)(yaml@2.7.1))
-
-  apps/portfolio-playground:
+  apps/playground:
     devDependencies:
       '@eslint/js':
         specifier: ^9.24.0
@@ -74,6 +44,33 @@ importers:
       vite-plugin-static-copy:
         specifier: ^2.3.1
         version: 2.3.1(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)(yaml@2.7.1))
+
+  apps/portfolio:
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.24.0
+        version: 9.24.0
+      autoprefixer:
+        specifier: ^10.4.21
+        version: 10.4.21(postcss@8.5.3)
+      eslint:
+        specifier: ^9.24.0
+        version: 9.24.0(jiti@2.4.2)
+      globals:
+        specifier: ^16.0.0
+        version: 16.0.0
+      postcss:
+        specifier: ^8.5.3
+        version: 8.5.3
+      postcss-sort-media-queries:
+        specifier: ^5.2.0
+        version: 5.2.0(postcss@8.5.3)
+      sass:
+        specifier: ^1.86.3
+        version: 1.86.3
+      vite:
+        specifier: ^6.2.6
+        version: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)(yaml@2.7.1)
 
   apps/studio:
     dependencies:

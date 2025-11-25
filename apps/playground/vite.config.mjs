@@ -4,12 +4,6 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 const buildConfig = {
   root: './src',
   base: './',
-  build: {
-    outDir: '../../../dist/portfolio',
-    emptyOutDir: true,
-    minify: true,
-    copyPublicDir: false,
-  },
   css: {
     preprocessorOptions: {
       scss: { api: 'modern' },
@@ -31,7 +25,7 @@ const devConfig = {
   root: './src',
   base: './',
   server: {
-    open: true,
+    open: false,
   },
   css: {
     preprocessorOptions: {
