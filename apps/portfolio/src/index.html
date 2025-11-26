@@ -9,11 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:opsz,wght@14..32,100..900&display=swap">
   <link rel="stylesheet" href="style.scss">
-  <script src="script.js" type="module" defer></script>
 </head>
 <body>
-  <div class="container">
-    <div>
+  <div class="page">
+    <main class="container">
       <header>
         <p class="title">
           Bringing ideas to&nbsp;life
@@ -22,39 +21,33 @@
           Rafał Czajka — Full-Stack Software&nbsp;Developer
         </h1>
       </header>
-      <main>
-        <p class="text">
-          I'm a simple guy who loves learning new things, being creative,
-          and building stuff that actually works. One of the easiest ways to do
-          that is programming, so that's what I focus on. If you want to know
-          more about what I do, you can:
-        </p>
-        <ul class="links">
-          <li>
-            <a class="button link" href="#">
-              <img class="button__image" src="assets/pxbunny.png" alt="PxBunny logo" />
-              <span class="button__text link link--external" style="text-decoration: line-through;">Visit my blog</span>
-            </a>
-          </li>
-          <li>
-            <a class="button" href="https://github.com/pxbunny" target="_blank">
-              <img class="button__image" src="assets/github.png" alt="GitHub logo" />
-              <span class="button__text link link--external">Go to my GitHub</span>
-            </a>
-          </li>
-          <li>
-            <a class="button" href="mailto:contact@rczajka.me">
-              <img class="button__image" src="assets/gmail.png" alt="Gmail logo" />
-              <span class="button__text link link--email">Contact me</span>
-            </a>
-          </li>
-        </ul>
-      </main>
-    </div>
-  </div>
-
-  <div class="loader">
-    <p class="loader__info">Loading...</p>
+      <p class="text">
+        I'm a simple guy who loves learning new things, being creative,
+        and building stuff that actually works. One of the easiest ways to do
+        that is programming, so that's what I focus on. If you want to know
+        more about what I do, you can:
+      </p>
+      <ul class="links">
+        <li>
+          <a class="button button--muted" href="#" aria-disabled="true" tabindex="-1" aria-label="Blog placeholder link">
+            <img class="button__image" src="assets/pxbunny.png" alt="PxBunny logo" />
+            <span class="button__text link link--external" style="text-decoration: line-through;">Visit my blog (soon)</span>
+          </a>
+        </li>
+        <li>
+          <a class="button" href="https://github.com/pxbunny" target="_blank" rel="noreferrer noopener">
+            <img class="button__image" src="assets/github.png" alt="GitHub logo" />
+            <span class="button__text link link--external">Go to my GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a class="button" href="mailto:contact@rczajka.me">
+            <img class="button__image" src="assets/gmail.png" alt="Gmail logo" />
+            <span class="button__text link link--email">Contact me</span>
+          </a>
+        </li>
+      </ul>
+    </main>
   </div>
 </body>
 </html>
